@@ -1,0 +1,6 @@
+[submodule "BolognieTouch/Library/mongo-c-driver"]
+	path = BolognieTouch/Library/mongo-c-driver
+	url = https://github.com/mongodb/mongo-c-driver.git
+[submodule "BolognieTouch/Library/cocos2d-x"]
+	path = BolognieTouch/Library/cocos2d-x
+	url = https://github.com/cocos2d/cocos2d-x.git
