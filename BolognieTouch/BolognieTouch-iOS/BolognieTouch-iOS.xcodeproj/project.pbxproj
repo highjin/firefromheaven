@@ -137,8 +137,21 @@
 		C19160EF14295950003C5260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19160EE14295950003C5260 /* main.m */; };
 		C19160F214295950003C5260 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19160F114295950003C5260 /* AppController.mm */; };
 		C19160F514295950003C5260 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19160F414295950003C5260 /* RootViewController.mm */; };
-		C19160F914295950003C5260 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19160F814295950003C5260 /* AppDelegate.cpp */; };
-		C19160FC14295950003C5260 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19160FB14295950003C5260 /* HelloWorldScene.cpp */; };
+		C1D614D314299FDD00F67223 /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1D614C814299FDD00F67223 /* test1.jpg */; };
+		C1D614D414299FDD00F67223 /* frameatlas1.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CA14299FDD00F67223 /* frameatlas1.plist */; };
+		C1D614D514299FDD00F67223 /* frameatlas1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CB14299FDD00F67223 /* frameatlas1.png */; };
+		C1D614D614299FDD00F67223 /* frameatlas2.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CC14299FDD00F67223 /* frameatlas2.plist */; };
+		C1D614D714299FDD00F67223 /* frameatlas2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CD14299FDD00F67223 /* frameatlas2.png */; };
+		C1D614D814299FDD00F67223 /* guiatlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CE14299FDD00F67223 /* guiatlas.plist */; };
+		C1D614D914299FDD00F67223 /* guiatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CF14299FDD00F67223 /* guiatlas.png */; };
+		C1D614DA14299FDD00F67223 /* opbg.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614D014299FDD00F67223 /* opbg.png */; };
+		C1D614DB14299FDD00F67223 /* 复调1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D614D214299FDD00F67223 /* 复调1.mp3 */; };
+		C1D614DF1429A0E000F67223 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614DD1429A0E000F67223 /* Default-Landscape~ipad.png */; };
+		C1D614E01429A0E000F67223 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614DE1429A0E000F67223 /* Default-Portrait~ipad.png */; };
+		C1D614E31429A10200F67223 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614E11429A10200F67223 /* Default-Landscape~ipad.png */; };
+		C1D614E41429A10200F67223 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614E21429A10200F67223 /* Default-Portrait~ipad.png */; };
+		C1D614EC1429A1B800F67223 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614E81429A1B800F67223 /* AppDelegate.cpp */; };
+		C1D614F21429A1F200F67223 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F01429A1F200F67223 /* HelloWorldScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -415,10 +428,23 @@
 		C19160F114295950003C5260 /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ios/AppController.mm; sourceTree = "<group>"; };
 		C19160F314295950003C5260 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ios/RootViewController.h; sourceTree = "<group>"; };
 		C19160F414295950003C5260 /* RootViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = RootViewController.mm; path = ios/RootViewController.mm; sourceTree = "<group>"; };
-		C19160F714295950003C5260 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
-		C19160F814295950003C5260 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
-		C19160FA14295950003C5260 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		C19160FB14295950003C5260 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		C1D614C814299FDD00F67223 /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
+		C1D614CA14299FDD00F67223 /* frameatlas1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frameatlas1.plist; sourceTree = "<group>"; };
+		C1D614CB14299FDD00F67223 /* frameatlas1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frameatlas1.png; sourceTree = "<group>"; };
+		C1D614CC14299FDD00F67223 /* frameatlas2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frameatlas2.plist; sourceTree = "<group>"; };
+		C1D614CD14299FDD00F67223 /* frameatlas2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frameatlas2.png; sourceTree = "<group>"; };
+		C1D614CE14299FDD00F67223 /* guiatlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = guiatlas.plist; sourceTree = "<group>"; };
+		C1D614CF14299FDD00F67223 /* guiatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guiatlas.png; sourceTree = "<group>"; };
+		C1D614D014299FDD00F67223 /* opbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opbg.png; sourceTree = "<group>"; };
+		C1D614D214299FDD00F67223 /* 复调1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "复调1.mp3"; sourceTree = "<group>"; };
+		C1D614DD1429A0E000F67223 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		C1D614DE1429A0E000F67223 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		C1D614E11429A10200F67223 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		C1D614E21429A10200F67223 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "Resources/Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		C1D614E81429A1B800F67223 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
+		C1D614E91429A1B800F67223 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		C1D614F01429A1F200F67223 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
+		C1D614F11429A1F200F67223 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +469,8 @@
 		C1915F341429594E003C5260 = {
 			isa = PBXGroup;
 			children = (
+				C1D614DD1429A0E000F67223 /* Default-Landscape~ipad.png */,
+				C1D614DE1429A0E000F67223 /* Default-Portrait~ipad.png */,
 				C1915F531429594E003C5260 /* BolognieTouch-iOS */,
 				C1915F421429594E003C5260 /* Frameworks */,
 				C1915F401429594E003C5260 /* Products */,
@@ -475,10 +503,10 @@
 		C1915F531429594E003C5260 /* BolognieTouch-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C1D614E71429A1A100F67223 /* Classes */,
 				C1915F541429594E003C5260 /* Resources */,
 				C1915F6C1429594E003C5260 /* libs */,
 				C19160ED14295950003C5260 /* ios */,
-				C19160F614295950003C5260 /* Classes */,
 				C19160EB14295950003C5260 /* Supporting Files */,
 			);
 			path = "BolognieTouch-iOS";
@@ -487,6 +515,9 @@
 		C1915F541429594E003C5260 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C1D614C514299FDD00F67223 /* Content */,
+				C1D614C914299FDD00F67223 /* GUI */,
+				C1D614D114299FDD00F67223 /* Music */,
 				C1915F551429594E003C5260 /* CloseNormal.png */,
 				C1915F571429594E003C5260 /* CloseSelected.png */,
 				C1915F591429594E003C5260 /* Default.png */,
@@ -497,6 +528,8 @@
 				C1915F631429594E003C5260 /* Icon-Small@2x.png */,
 				C1915F651429594E003C5260 /* Icon.png */,
 				C1915F671429594E003C5260 /* Icon@2x.png */,
+				C1D614E11429A10200F67223 /* Default-Landscape~ipad.png */,
+				C1D614E21429A10200F67223 /* Default-Portrait~ipad.png */,
 				C1915F691429594E003C5260 /* Info.plist */,
 				C1915F6A1429594E003C5260 /* iTunesArtwork */,
 			);
@@ -1000,15 +1033,82 @@
 			name = ios;
 			sourceTree = "<group>";
 		};
-		C19160F614295950003C5260 /* Classes */ = {
+		C1D614C514299FDD00F67223 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				C19160F714295950003C5260 /* AppDelegate.h */,
-				C19160F814295950003C5260 /* AppDelegate.cpp */,
-				C19160FA14295950003C5260 /* HelloWorldScene.h */,
-				C19160FB14295950003C5260 /* HelloWorldScene.cpp */,
+				C1D614C614299FDD00F67223 /* Background */,
+				C1D614C714299FDD00F67223 /* CG */,
+			);
+			name = Content;
+			path = Resources/Content;
+			sourceTree = "<group>";
+		};
+		C1D614C614299FDD00F67223 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		C1D614C714299FDD00F67223 /* CG */ = {
+			isa = PBXGroup;
+			children = (
+				C1D614C814299FDD00F67223 /* test1.jpg */,
+			);
+			path = CG;
+			sourceTree = "<group>";
+		};
+		C1D614C914299FDD00F67223 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				C1D614CA14299FDD00F67223 /* frameatlas1.plist */,
+				C1D614CB14299FDD00F67223 /* frameatlas1.png */,
+				C1D614CC14299FDD00F67223 /* frameatlas2.plist */,
+				C1D614CD14299FDD00F67223 /* frameatlas2.png */,
+				C1D614CE14299FDD00F67223 /* guiatlas.plist */,
+				C1D614CF14299FDD00F67223 /* guiatlas.png */,
+				C1D614D014299FDD00F67223 /* opbg.png */,
+			);
+			name = GUI;
+			path = Resources/GUI;
+			sourceTree = "<group>";
+		};
+		C1D614D114299FDD00F67223 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				C1D614D214299FDD00F67223 /* 复调1.mp3 */,
+			);
+			name = Music;
+			path = Resources/Music;
+			sourceTree = "<group>";
+		};
+		C1D614E71429A1A100F67223 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C1D614EE1429A1F200F67223 /* Layers */,
+				C1D614EF1429A1F200F67223 /* Scenes */,
+				C1D614E81429A1B800F67223 /* AppDelegate.cpp */,
+				C1D614E91429A1B800F67223 /* AppDelegate.h */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		C1D614EE1429A1F200F67223 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Layers;
+			path = Classes/Layers;
+			sourceTree = "<group>";
+		};
+		C1D614EF1429A1F200F67223 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C1D614F01429A1F200F67223 /* HelloWorldScene.cpp */,
+				C1D614F11429A1F200F67223 /* HelloWorldScene.h */,
+			);
+			name = Scenes;
+			path = Classes/Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1069,6 +1169,19 @@
 				C1915F661429594E003C5260 /* Icon.png in Resources */,
 				C1915F681429594E003C5260 /* Icon@2x.png in Resources */,
 				C1915F6B1429594E003C5260 /* iTunesArtwork in Resources */,
+				C1D614D314299FDD00F67223 /* test1.jpg in Resources */,
+				C1D614D414299FDD00F67223 /* frameatlas1.plist in Resources */,
+				C1D614D514299FDD00F67223 /* frameatlas1.png in Resources */,
+				C1D614D614299FDD00F67223 /* frameatlas2.plist in Resources */,
+				C1D614D714299FDD00F67223 /* frameatlas2.png in Resources */,
+				C1D614D814299FDD00F67223 /* guiatlas.plist in Resources */,
+				C1D614D914299FDD00F67223 /* guiatlas.png in Resources */,
+				C1D614DA14299FDD00F67223 /* opbg.png in Resources */,
+				C1D614DB14299FDD00F67223 /* 复调1.mp3 in Resources */,
+				C1D614DF1429A0E000F67223 /* Default-Landscape~ipad.png in Resources */,
+				C1D614E01429A0E000F67223 /* Default-Portrait~ipad.png in Resources */,
+				C1D614E31429A10200F67223 /* Default-Landscape~ipad.png in Resources */,
+				C1D614E41429A10200F67223 /* Default-Portrait~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1190,8 +1303,8 @@
 				C19160EF14295950003C5260 /* main.m in Sources */,
 				C19160F214295950003C5260 /* AppController.mm in Sources */,
 				C19160F514295950003C5260 /* RootViewController.mm in Sources */,
-				C19160F914295950003C5260 /* AppDelegate.cpp in Sources */,
-				C19160FC14295950003C5260 /* HelloWorldScene.cpp in Sources */,
+				C1D614EC1429A1B800F67223 /* AppDelegate.cpp in Sources */,
+				C1D614F21429A1F200F67223 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1260,11 +1373,13 @@
 				GCC_PREFIX_HEADER = "BolognieTouch-iOS/Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "BolognieTouch-iOS/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1278,11 +1393,13 @@
 				GCC_PREFIX_HEADER = "BolognieTouch-iOS/Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "BolognieTouch-iOS/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1307,6 +1424,7 @@
 				C191610114295950003C5260 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
