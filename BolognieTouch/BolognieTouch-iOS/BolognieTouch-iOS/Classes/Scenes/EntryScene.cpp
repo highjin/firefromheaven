@@ -1,5 +1,4 @@
 #include "EntryScene.h"
-#include "EntryBackgroundLayer.h"
 #include "SimpleAudioEngine.h"
 
 using namespace cocos2d;
@@ -15,8 +14,17 @@ bool EntryScene::init()
     loadGuiResources();
     playBackgroundMusic();
     
-    CCLayer* layer = EntryBackgroundLayer::node();
-    addChild(layer);
+    // ask director the window size
+	CCSize size = CCDirector::sharedDirector()->getWinSize();
+    
+	// add "HelloWorld" splash screen"
+	CCSprite* pSprite = CCSprite::spriteWithFile("opbg.png");
+    
+	// position the sprite on the center of the screen
+	pSprite->setPosition( ccp(size.width/2, size.height/2) );
+    
+	// add the sprite as a child to this layer
+	this->addChild(pSprite, 0);
     
     return true;
 }

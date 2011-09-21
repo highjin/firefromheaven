@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C16180E0142A54AE001A18C0 /* frame_load.png in Resources */ = {isa = PBXBuildFile; fileRef = C16180D9142A54AE001A18C0 /* frame_load.png */; };
+		C16180E1142A54AE001A18C0 /* frame_save.png in Resources */ = {isa = PBXBuildFile; fileRef = C16180DA142A54AE001A18C0 /* frame_save.png */; };
+		C16180E2142A54AE001A18C0 /* gui_big_atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = C16180DB142A54AE001A18C0 /* gui_big_atlas.plist */; };
+		C16180E3142A54AE001A18C0 /* gui_big_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = C16180DC142A54AE001A18C0 /* gui_big_atlas.png */; };
+		C16180E4142A54AE001A18C0 /* gui_small_atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = C16180DD142A54AE001A18C0 /* gui_small_atlas.plist */; };
+		C16180E5142A54AE001A18C0 /* gui_small_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = C16180DE142A54AE001A18C0 /* gui_small_atlas.png */; };
+		C16180E6142A54AE001A18C0 /* 游戏面板背景.png in Resources */ = {isa = PBXBuildFile; fileRef = C16180DF142A54AE001A18C0 /* 游戏面板背景.png */; };
 		C1915F441429594E003C5260 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F431429594E003C5260 /* QuartzCore.framework */; };
 		C1915F461429594E003C5260 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F451429594E003C5260 /* OpenGLES.framework */; };
 		C1915F481429594E003C5260 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F471429594E003C5260 /* OpenAL.framework */; };
@@ -138,12 +145,6 @@
 		C19160F214295950003C5260 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19160F114295950003C5260 /* AppController.mm */; };
 		C19160F514295950003C5260 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19160F414295950003C5260 /* RootViewController.mm */; };
 		C1D614D314299FDD00F67223 /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1D614C814299FDD00F67223 /* test1.jpg */; };
-		C1D614D414299FDD00F67223 /* frameatlas1.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CA14299FDD00F67223 /* frameatlas1.plist */; };
-		C1D614D514299FDD00F67223 /* frameatlas1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CB14299FDD00F67223 /* frameatlas1.png */; };
-		C1D614D614299FDD00F67223 /* frameatlas2.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CC14299FDD00F67223 /* frameatlas2.plist */; };
-		C1D614D714299FDD00F67223 /* frameatlas2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CD14299FDD00F67223 /* frameatlas2.png */; };
-		C1D614D814299FDD00F67223 /* guiatlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CE14299FDD00F67223 /* guiatlas.plist */; };
-		C1D614D914299FDD00F67223 /* guiatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614CF14299FDD00F67223 /* guiatlas.png */; };
 		C1D614DA14299FDD00F67223 /* opbg.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614D014299FDD00F67223 /* opbg.png */; };
 		C1D614DB14299FDD00F67223 /* 复调1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D614D214299FDD00F67223 /* 复调1.mp3 */; };
 		C1D614DF1429A0E000F67223 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614DD1429A0E000F67223 /* Default-Landscape~ipad.png */; };
@@ -152,10 +153,16 @@
 		C1D614E41429A10200F67223 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614E21429A10200F67223 /* Default-Portrait~ipad.png */; };
 		C1D614EC1429A1B800F67223 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614E81429A1B800F67223 /* AppDelegate.cpp */; };
 		C1D614F51429A32500F67223 /* EntryScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F31429A32500F67223 /* EntryScene.cpp */; };
-		C1D614FA1429A46000F67223 /* EntryBackgroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F91429A46000F67223 /* EntryBackgroundLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C16180D9142A54AE001A18C0 /* frame_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_load.png; sourceTree = "<group>"; };
+		C16180DA142A54AE001A18C0 /* frame_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_save.png; sourceTree = "<group>"; };
+		C16180DB142A54AE001A18C0 /* gui_big_atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gui_big_atlas.plist; sourceTree = "<group>"; };
+		C16180DC142A54AE001A18C0 /* gui_big_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gui_big_atlas.png; sourceTree = "<group>"; };
+		C16180DD142A54AE001A18C0 /* gui_small_atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gui_small_atlas.plist; sourceTree = "<group>"; };
+		C16180DE142A54AE001A18C0 /* gui_small_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gui_small_atlas.png; sourceTree = "<group>"; };
+		C16180DF142A54AE001A18C0 /* 游戏面板背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "游戏面板背景.png"; sourceTree = "<group>"; };
 		C1915F3F1429594E003C5260 /* BolognieTouch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BolognieTouch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1915F431429594E003C5260 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C1915F451429594E003C5260 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -430,12 +437,6 @@
 		C19160F314295950003C5260 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ios/RootViewController.h; sourceTree = "<group>"; };
 		C19160F414295950003C5260 /* RootViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = RootViewController.mm; path = ios/RootViewController.mm; sourceTree = "<group>"; };
 		C1D614C814299FDD00F67223 /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
-		C1D614CA14299FDD00F67223 /* frameatlas1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frameatlas1.plist; sourceTree = "<group>"; };
-		C1D614CB14299FDD00F67223 /* frameatlas1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frameatlas1.png; sourceTree = "<group>"; };
-		C1D614CC14299FDD00F67223 /* frameatlas2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frameatlas2.plist; sourceTree = "<group>"; };
-		C1D614CD14299FDD00F67223 /* frameatlas2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frameatlas2.png; sourceTree = "<group>"; };
-		C1D614CE14299FDD00F67223 /* guiatlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = guiatlas.plist; sourceTree = "<group>"; };
-		C1D614CF14299FDD00F67223 /* guiatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guiatlas.png; sourceTree = "<group>"; };
 		C1D614D014299FDD00F67223 /* opbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opbg.png; sourceTree = "<group>"; };
 		C1D614D214299FDD00F67223 /* 复调1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "复调1.mp3"; sourceTree = "<group>"; };
 		C1D614DD1429A0E000F67223 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -446,8 +447,6 @@
 		C1D614E91429A1B800F67223 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		C1D614F31429A32500F67223 /* EntryScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryScene.cpp; sourceTree = "<group>"; };
 		C1D614F41429A32500F67223 /* EntryScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryScene.h; sourceTree = "<group>"; };
-		C1D614F91429A46000F67223 /* EntryBackgroundLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryBackgroundLayer.cpp; sourceTree = "<group>"; };
-		C1D614FB1429A46E00F67223 /* EntryBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryBackgroundLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1064,12 +1063,13 @@
 		C1D614C914299FDD00F67223 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-				C1D614CA14299FDD00F67223 /* frameatlas1.plist */,
-				C1D614CB14299FDD00F67223 /* frameatlas1.png */,
-				C1D614CC14299FDD00F67223 /* frameatlas2.plist */,
-				C1D614CD14299FDD00F67223 /* frameatlas2.png */,
-				C1D614CE14299FDD00F67223 /* guiatlas.plist */,
-				C1D614CF14299FDD00F67223 /* guiatlas.png */,
+				C16180D9142A54AE001A18C0 /* frame_load.png */,
+				C16180DA142A54AE001A18C0 /* frame_save.png */,
+				C16180DB142A54AE001A18C0 /* gui_big_atlas.plist */,
+				C16180DC142A54AE001A18C0 /* gui_big_atlas.png */,
+				C16180DD142A54AE001A18C0 /* gui_small_atlas.plist */,
+				C16180DE142A54AE001A18C0 /* gui_small_atlas.png */,
+				C16180DF142A54AE001A18C0 /* 游戏面板背景.png */,
 				C1D614D014299FDD00F67223 /* opbg.png */,
 			);
 			name = GUI;
@@ -1120,8 +1120,6 @@
 		C1D614F61429A42400F67223 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
-				C1D614F91429A46000F67223 /* EntryBackgroundLayer.cpp */,
-				C1D614FB1429A46E00F67223 /* EntryBackgroundLayer.h */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -1199,18 +1197,19 @@
 				C1915F681429594E003C5260 /* Icon@2x.png in Resources */,
 				C1915F6B1429594E003C5260 /* iTunesArtwork in Resources */,
 				C1D614D314299FDD00F67223 /* test1.jpg in Resources */,
-				C1D614D414299FDD00F67223 /* frameatlas1.plist in Resources */,
-				C1D614D514299FDD00F67223 /* frameatlas1.png in Resources */,
-				C1D614D614299FDD00F67223 /* frameatlas2.plist in Resources */,
-				C1D614D714299FDD00F67223 /* frameatlas2.png in Resources */,
-				C1D614D814299FDD00F67223 /* guiatlas.plist in Resources */,
-				C1D614D914299FDD00F67223 /* guiatlas.png in Resources */,
 				C1D614DA14299FDD00F67223 /* opbg.png in Resources */,
 				C1D614DB14299FDD00F67223 /* 复调1.mp3 in Resources */,
 				C1D614DF1429A0E000F67223 /* Default-Landscape~ipad.png in Resources */,
 				C1D614E01429A0E000F67223 /* Default-Portrait~ipad.png in Resources */,
 				C1D614E31429A10200F67223 /* Default-Landscape~ipad.png in Resources */,
 				C1D614E41429A10200F67223 /* Default-Portrait~ipad.png in Resources */,
+				C16180E0142A54AE001A18C0 /* frame_load.png in Resources */,
+				C16180E1142A54AE001A18C0 /* frame_save.png in Resources */,
+				C16180E2142A54AE001A18C0 /* gui_big_atlas.plist in Resources */,
+				C16180E3142A54AE001A18C0 /* gui_big_atlas.png in Resources */,
+				C16180E4142A54AE001A18C0 /* gui_small_atlas.plist in Resources */,
+				C16180E5142A54AE001A18C0 /* gui_small_atlas.png in Resources */,
+				C16180E6142A54AE001A18C0 /* 游戏面板背景.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1334,7 +1333,6 @@
 				C19160F514295950003C5260 /* RootViewController.mm in Sources */,
 				C1D614EC1429A1B800F67223 /* AppDelegate.cpp in Sources */,
 				C1D614F51429A32500F67223 /* EntryScene.cpp in Sources */,
-				C1D614FA1429A46000F67223 /* EntryBackgroundLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
