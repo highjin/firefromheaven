@@ -14,6 +14,15 @@
 		C16180E4142A54AE001A18C0 /* gui_small_atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = C16180DD142A54AE001A18C0 /* gui_small_atlas.plist */; };
 		C16180E5142A54AE001A18C0 /* gui_small_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = C16180DE142A54AE001A18C0 /* gui_small_atlas.png */; };
 		C16180E6142A54AE001A18C0 /* 游戏面板背景.png in Resources */ = {isa = PBXBuildFile; fileRef = C16180DF142A54AE001A18C0 /* 游戏面板背景.png */; };
+		C16180E9142A5949001A18C0 /* MainMenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16180E8142A5949001A18C0 /* MainMenuLayer.cpp */; };
+		C16180EC142A9828001A18C0 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16180EB142A9828001A18C0 /* GameScene.cpp */; };
+		C16180EF142A98A8001A18C0 /* GameBackgroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16180EE142A98A7001A18C0 /* GameBackgroundLayer.cpp */; };
+		C16180F6142A9CF5001A18C0 /* CG01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F0142A9CF5001A18C0 /* CG01.jpg */; };
+		C16180F7142A9CF5001A18C0 /* ReadingRoom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F1142A9CF5001A18C0 /* ReadingRoom.jpg */; };
+		C16180F8142A9CF5001A18C0 /* 波洛革涅城.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F2142A9CF5001A18C0 /* 波洛革涅城.jpg */; };
+		C16180F9142A9CF5001A18C0 /* 图书馆大厅.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F3142A9CF5001A18C0 /* 图书馆大厅.jpg */; };
+		C16180FA142A9CF5001A18C0 /* 图书馆门前.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F4142A9CF5001A18C0 /* 图书馆门前.jpg */; };
+		C16180FB142A9CF5001A18C0 /* 校园小路.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F5142A9CF5001A18C0 /* 校园小路.jpg */; };
 		C1915F441429594E003C5260 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F431429594E003C5260 /* QuartzCore.framework */; };
 		C1915F461429594E003C5260 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F451429594E003C5260 /* OpenGLES.framework */; };
 		C1915F481429594E003C5260 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F471429594E003C5260 /* OpenAL.framework */; };
@@ -152,7 +161,7 @@
 		C1D614E31429A10200F67223 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614E11429A10200F67223 /* Default-Landscape~ipad.png */; };
 		C1D614E41429A10200F67223 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614E21429A10200F67223 /* Default-Portrait~ipad.png */; };
 		C1D614EC1429A1B800F67223 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614E81429A1B800F67223 /* AppDelegate.cpp */; };
-		C1D614F51429A32500F67223 /* EntryScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F31429A32500F67223 /* EntryScene.cpp */; };
+		C1D614F51429A32500F67223 /* MainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F31429A32500F67223 /* MainMenuScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +172,18 @@
 		C16180DD142A54AE001A18C0 /* gui_small_atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gui_small_atlas.plist; sourceTree = "<group>"; };
 		C16180DE142A54AE001A18C0 /* gui_small_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gui_small_atlas.png; sourceTree = "<group>"; };
 		C16180DF142A54AE001A18C0 /* 游戏面板背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "游戏面板背景.png"; sourceTree = "<group>"; };
+		C16180E7142A5941001A18C0 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuLayer.h; path = "BolognieTouch-iOS/Classes/Layers/MainMenu/MainMenuLayer.h"; sourceTree = SOURCE_ROOT; };
+		C16180E8142A5949001A18C0 /* MainMenuLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainMenuLayer.cpp; path = "BolognieTouch-iOS/Classes/Layers/MainMenu/MainMenuLayer.cpp"; sourceTree = SOURCE_ROOT; };
+		C16180EA142A981F001A18C0 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		C16180EB142A9828001A18C0 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		C16180ED142A98A0001A18C0 /* GameBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameBackgroundLayer.h; path = "BolognieTouch-iOS/Classes/Layers/Game/GameBackgroundLayer.h"; sourceTree = SOURCE_ROOT; };
+		C16180EE142A98A7001A18C0 /* GameBackgroundLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameBackgroundLayer.cpp; path = "BolognieTouch-iOS/Classes/Layers/Game/GameBackgroundLayer.cpp"; sourceTree = SOURCE_ROOT; };
+		C16180F0142A9CF5001A18C0 /* CG01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CG01.jpg; sourceTree = "<group>"; };
+		C16180F1142A9CF5001A18C0 /* ReadingRoom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ReadingRoom.jpg; sourceTree = "<group>"; };
+		C16180F2142A9CF5001A18C0 /* 波洛革涅城.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "波洛革涅城.jpg"; sourceTree = "<group>"; };
+		C16180F3142A9CF5001A18C0 /* 图书馆大厅.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "图书馆大厅.jpg"; sourceTree = "<group>"; };
+		C16180F4142A9CF5001A18C0 /* 图书馆门前.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "图书馆门前.jpg"; sourceTree = "<group>"; };
+		C16180F5142A9CF5001A18C0 /* 校园小路.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "校园小路.jpg"; sourceTree = "<group>"; };
 		C1915F3F1429594E003C5260 /* BolognieTouch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BolognieTouch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1915F431429594E003C5260 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C1915F451429594E003C5260 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -445,8 +466,8 @@
 		C1D614E21429A10200F67223 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "Resources/Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		C1D614E81429A1B800F67223 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		C1D614E91429A1B800F67223 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
-		C1D614F31429A32500F67223 /* EntryScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryScene.cpp; sourceTree = "<group>"; };
-		C1D614F41429A32500F67223 /* EntryScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryScene.h; sourceTree = "<group>"; };
+		C1D614F31429A32500F67223 /* MainMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuScene.cpp; sourceTree = "<group>"; };
+		C1D614F41429A32500F67223 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1048,6 +1069,12 @@
 		C1D614C614299FDD00F67223 /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				C16180F0142A9CF5001A18C0 /* CG01.jpg */,
+				C16180F1142A9CF5001A18C0 /* ReadingRoom.jpg */,
+				C16180F2142A9CF5001A18C0 /* 波洛革涅城.jpg */,
+				C16180F3142A9CF5001A18C0 /* 图书馆大厅.jpg */,
+				C16180F4142A9CF5001A18C0 /* 图书馆门前.jpg */,
+				C16180F5142A9CF5001A18C0 /* 校园小路.jpg */,
 			);
 			path = Background;
 			sourceTree = "<group>";
@@ -1099,7 +1126,7 @@
 		C1D614EE1429A1F200F67223 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				C1D614F61429A42400F67223 /* Entry */,
+				C1D614F61429A42400F67223 /* MainMenu */,
 				C1D614F71429A42400F67223 /* Game */,
 				C1D614F81429A42400F67223 /* SaveLoad */,
 			);
@@ -1110,17 +1137,24 @@
 		C1D614EF1429A1F200F67223 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C1D614F31429A32500F67223 /* EntryScene.cpp */,
-				C1D614F41429A32500F67223 /* EntryScene.h */,
+				C1D614F31429A32500F67223 /* MainMenuScene.cpp */,
+				C1D614F41429A32500F67223 /* MainMenuScene.h */,
+				C16180EA142A981F001A18C0 /* GameScene.h */,
+				C16180EB142A9828001A18C0 /* GameScene.cpp */,
 			);
 			name = Scenes;
 			path = Classes/Scenes;
 			sourceTree = "<group>";
 		};
-		C1D614F61429A42400F67223 /* Entry */ = {
+		C1D614F61429A42400F67223 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
+				C16180E7142A5941001A18C0 /* MainMenuLayer.h */,
+				C16180E8142A5949001A18C0 /* MainMenuLayer.cpp */,
+				C16180ED142A98A0001A18C0 /* GameBackgroundLayer.h */,
+				C16180EE142A98A7001A18C0 /* GameBackgroundLayer.cpp */,
 			);
+			name = MainMenu;
 			path = Entry;
 			sourceTree = "<group>";
 		};
@@ -1210,6 +1244,12 @@
 				C16180E4142A54AE001A18C0 /* gui_small_atlas.plist in Resources */,
 				C16180E5142A54AE001A18C0 /* gui_small_atlas.png in Resources */,
 				C16180E6142A54AE001A18C0 /* 游戏面板背景.png in Resources */,
+				C16180F6142A9CF5001A18C0 /* CG01.jpg in Resources */,
+				C16180F7142A9CF5001A18C0 /* ReadingRoom.jpg in Resources */,
+				C16180F8142A9CF5001A18C0 /* 波洛革涅城.jpg in Resources */,
+				C16180F9142A9CF5001A18C0 /* 图书馆大厅.jpg in Resources */,
+				C16180FA142A9CF5001A18C0 /* 图书馆门前.jpg in Resources */,
+				C16180FB142A9CF5001A18C0 /* 校园小路.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1332,7 +1372,10 @@
 				C19160F214295950003C5260 /* AppController.mm in Sources */,
 				C19160F514295950003C5260 /* RootViewController.mm in Sources */,
 				C1D614EC1429A1B800F67223 /* AppDelegate.cpp in Sources */,
-				C1D614F51429A32500F67223 /* EntryScene.cpp in Sources */,
+				C1D614F51429A32500F67223 /* MainMenuScene.cpp in Sources */,
+				C16180E9142A5949001A18C0 /* MainMenuLayer.cpp in Sources */,
+				C16180EC142A9828001A18C0 /* GameScene.cpp in Sources */,
+				C16180EF142A98A8001A18C0 /* GameBackgroundLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
