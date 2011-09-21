@@ -151,7 +151,8 @@
 		C1D614E31429A10200F67223 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614E11429A10200F67223 /* Default-Landscape~ipad.png */; };
 		C1D614E41429A10200F67223 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614E21429A10200F67223 /* Default-Portrait~ipad.png */; };
 		C1D614EC1429A1B800F67223 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614E81429A1B800F67223 /* AppDelegate.cpp */; };
-		C1D614F21429A1F200F67223 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F01429A1F200F67223 /* HelloWorldScene.cpp */; };
+		C1D614F51429A32500F67223 /* EntryScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F31429A32500F67223 /* EntryScene.cpp */; };
+		C1D614FA1429A46000F67223 /* EntryBackgroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F91429A46000F67223 /* EntryBackgroundLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -443,8 +444,10 @@
 		C1D614E21429A10200F67223 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "Resources/Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		C1D614E81429A1B800F67223 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		C1D614E91429A1B800F67223 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
-		C1D614F01429A1F200F67223 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		C1D614F11429A1F200F67223 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		C1D614F31429A32500F67223 /* EntryScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryScene.cpp; sourceTree = "<group>"; };
+		C1D614F41429A32500F67223 /* EntryScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryScene.h; sourceTree = "<group>"; };
+		C1D614F91429A46000F67223 /* EntryBackgroundLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryBackgroundLayer.cpp; sourceTree = "<group>"; };
+		C1D614FB1429A46E00F67223 /* EntryBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryBackgroundLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1096,6 +1099,9 @@
 		C1D614EE1429A1F200F67223 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				C1D614F61429A42400F67223 /* Entry */,
+				C1D614F71429A42400F67223 /* Game */,
+				C1D614F81429A42400F67223 /* SaveLoad */,
 			);
 			name = Layers;
 			path = Classes/Layers;
@@ -1104,11 +1110,34 @@
 		C1D614EF1429A1F200F67223 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C1D614F01429A1F200F67223 /* HelloWorldScene.cpp */,
-				C1D614F11429A1F200F67223 /* HelloWorldScene.h */,
+				C1D614F31429A32500F67223 /* EntryScene.cpp */,
+				C1D614F41429A32500F67223 /* EntryScene.h */,
 			);
 			name = Scenes;
 			path = Classes/Scenes;
+			sourceTree = "<group>";
+		};
+		C1D614F61429A42400F67223 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				C1D614F91429A46000F67223 /* EntryBackgroundLayer.cpp */,
+				C1D614FB1429A46E00F67223 /* EntryBackgroundLayer.h */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		C1D614F71429A42400F67223 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		C1D614F81429A42400F67223 /* SaveLoad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SaveLoad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1304,7 +1333,8 @@
 				C19160F214295950003C5260 /* AppController.mm in Sources */,
 				C19160F514295950003C5260 /* RootViewController.mm in Sources */,
 				C1D614EC1429A1B800F67223 /* AppDelegate.cpp in Sources */,
-				C1D614F21429A1F200F67223 /* HelloWorldScene.cpp in Sources */,
+				C1D614F51429A32500F67223 /* EntryScene.cpp in Sources */,
+				C1D614FA1429A46000F67223 /* EntryBackgroundLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
