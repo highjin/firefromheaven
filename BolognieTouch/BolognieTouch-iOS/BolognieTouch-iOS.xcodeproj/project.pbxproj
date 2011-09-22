@@ -23,6 +23,7 @@
 		C16180F9142A9CF5001A18C0 /* 图书馆大厅.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F3142A9CF5001A18C0 /* 图书馆大厅.jpg */; };
 		C16180FA142A9CF5001A18C0 /* 图书馆门前.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F4142A9CF5001A18C0 /* 图书馆门前.jpg */; };
 		C16180FB142A9CF5001A18C0 /* 校园小路.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F5142A9CF5001A18C0 /* 校园小路.jpg */; };
+		C16180FE142AA34A001A18C0 /* GameTouchReceiverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16180FD142AA34A001A18C0 /* GameTouchReceiverLayer.cpp */; };
 		C1915F441429594E003C5260 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F431429594E003C5260 /* QuartzCore.framework */; };
 		C1915F461429594E003C5260 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F451429594E003C5260 /* OpenGLES.framework */; };
 		C1915F481429594E003C5260 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F471429594E003C5260 /* OpenAL.framework */; };
@@ -184,6 +185,8 @@
 		C16180F3142A9CF5001A18C0 /* 图书馆大厅.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "图书馆大厅.jpg"; sourceTree = "<group>"; };
 		C16180F4142A9CF5001A18C0 /* 图书馆门前.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "图书馆门前.jpg"; sourceTree = "<group>"; };
 		C16180F5142A9CF5001A18C0 /* 校园小路.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "校园小路.jpg"; sourceTree = "<group>"; };
+		C16180FC142AA342001A18C0 /* GameTouchReceiverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTouchReceiverLayer.h; sourceTree = "<group>"; };
+		C16180FD142AA34A001A18C0 /* GameTouchReceiverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTouchReceiverLayer.cpp; sourceTree = "<group>"; };
 		C1915F3F1429594E003C5260 /* BolognieTouch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BolognieTouch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1915F431429594E003C5260 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C1915F451429594E003C5260 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1151,8 +1154,6 @@
 			children = (
 				C16180E7142A5941001A18C0 /* MainMenuLayer.h */,
 				C16180E8142A5949001A18C0 /* MainMenuLayer.cpp */,
-				C16180ED142A98A0001A18C0 /* GameBackgroundLayer.h */,
-				C16180EE142A98A7001A18C0 /* GameBackgroundLayer.cpp */,
 			);
 			name = MainMenu;
 			path = Entry;
@@ -1161,6 +1162,10 @@
 		C1D614F71429A42400F67223 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				C16180ED142A98A0001A18C0 /* GameBackgroundLayer.h */,
+				C16180EE142A98A7001A18C0 /* GameBackgroundLayer.cpp */,
+				C16180FC142AA342001A18C0 /* GameTouchReceiverLayer.h */,
+				C16180FD142AA34A001A18C0 /* GameTouchReceiverLayer.cpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -1376,6 +1381,7 @@
 				C16180E9142A5949001A18C0 /* MainMenuLayer.cpp in Sources */,
 				C16180EC142A9828001A18C0 /* GameScene.cpp in Sources */,
 				C16180EF142A98A8001A18C0 /* GameBackgroundLayer.cpp in Sources */,
+				C16180FE142AA34A001A18C0 /* GameTouchReceiverLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

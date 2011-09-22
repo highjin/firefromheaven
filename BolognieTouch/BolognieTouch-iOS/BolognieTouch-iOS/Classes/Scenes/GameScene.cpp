@@ -17,6 +17,8 @@ bool GameScene::init() {
     backgroundLayer = GameBackgroundLayer::node();
     addChild(backgroundLayer, 0);
     
+    touchReceiverLayer = GameTouchReceiverLayer::node();
+    addChild(touchReceiverLayer, 1);
     
     backgroundLayer->Show("波洛革涅城.jpg");
     

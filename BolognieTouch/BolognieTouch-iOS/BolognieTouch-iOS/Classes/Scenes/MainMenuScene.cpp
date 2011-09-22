@@ -42,5 +42,9 @@ void MainMenuScene::loadGuiResources()
 void MainMenuScene::playBackgroundMusic()
 {
     SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("复调1.mp3");
-    SimpleAudioEngine::sharedEngine()->playBackgroundMusic("复调1.mp3");
+    SimpleAudioEngine::sharedEngine()->playBackgroundMusic("复调1.mp3", true);
+}
+
+void MainMenuScene::onExit() {
+    SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();   //TODO: Fade out
 }

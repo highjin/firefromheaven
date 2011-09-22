@@ -18,6 +18,9 @@ private:
 public:
     virtual bool init();
     void startButtonCallback(CCObject* pSender);
+    void continueButtonCallback(CCObject* pSender);
+    void optionButtonCallback(CCObject* pSender);
+    void extraButtonCallback(CCObject* pSender);
     void exitButtonCallback(CCObject* pSender);
     LAYER_NODE_FUNC(MainMenuLayer);
 };

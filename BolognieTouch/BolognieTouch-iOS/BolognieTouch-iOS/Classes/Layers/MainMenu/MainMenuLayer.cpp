@@ -23,11 +23,11 @@ bool MainMenuLayer::init() {
 void MainMenuLayer::displayMenu() {
     CCMenuItemSprite *startButton = CCMenuItemSprite::itemFromNormalSprite(CCSprite::spriteWithSpriteFrameName("op_start1.png"), CCSprite::spriteWithSpriteFrameName("op_start2.png"), this, menu_selector(MainMenuLayer::startButtonCallback));
     
-    CCMenuItemSprite *continueButton = CCMenuItemSprite::itemFromNormalSprite(CCSprite::spriteWithSpriteFrameName("op_continue1.png"), CCSprite::spriteWithSpriteFrameName("op_continue2.png"), this, menu_selector(MainMenuLayer::startButtonCallback));
+    CCMenuItemSprite *continueButton = CCMenuItemSprite::itemFromNormalSprite(CCSprite::spriteWithSpriteFrameName("op_continue1.png"), CCSprite::spriteWithSpriteFrameName("op_continue2.png"), this, menu_selector(MainMenuLayer::continueButtonCallback));
 
-    CCMenuItemSprite *optionButton = CCMenuItemSprite::itemFromNormalSprite(CCSprite::spriteWithSpriteFrameName("op_option1.png"), CCSprite::spriteWithSpriteFrameName("op_option2.png"), this, menu_selector(MainMenuLayer::startButtonCallback));
+    CCMenuItemSprite *optionButton = CCMenuItemSprite::itemFromNormalSprite(CCSprite::spriteWithSpriteFrameName("op_option1.png"), CCSprite::spriteWithSpriteFrameName("op_option2.png"), this, menu_selector(MainMenuLayer::optionButtonCallback));
     
-    CCMenuItemSprite *extraButton = CCMenuItemSprite::itemFromNormalSprite(CCSprite::spriteWithSpriteFrameName("op_extra1.png"), CCSprite::spriteWithSpriteFrameName("op_extra2.png"), this, menu_selector(MainMenuLayer::startButtonCallback));
+    CCMenuItemSprite *extraButton = CCMenuItemSprite::itemFromNormalSprite(CCSprite::spriteWithSpriteFrameName("op_extra1.png"), CCSprite::spriteWithSpriteFrameName("op_extra2.png"), this, menu_selector(MainMenuLayer::extraButtonCallback));
     
     CCMenuItemSprite *exitButton = CCMenuItemSprite::itemFromNormalSprite(CCSprite::spriteWithSpriteFrameName("op_exit1.png"), CCSprite::spriteWithSpriteFrameName("op_exit2.png"), this, menu_selector(MainMenuLayer::exitButtonCallback));
      
@@ -43,6 +43,18 @@ void MainMenuLayer::displayMenu() {
 
 void MainMenuLayer::startButtonCallback(CCObject* pSender) {
     CCDirector::sharedDirector()->replaceScene(GameScene::node());
+}
+
+void MainMenuLayer::continueButtonCallback(CCObject* pSender) {
+    //TODO
+}
+
+void MainMenuLayer::optionButtonCallback(CCObject* pSender) {
+    //TODO
+}
+
+void MainMenuLayer::extraButtonCallback(CCObject* pSender) {
+    //TODO
 }
 
 void MainMenuLayer::exitButtonCallback(CCObject* pSender) {

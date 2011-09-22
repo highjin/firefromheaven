@@ -11,14 +11,18 @@
 
 #include "cocos2d.h"
 #include "GameBackgroundLayer.h"
+#include "GameTouchReceiverLayer.h"
 
 class GameScene : public cocos2d::CCScene {
 private:
     GameBackgroundLayer* backgroundLayer;
+    GameTouchReceiverLayer* touchReceiverLayer;
     
 public:
     virtual bool init();
     SCENE_NODE_FUNC(GameScene);
+    
+    inline GameBackgroundLayer* getBackgroundLayer() { return backgroundLayer; }
 };
 
 

@@ -9,6 +9,22 @@
 #ifndef BolognieTouch_iOS_GameTouchReceiverLayer_h
 #define BolognieTouch_iOS_GameTouchReceiverLayer_h
 
+#include "cocos2d.h"
 
+class GameTouchReceiverLayer : public cocos2d::CCLayerColor {
+private:
+    int opState;    //for debug
+    
+public:
+    GameTouchReceiverLayer();
+    virtual bool init();
+    LAYER_NODE_FUNC(GameTouchReceiverLayer);
+    
+    /*void setGameScene(GameScene* gameScene) {
+        this->gameScene = gameScene;
+    }*/
+    
+    void ccTouchesEnded(cocos2d::CCSet *touches, cocos2d::CCEvent *event);
+};
 
 #endif
