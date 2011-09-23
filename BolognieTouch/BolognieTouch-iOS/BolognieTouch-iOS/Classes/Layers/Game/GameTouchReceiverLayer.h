@@ -14,15 +14,12 @@
 class GameTouchReceiverLayer : public cocos2d::CCLayerColor {
 private:
     int opState;    //for debug
+    void next();    //for debug
     
 public:
     GameTouchReceiverLayer();
     virtual bool init();
     LAYER_NODE_FUNC(GameTouchReceiverLayer);
-    
-    /*void setGameScene(GameScene* gameScene) {
-        this->gameScene = gameScene;
-    }*/
     
     void ccTouchesEnded(cocos2d::CCSet *touches, cocos2d::CCEvent *event);
     void onExit();

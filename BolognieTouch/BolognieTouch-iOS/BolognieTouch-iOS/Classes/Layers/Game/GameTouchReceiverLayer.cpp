@@ -9,6 +9,7 @@
 #include "GameTouchReceiverLayer.h"
 #include "MainMenuScene.h"
 #include "GameScene.h"
+#include "ScriptHolderManager.h"
 
 using namespace cocos2d;
 
@@ -37,6 +38,14 @@ void GameTouchReceiverLayer::ccTouchesEnded(cocos2d::CCSet *touches, cocos2d::CC
     /*CCTouch* touch = (CCTouch*) (touches->anyObject());
     CCPoint location = touch->locationInView(touch->view());*/
     
+    if (ScriptHolderManager::sharedScriptHolderManager()->isScriptHolding()) {
+        ScriptHolderManager::sharedScriptHolderManager()->onTouch();
+    } else {
+        next();
+    }
+}
+
+void GameTouchReceiverLayer::next() {
     GameScene* gameScene = (GameScene*) getParent();
     
     switch(opState) {
