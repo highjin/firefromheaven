@@ -7,25 +7,15 @@
 //
 
 #include "GameConversationLayer.h"
+#include "utf8.h"
+#include "ScriptHolderManager.h"
 using namespace cocos2d;
 
-GameConversationLayer::GameConversationLayer() {
-    name = NULL;
-    dialog = NULL;
-    isDialogVisible = false;
-    isNameVisible = false;
+GameConversationLayer::GameConversationLayer() : name(NULL), dialog(NULL), dialogSub(NULL), isDialogVisible(false), isNameVisible(false), dialogCharNum(0), dialogSubCharNum(0), perWordAnimationScheduled(false) {
 }
 
 GameConversationLayer::~GameConversationLayer() {
-    if (name != NULL) {
-        delete [] name;
-        name = NULL;
-    }
-    
-    if (dialog != NULL) {
-        delete [] dialog;
-        dialog = NULL;
-    }
+    cleanupOldConversation();
 }
 
 bool GameConversationLayer::init() {
@@ -66,13 +56,20 @@ bool GameConversationLayer::init() {
 
 void GameConversationLayer::show(const char* dialog, const char* name) {
     assert(dialog != NULL);
+    cleanupOldConversation();
     
-    deleteNameAndDialog();
+    int len = strlen(dialog);
+    this->dialog = new char[len + 1];
+    this->dialogSub = new char[len + 1];
     
-    this->dialog = new char[strlen(dialog) + 1];
+    this->dialogCharNum = utf8_strlen((utf8*)dialog);
+    
     strcpy(this->dialog, dialog);
-    dialogLabel->setString(this->dialog);
+    dialogLabel->setString("");
     dialogBackground->setOpacity(255);  //TODO: transition
+    
+    //begin per-word animation scheduler
+    schedulePerWordAnimation();
     
     if (name != NULL) {
         this->name = new char[strlen(name) + 1];
@@ -87,16 +84,29 @@ void GameConversationLayer::show(const char* dialog, const char* name) {
 }
 
 void GameConversationLayer::append(const char *dialog) {
+    dialogSubCharNum = dialogCharNum;
+    int newByteLength = strlen(this->dialog) + strlen(dialog) + 1;
+    
+    delete [] dialogSub;
+    dialogSub = new char[newByteLength];
+    
     char* tmp = this->dialog;
-    this->dialog = new char[strlen(tmp) + strlen(dialog) + 1];
+    this->dialog = new char[newByteLength];
     strcpy(this->dialog, tmp);
     strcat(this->dialog, dialog);
+    delete [] tmp;
     
-    dialogLabel->setString(this->dialog);
+    dialogCharNum = utf8_strlen((utf8*)this->dialog);
+    
+    if (!perWordAnimationScheduled) {
+        schedulePerWordAnimation();
+    }
+    
+    //dialogLabel->setString(this->dialog);
 }
 
 void GameConversationLayer::hide() {
-    deleteNameAndDialog();
+    cleanupOldConversation();
     
     dialogLabel->setString("");
     nameLabel->setString("");
@@ -105,7 +115,15 @@ void GameConversationLayer::hide() {
     nameBackground->setOpacity(0);
 }
 
-void GameConversationLayer::deleteNameAndDialog() {
+void GameConversationLayer::cleanupOldConversation() {
+    
+    if (perWordAnimationScheduled) {
+        unschedulePerWordAnimation();
+    }
+    
+    dialogSubCharNum = 0;
+    dialogCharNum = 0;
+    
     if (this->dialog != NULL) {
         delete [] this->dialog;
         this->dialog = NULL;
@@ -115,4 +133,49 @@ void GameConversationLayer::deleteNameAndDialog() {
         delete [] this->name;
         this->name = NULL;
     }
+    
+    if (this->dialogSub != NULL) {
+        delete [] this->dialogSub;
+        this->dialogSub = NULL;
+    }
 }
+
+void GameConversationLayer::perWordAnimationScheduler(ccTime delta) {
+    if (dialogCharNum == 0) {
+        dialogLabel->setString("");
+        unschedulePerWordAnimation();
+        assert(dialogSubCharNum = 0);
+    } else {
+        dialogSubCharNum++; 
+        utf8_substr((utf8*)dialog, 0, dialogSubCharNum, (utf8*)dialogSub);
+        dialogLabel->setString((char*)dialogSub);
+    }
+    
+    if (dialogSubCharNum >= dialogCharNum) {
+        unschedulePerWordAnimation();
+    }
+}
+
+void GameConversationLayer::schedulePerWordAnimation() {
+    schedule(schedule_selector(GameConversationLayer::perWordAnimationScheduler), 0.075f);
+    perWordAnimationScheduled = true;
+    //TODO: 0.5f -> property
+    
+    ScriptHolderManager::sharedScriptHolderManager()->registerScriptHolder(this, WaitOnRelease, GameConversationLayer::onTouchHandler);
+}
+
+void GameConversationLayer::unschedulePerWordAnimation() {
+    unschedule(schedule_selector(GameConversationLayer::perWordAnimationScheduler));
+    perWordAnimationScheduled = false;
+    
+    ScriptHolderManager::sharedScriptHolderManager()->releaseScriptHolder(this);
+}
+
+void GameConversationLayer::onTouchHandler(void* sender) {
+    GameConversationLayer* layer = (GameConversationLayer*) sender;
+    layer->dialogSubCharNum = layer->dialogCharNum;
+    layer->unschedulePerWordAnimation();
+    
+    layer->dialogLabel->setString(layer->dialog);
+}
+

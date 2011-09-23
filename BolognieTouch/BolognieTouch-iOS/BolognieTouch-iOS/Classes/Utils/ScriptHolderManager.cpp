@@ -35,7 +35,7 @@ ScriptHolderManager* ScriptHolderManager::sharedScriptHolderManager() {
 	return &scriptHolderManagerInstance;
 }
 
-void ScriptHolderManager::registerScriptHolder(void* holder, ScriptHolderReleaseBehavior releaseBehavior, void (*onTouchHandler)()) {
+void ScriptHolderManager::registerScriptHolder(void* holder, ScriptHolderReleaseBehavior releaseBehavior, ScriptHolderOnTouchHandler onTouchHandler) {
     assert(holderItem.holder == NULL);
     
     holderItem.holder = holder;
@@ -50,6 +50,6 @@ void ScriptHolderManager::releaseScriptHolder(void* obj) {
 
 void ScriptHolderManager::onTouch() {
     if (holderItem.holder != NULL && holderItem.onTouchHandler != NULL) {
-        holderItem.onTouchHandler();
+        holderItem.onTouchHandler(holderItem.holder);
     }
 }

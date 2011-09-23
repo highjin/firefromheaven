@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 
+
 class GameConversationLayer : public cocos2d::CCLayer {
 private:
     cocos2d::CCSprite* dialogBackground;
@@ -22,8 +23,16 @@ private:
     
     char* name;
     char* dialog;
+    char* dialogSub;    //used for per-word animation
     
-    void deleteNameAndDialog();
+    int dialogCharNum;
+    int dialogSubCharNum;   //used for per-word animation, in UTF-8 length!!
+    
+    void cleanupOldConversation();
+
+    void schedulePerWordAnimation();
+    void unschedulePerWordAnimation();
+    bool perWordAnimationScheduled;
     
 public:
     GameConversationLayer();
@@ -35,6 +44,9 @@ public:
     void append(const char* dialog);
     void hide();
     //TODO: hidden by right click
+    
+    void perWordAnimationScheduler(cocos2d::ccTime delta);
+    static void onTouchHandler(void* sender);
 };
 
 #endif

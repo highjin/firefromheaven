@@ -9,17 +9,21 @@
 #ifndef BolognieTouch_iOS_ScriptHolderManager_h
 #define BolognieTouch_iOS_ScriptHolderManager_h
 
+#ifndef NULL
 #define NULL 0
+#endif
 
 typedef enum {
     WaitOnRelease = 0,
     GotoNextOnRelease = 1
 } ScriptHolderReleaseBehavior;
 
+typedef void (*ScriptHolderOnTouchHandler)(void* sender);
+
 typedef struct {
     void* holder;
     ScriptHolderReleaseBehavior releaseBehavior;
-    void (*onTouchHandler)();
+    ScriptHolderOnTouchHandler onTouchHandler;
 } ScriptHolderItem;
 
 /**
@@ -40,7 +44,7 @@ public:
      @param releaseBehavior Whether to execute the next script command automatically when released. For animation holder and selection box, it should be GotoNextOnRelease. For conversation, it should be WaitOnRelease.
      @param onTouchHandler What to do when the user click on the global touch layer while the script is held by this obj.
      */
-    void registerScriptHolder(void* obj, ScriptHolderReleaseBehavior releaseBehavior, void (*onTouchHandler)() = NULL); //TODO: add params for the handler
+    void registerScriptHolder(void* obj, ScriptHolderReleaseBehavior releaseBehavior, ScriptHolderOnTouchHandler onTouchHandler = NULL); //TODO: add params for the handler
     
     void releaseScriptHolder(void* obj);
     

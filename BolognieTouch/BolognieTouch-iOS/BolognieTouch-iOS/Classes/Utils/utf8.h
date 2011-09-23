@@ -21,7 +21,7 @@ using namespace std;
 
 typedef unsigned char utf8;
 
-void substr(const utf8 *string, 
+void utf8_substr(const utf8 *string, 
             int start, 
             int len, 
             utf8 *substring)
@@ -45,7 +45,7 @@ void substr(const utf8 *string,
     substring[bytes] = '\0';
 }
 
-int length(const utf8 *string)
+int utf8_strlen(const utf8 *string)
 {
     int len;
     len = 0;
