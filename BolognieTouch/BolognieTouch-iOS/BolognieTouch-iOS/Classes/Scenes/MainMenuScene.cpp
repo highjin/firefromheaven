@@ -12,7 +12,6 @@ bool MainMenuScene::init()
 		return false;
 	}
     
-    loadGuiResources();
     playBackgroundMusic();
     
     // ask director the window size
@@ -33,12 +32,6 @@ bool MainMenuScene::init()
     return true;
 }
 
-void MainMenuScene::loadGuiResources() 
-{
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gui_small_atlas.plist");
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gui_big_atlas.plist");
-}
-
 void MainMenuScene::playBackgroundMusic()
 {
     SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("复调1.mp3");
@@ -46,5 +39,5 @@ void MainMenuScene::playBackgroundMusic()
 }
 
 void MainMenuScene::onExit() {
-    SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();   //TODO: Fade out
+    //SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();   //TODO: Fade out
 }

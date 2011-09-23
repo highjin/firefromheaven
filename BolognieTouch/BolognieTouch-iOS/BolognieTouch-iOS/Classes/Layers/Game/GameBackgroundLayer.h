@@ -20,7 +20,7 @@ public:
     virtual bool init();
     LAYER_NODE_FUNC(GameBackgroundLayer);
     
-    void Show(const char* filename);    //TODO: Transition
+    void show(const char* filename);    //TODO: Transition
 };
 
 

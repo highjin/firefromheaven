@@ -42,7 +42,12 @@ void MainMenuLayer::displayMenu() {
 }
 
 void MainMenuLayer::startButtonCallback(CCObject* pSender) {
+    
+    mainMenu->setIsTouchEnabled(false); //FIXME: another cocos2d bug or?
+    CCTouchDispatcher::sharedDispatcher()->removeDelegate(mainMenu);
+    
     CCDirector::sharedDirector()->replaceScene(GameScene::node());
+    //CCDirector::sharedDirector()->pushScene(GameScene::node());
 }
 
 void MainMenuLayer::continueButtonCallback(CCObject* pSender) {
@@ -58,6 +63,8 @@ void MainMenuLayer::extraButtonCallback(CCObject* pSender) {
 }
 
 void MainMenuLayer::exitButtonCallback(CCObject* pSender) {
+    //CCDirector::sharedDirector()->popScene();
+    
     CCDirector::sharedDirector()->end();
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)

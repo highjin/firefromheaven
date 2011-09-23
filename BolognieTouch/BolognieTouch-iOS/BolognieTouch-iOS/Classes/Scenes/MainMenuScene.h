@@ -6,7 +6,6 @@
 class MainMenuScene : public cocos2d::CCScene
 {
 private:
-    void loadGuiResources(); 
     void playBackgroundMusic();
     
 public:

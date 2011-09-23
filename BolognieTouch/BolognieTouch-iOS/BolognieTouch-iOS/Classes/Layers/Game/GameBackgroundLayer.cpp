@@ -23,7 +23,7 @@ bool GameBackgroundLayer::init() {
     return true;
 }
 
-void GameBackgroundLayer::Show(const char* filename) {
+void GameBackgroundLayer::show(const char* filename) {
     if (imageSprite != NULL) {
         removeChild(imageSprite, true);
     }

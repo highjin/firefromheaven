@@ -25,6 +25,7 @@ public:
     }*/
     
     void ccTouchesEnded(cocos2d::CCSet *touches, cocos2d::CCEvent *event);
+    void onExit();
 };
 
 #endif

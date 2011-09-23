@@ -91,6 +91,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     //add by Wander
     pDirector->setProjection(CCDirectorProjection2D);
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gui_small_atlas.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gui_big_atlas.plist");
+    
 
 	// create a scene. it's an autorelease object
 	CCScene *pScene = MainMenuScene::node();
