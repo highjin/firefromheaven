@@ -6,6 +6,7 @@ using FireEngine.FireMLEngine.AST;
 using FireEngine.FireMLEngine.Compiler;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using FireEngine.FireML.Editor;
 
 namespace FireEngine.Test.ConsoleCompiler
 {
@@ -51,7 +52,7 @@ namespace FireEngine.Test.ConsoleCompiler
 
             string xsdDirPath = fireMLDirInfo.FullName + "\\" + "XSD";
 
-            FireEngine.XNAContent.ContentManager contentManager = new FireEngine.XNAContent.ContentManager(contentDirInfo.FullName);
+            ContentManager contentManager = new ContentManager(contentDirInfo.FullName);
             CompilerKernel kernel = new CompilerKernel(plotFileList.ToArray(), assetFileList.ToArray(), xsdDirPath, contentManager);
             FireMLRoot result = kernel.CompileFireML();
 
