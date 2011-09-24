@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class PlotDef : Definition
+    public class PlotDef : Definition
     {
 
         public List<Statement> Content

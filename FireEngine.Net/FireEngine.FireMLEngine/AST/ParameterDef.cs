@@ -6,7 +6,7 @@ using FireEngine.FireMLEngine.Expr;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class ParameterDef : Definition
+    public class ParameterDef : Definition
     {
         /// <summary>
         /// 默认值在编译时已经存储好

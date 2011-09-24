@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class IfBlock : ASTNode
+    public class IfBlock : ASTNode
     {
         /// <summary>
         /// Condition == null时表示else

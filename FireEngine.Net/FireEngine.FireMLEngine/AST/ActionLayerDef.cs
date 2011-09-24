@@ -6,7 +6,7 @@ using FireEngine.FireMLData;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class ActionLayerDef : Definition
+    public class ActionLayerDef : Definition
     {
         public PositionData Position
         {

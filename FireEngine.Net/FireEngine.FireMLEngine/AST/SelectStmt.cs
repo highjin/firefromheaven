@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class SelectStmt : Statement
+    public class SelectStmt : Statement
     {
         public List<SelectOption> OptionList
         {

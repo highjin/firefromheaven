@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    class DivExpr : BinaryAlgoExpr
+    public class DivExpr : BinaryAlgoExpr
     {
         internal override void Accept(IExprVisitor visitor, params object[] args)
         {

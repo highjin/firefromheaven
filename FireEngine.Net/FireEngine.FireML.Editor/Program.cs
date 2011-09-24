@@ -4,7 +4,6 @@ using System.Text;
 using System.IO;
 using FireEngine.FireMLEngine.Compiler;
 using FireEngine.FireMLEngine;
-using FireEngine.FireMLEngine.Bson;
 using FireEngine.FireML.Editor;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.IO;
@@ -17,6 +16,8 @@ namespace FireEngine.FireML.Editor
         static void Main(string[] args)
         {
             FileInfo assemblyFileInfo = new FileInfo(args[0]);
+            string savePath = args[1];
+
             DirectoryInfo fireMLDirInfo = assemblyFileInfo.Directory;
             DirectoryInfo contentDirInfo = fireMLDirInfo.Parent;
 
@@ -55,8 +56,22 @@ namespace FireEngine.FireML.Editor
                 return;
             }
 
-            BsonExporter bsonExporter = new BsonExporter(result);
-            bsonExporter.Export();
+            /*JsonWriterSettings jsonSettings = new JsonWriterSettings();
+            jsonSettings.NewLineChars = "\r\n";
+            jsonSettings.OutputMode = JsonOutputMode.JavaScript;
+            jsonSettings.Indent = true;
+            jsonSettings.IndentChars = "  ";
+            StreamWriter streamWriter = new StreamWriter(new FileStream("out.txt", FileMode.Create));
+            JsonWriter jsonWriter = new JsonWriter(streamWriter, jsonSettings);
+            BsonSerializer.Serialize<FireMLRoot>(jsonWriter, result);
+            jsonWriter.Close();*/
+
+            Stream bsonStream = new FileStream(savePath, FileMode.Create);
+            BsonBuffer bsonBuffer = new BsonBuffer();
+            BsonBinaryWriterSettings bsonSettings = new BsonBinaryWriterSettings();
+            BsonBinaryWriter bsonWriter = new BsonBinaryWriter(bsonStream, bsonBuffer, bsonSettings);
+            BsonSerializer.Serialize<FireMLRoot>(bsonWriter, result);
+            bsonWriter.Close();
         }
 
         

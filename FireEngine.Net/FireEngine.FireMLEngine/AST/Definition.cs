@@ -8,7 +8,7 @@ namespace FireEngine.FireMLEngine.AST
     /// 直接属于FireMLRoot的结点，均为全局定义
     /// </summary>
     [Serializable]
-    abstract class Definition : ASTNode
+    abstract public class Definition : ASTNode
     {
         public string Name
         {

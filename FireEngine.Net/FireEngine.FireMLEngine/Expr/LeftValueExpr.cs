@@ -11,7 +11,7 @@ namespace FireEngine.FireMLEngine.Expr
     /// 变量引用算作LeftValueExpr
     /// </remarks>
     [Serializable]
-    class LeftValueExpr : Expression
+    public class LeftValueExpr : Expression
     {
         public LeftValue LeftValue
         {

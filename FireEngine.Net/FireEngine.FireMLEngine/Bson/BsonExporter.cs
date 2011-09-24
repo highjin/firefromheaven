@@ -22,10 +22,7 @@ namespace FireEngine.FireMLEngine.Bson
 
         public void Export()
         {
-            JsonWriterSettings settings = new JsonWriterSettings();
-            JsonWriter writer = new JsonWriter(new StreamWriter(new FileStream("out.txt", FileMode.Create)), settings);
-            BsonSerializer.Serialize<FireMLRoot>(writer, root);
-            writer.Close();
+
         }
     }
 }

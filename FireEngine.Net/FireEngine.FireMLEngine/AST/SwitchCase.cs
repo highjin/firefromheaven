@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class SwitchCase : ASTNode
+    public class SwitchCase : ASTNode
     {
         /// <summary>
         /// null表示Default

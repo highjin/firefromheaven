@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    enum DataType
+    public enum DataType
     {
         Unknown = 0,
         Bool,

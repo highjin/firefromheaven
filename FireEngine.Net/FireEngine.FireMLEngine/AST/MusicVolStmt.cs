@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class MusicVolStmt : Statement
+    public class MusicVolStmt : Statement
     {
         public MusicVolStmt()
         {

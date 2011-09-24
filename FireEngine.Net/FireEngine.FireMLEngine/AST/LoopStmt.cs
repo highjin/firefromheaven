@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class LoopStmt : Statement
+    public class LoopStmt : Statement
     {
         public Expr.Expression Condition
         {

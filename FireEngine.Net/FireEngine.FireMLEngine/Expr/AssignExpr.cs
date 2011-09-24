@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    class AssignExpr : RightValueExpr
+    public class AssignExpr : RightValueExpr
     {
         public LeftValueExpr LeftExpr
         {

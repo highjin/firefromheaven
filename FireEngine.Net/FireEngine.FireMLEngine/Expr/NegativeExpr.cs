@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    class NegativeExpr : RightValueExpr
+    public class NegativeExpr : RightValueExpr
     {
         public Expression Op
         {

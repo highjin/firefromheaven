@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class FunctionDef : Definition
+    public class FunctionDef : Definition
     {
 
         public Dictionary<string, ParameterDef> ParaMap

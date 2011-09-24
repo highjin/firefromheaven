@@ -9,7 +9,7 @@ namespace FireEngine.FireMLEngine.AST
     /// 通过局部序列化方法来解析的Statement
     /// </summary>
     [Serializable]
-    class DataStmt : Statement
+    public class DataStmt : Statement
     {
         public FireMLDataBase Data { get; set; }
         public string DataType { get; set; }

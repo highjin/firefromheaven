@@ -27,7 +27,7 @@ namespace FireEngine.FireMLEngine.AST
         /// <summary>
         /// 用来标识结点的ID，在AST中唯一
         /// </summary>
-        internal int ID { get; set; }
+        public int ID { get; set; }
 
         internal abstract void Accept(IASTVisitor visitor, params object[] args);
     }

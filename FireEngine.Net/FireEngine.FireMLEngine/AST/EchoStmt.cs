@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class EchoStmt : Statement
+    public class EchoStmt : Statement
     {
         public Expr.Expression Expression
         {

@@ -6,7 +6,7 @@ using FireEngine.FireMLData;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class ActorStmt : Statement
+    public class ActorStmt : Statement
     {
         public string Name
         {

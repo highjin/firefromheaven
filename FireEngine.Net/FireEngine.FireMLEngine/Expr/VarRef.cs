@@ -6,7 +6,7 @@ namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
     [System.Diagnostics.DebuggerDisplay("VarName = {VarName}")]
-    class VarRef : LeftValue
+    public class VarRef : LeftValue
     {
         public string VarName
         {

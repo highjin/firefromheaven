@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class SwitchStmt : Statement
+    public class SwitchStmt : Statement
     {
         public List<SwitchCase> SwitchCaseList
         {

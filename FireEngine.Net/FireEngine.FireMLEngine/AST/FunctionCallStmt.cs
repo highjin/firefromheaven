@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class FunctionCallStmt : Statement
+    public class FunctionCallStmt : Statement
     {
         public string Name
         {

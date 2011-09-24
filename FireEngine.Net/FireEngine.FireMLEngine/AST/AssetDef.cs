@@ -6,7 +6,7 @@ using FireEngine.FireMLData.Asset;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class AssetDef : Definition
+    public class AssetDef : Definition
     {
         public AssetDataBase AssetData
         {

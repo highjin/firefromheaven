@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    class StringConst : RightValue
+    public class StringConst : RightValue
     {
         public string Value
         {

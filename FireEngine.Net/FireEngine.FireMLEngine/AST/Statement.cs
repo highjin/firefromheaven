@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    abstract class Statement : ASTNode
+    abstract public class Statement : ASTNode
     {
         internal override abstract void Accept(IASTVisitor visitor, params object[] args);
     }

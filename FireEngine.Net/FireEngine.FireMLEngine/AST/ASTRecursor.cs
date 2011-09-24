@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FireEngine.FireMLEngine.AST
 {
-    abstract class ASTRecursor : IASTVisitor
+    abstract public class ASTRecursor : IASTVisitor
     {
         public virtual void Visit(FireMLRoot root, object[] args)
         {

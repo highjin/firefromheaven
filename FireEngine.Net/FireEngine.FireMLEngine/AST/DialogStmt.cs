@@ -8,7 +8,7 @@ namespace FireEngine.FireMLEngine.AST
     /// 一条对白：即完全显示后，等待用户点击鼠标
     /// </summary>
     [Serializable]
-    class DialogStmt : Statement
+    public class DialogStmt : Statement
     {
         public string Text
         {

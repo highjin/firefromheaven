@@ -12,7 +12,7 @@ namespace FireEngine.FireMLEngine.Expr
     /// </remarks>
     [Serializable]
     [System.Diagnostics.DebuggerDisplay("Type = {this.GetType().Name}; Value = {RightValue.ToString()}")]
-    class RightValueExpr : Expression
+    public class RightValueExpr : Expression
     {
         /// <summary>
         /// 该属性在运行时回填

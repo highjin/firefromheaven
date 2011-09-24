@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class IfStmt : Statement
+    public class IfStmt : Statement
     {
         public List<IfBlock> BlockList
         {

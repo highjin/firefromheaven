@@ -63,7 +63,7 @@
     <None Include="FireML\Asset\ClannadSample.fmlasset" />
     <None Include="FireML\Asset\FireMLAssetTester.fmlasset" />
     <None Include="FireML\FireML.fml" />
-    <None Include="FireML\Plot\ClannadSample.fmlplot" />
+    <None Include="FireML\Plot\ClannadSample.fmlplot.disabled" />
     <None Include="FireML\Plot\FireMLAtomTester.fmlplot" />
     <None Include="FireML\Plot\FireMLFuncTester.fmlplot" />
     <None Include="FireML\XSD\FireML.xsd">

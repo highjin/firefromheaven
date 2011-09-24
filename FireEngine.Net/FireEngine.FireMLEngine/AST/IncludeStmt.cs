@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class IncludeStmt : Statement
+    public class IncludeStmt : Statement
     {
         public string SubPlot
         {

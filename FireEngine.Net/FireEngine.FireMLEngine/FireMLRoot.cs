@@ -8,12 +8,14 @@ namespace FireEngine.FireMLEngine
     [Serializable]
     public class FireMLRoot
     {
-        internal PlotDef MainPlot { get; set; }
-        internal Dictionary<string, PlotDef> SubPlotMap { get; set; }
-        internal Dictionary<string, FunctionDef> FuncDefMap { get; set; }
-        internal Dictionary<string, ActionLayerDef> ActionLayerMap { get; set; }
+        public PlotDef MainPlot { get; set; }
+        public Dictionary<string, PlotDef> SubPlotMap { get; set; }
+        public Dictionary<string, FunctionDef> FuncDefMap { get; set; }
+        public Dictionary<string, ActionLayerDef> ActionLayerMap { get; set; }
+        public Dictionary<string, AssetDef> AssetMap { get; set; }
+
+        //do not serialize
         internal Dictionary<int, ASTNode> NodeMap { get; set; }
-        internal Dictionary<string, AssetDef> AssetMap { get; set; }
 
         internal FireMLRoot()
         {

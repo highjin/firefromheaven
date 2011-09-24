@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class MusicStopStmt : Statement
+    public class MusicStopStmt : Statement
     {
         public MusicStopStmt()
         {

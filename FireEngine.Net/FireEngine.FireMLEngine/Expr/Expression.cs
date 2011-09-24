@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    abstract class Expression
+    abstract public class Expression
     {
         /// <summary>
         /// 在编译时确定的数据类型；运行时不再改变

@@ -6,7 +6,7 @@ namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
     [System.Diagnostics.DebuggerDisplay("{Value} : {this.GetType().Name}")]
-    class IntConst : RightValue
+    public class IntConst : RightValue
     {
         public int Value
         {

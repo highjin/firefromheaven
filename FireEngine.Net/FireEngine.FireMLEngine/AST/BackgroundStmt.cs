@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.AST
 {
     [Serializable]
-    class BackgroundStmt : Statement
+    public class BackgroundStmt : Statement
     {
         public string Img
         {

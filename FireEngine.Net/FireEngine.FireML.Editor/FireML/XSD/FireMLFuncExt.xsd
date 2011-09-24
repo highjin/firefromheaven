@@ -3,69 +3,6 @@
   <xs:include schemaLocation="FireMLTypes.xsd" />
   <xs:group name="Function">
     <xs:choice>
-      <xs:element name="solo" nillable="true">
-        <xs:annotation>
-          <xs:documentation>独白</xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-          <xs:attribute name="return" type="VarRef">
-            <xs:annotation>
-              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
-            </xs:annotation>
-          </xs:attribute>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="tomoya" nillable="true">
-        <xs:annotation>
-          <xs:documentation>朋也</xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-          <xs:attribute name="img" type="xs:string" default="">
-            <xs:annotation>
-              <xs:documentation>立绘，空值表示不显示立绘</xs:documentation>
-            </xs:annotation>
-          </xs:attribute>
-          <xs:attribute name="return" type="VarRef">
-            <xs:annotation>
-              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
-            </xs:annotation>
-          </xs:attribute>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="girl" nillable="true">
-        <xs:annotation>
-          <xs:documentation>女孩</xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-          <xs:attribute name="return" type="VarRef">
-            <xs:annotation>
-              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
-            </xs:annotation>
-          </xs:attribute>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="nagisa" nillable="true">
-        <xs:annotation>
-          <xs:documentation>渚</xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-          <xs:attribute name="img" type="xs:string">
-            <xs:annotation>
-              <xs:documentation>渚的立绘</xs:documentation>
-            </xs:annotation>
-          </xs:attribute>
-          <xs:attribute name="古河" type="xs:boolean" default="false">
-            <xs:annotation>
-              <xs:documentation>如果该项为true，则名字显示“古河”而不是“渚”</xs:documentation>
-            </xs:annotation>
-          </xs:attribute>
-          <xs:attribute name="return" type="VarRef">
-            <xs:annotation>
-              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
-            </xs:annotation>
-          </xs:attribute>
-        </xs:complexType>
-      </xs:element>
       <xs:element name="MyNewFunc" nillable="true">
         <xs:annotation>
           <xs:documentation>最新的函数哦</xs:documentation>

@@ -6,7 +6,7 @@ namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
     //[System.Diagnostics.DebuggerDisplay("{this.GetType().Name},{FirstOp.ToString()}, {SecondOp.ToString()}")]
-    abstract class BinaryAlgoExpr : RightValueExpr
+    abstract public class BinaryAlgoExpr : RightValueExpr
     {
         public Expression FirstOp
         {

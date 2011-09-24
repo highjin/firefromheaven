@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    abstract class BinaryCmpExpr : RightValueExpr
+    abstract public class BinaryCmpExpr : RightValueExpr
     {
         public Expression FirstOp
         {

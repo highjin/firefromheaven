@@ -2,7 +2,8 @@
 <FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
 
   <MainPlot>
-
+    Hello Fire Engine!
+    
     <MyNewFunc/>
     
     <select return="$功能选择">

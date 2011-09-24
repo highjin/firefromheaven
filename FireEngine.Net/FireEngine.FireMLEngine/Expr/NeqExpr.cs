@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    class NeqExpr : BinaryCmpExpr
+    public class NeqExpr : BinaryCmpExpr
     {
         internal override void Accept(IExprVisitor visitor, params object[] args)
         {

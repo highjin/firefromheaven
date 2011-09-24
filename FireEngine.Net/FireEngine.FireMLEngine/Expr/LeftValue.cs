@@ -5,7 +5,7 @@ using System.Text;
 namespace FireEngine.FireMLEngine.Expr
 {
     [Serializable]
-    abstract class LeftValue : Value
+    abstract public class LeftValue : Value
     {
         //public RightValue Value
         //{
