@@ -4,7 +4,7 @@ S junk files
 
 #Visual Studio files
 *.[Oo]bj
-*.user
+#*.user
 *.aps
 *.pch
 *.vspscc
@@ -12,7 +12,7 @@ S junk files
 *_i.c
 *_p.c
 *.ncb
-*.suo
+#*.suo
 *.tlb
 *.tlh
 *.bak
