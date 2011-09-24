@@ -10,12 +10,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FireEngine.FireMLEngine</RootNamespace>
     <AssemblyName>FireEngine.FireMLEngine</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -142,6 +143,10 @@
     <None Include="ClassDiagram\Runtime.cd" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bson\Bson.csproj">
+      <Project>{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}</Project>
+      <Name>Bson</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FireEngine.ContentInterface\FireEngine.ContentInterface.csproj">
       <Project>{9695925C-80C9-4857-8440-C8CE200A6C3D}</Project>
       <Name>FireEngine.ContentInterface</Name>
