@@ -23,12 +23,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireEngine.Utilities.FuncXS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireEngine.Test.ConsoleCompiler", "FireEngine.Test.ConsoleCompiler\FireEngine.Test.ConsoleCompiler.csproj", "{1D1EBF6F-CE83-4A84-94F1-020A5179397F}"
 	ProjectSection(ProjectDependencies) = postProject
+		{CA6C6155-F382-46FB-B4F8-9FD7FF8A9F73} = {CA6C6155-F382-46FB-B4F8-9FD7FF8A9F73}
 		{F74A6B6F-DADC-4EA7-8CF3-A4DCD17834AB} = {F74A6B6F-DADC-4EA7-8CF3-A4DCD17834AB}
+		{F792776F-D2AE-4F0D-BE63-12ECDCE04613} = {F792776F-D2AE-4F0D-BE63-12ECDCE04613}
+		{1223C2BB-7C2B-464A-AC52-1FBEB6810E67} = {1223C2BB-7C2B-464A-AC52-1FBEB6810E67}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireEngine.Test.ConsoleRuntimeEnv", "FireEngine.Test.ConsoleRuntimeEnv\FireEngine.Test.ConsoleRuntimeEnv.csproj", "{AC4E880E-C25E-41E8-AEB2-28BDD76936C0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1D1EBF6F-CE83-4A84-94F1-020A5179397F} = {1D1EBF6F-CE83-4A84-94F1-020A5179397F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireEngine.FireML.Editor", "FireEngine.FireML.Editor\FireEngine.FireML.Editor.csproj", "{F74A6B6F-DADC-4EA7-8CF3-A4DCD17834AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CA6C6155-F382-46FB-B4F8-9FD7FF8A9F73} = {CA6C6155-F382-46FB-B4F8-9FD7FF8A9F73}
+		{1223C2BB-7C2B-464A-AC52-1FBEB6810E67} = {1223C2BB-7C2B-464A-AC52-1FBEB6810E67}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

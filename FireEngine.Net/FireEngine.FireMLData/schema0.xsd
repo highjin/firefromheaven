@@ -1,10 +1,157 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
+<!--请勿修改此文件，它会在编译工程时被重写！-->
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--
 FireMLDataBase
 -->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
+  <!--
+FireMLDataBase
+-->
   <xs:complexType name="FireMLDataBase" abstract="true" />
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
+  <!--
+PositionData
+-->
   <!--
 PositionData
 -->
@@ -16,6 +163,69 @@ PositionData
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
+  <!--
+AssetDataBase
+-->
   <!--
 AssetDataBase
 -->
@@ -37,6 +247,69 @@ AssetDataBase
   <!--
 ActorAsset
 -->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
+  <!--
+ActorAsset
+-->
   <xs:complexType name="ActorAsset">
     <xs:complexContent mixed="false">
       <xs:extension base="AssetDataBase">
@@ -45,6 +318,69 @@ ActorAsset
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
+  <!--
+VideoAsset
+-->
   <!--
 VideoAsset
 -->
@@ -58,6 +394,69 @@ VideoAsset
   <!--
 CGAsset
 -->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
+  <!--
+CGAsset
+-->
   <xs:complexType name="CGAsset">
     <xs:complexContent mixed="false">
       <xs:extension base="AssetDataBase">
@@ -66,6 +465,69 @@ CGAsset
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
+  <!--
+MusicAsset
+-->
   <!--
 MusicAsset
 -->

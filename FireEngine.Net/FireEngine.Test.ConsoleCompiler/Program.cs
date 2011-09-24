@@ -6,7 +6,6 @@ using FireEngine.FireMLEngine.AST;
 using FireEngine.FireMLEngine.Compiler;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using FireEngine.FireML.Editor;
 
 namespace FireEngine.Test.ConsoleCompiler
 {
