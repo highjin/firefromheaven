@@ -10,9 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FireEngine.FireML.Editor</RootNamespace>
     <AssemblyName>FireEngine.FireML.Editor</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -87,6 +86,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bson\Bson.csproj">
+      <Project>{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}</Project>
+      <Name>Bson</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FireEngine.ContentInterface\FireEngine.ContentInterface.csproj">
       <Project>{9695925C-80C9-4857-8440-C8CE200A6C3D}</Project>
       <Name>FireEngine.ContentInterface</Name>
@@ -121,8 +124,14 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>echo FireML Assembly File - FireEngine &gt; $(ProjectDir)FireML\FireML.fml
+
 $(SolutionDir)\FireEngine.Utilities.FuncXSDGenerator\bin\Debug\FireEngine.Utilities.FuncXSDGenerator.exe $(ProjectDir)\FireML\XSD\FireMLFuncExt.xsd $(ProjectDir)\FireML\
-$(SolutionDir)\FireEngine.Utilities.AssetXSDGenerator\bin\Debug\FireEngine.Utilities.AssetXSDGenerator.exe $(ProjectDir)\FireML\XSD\FireMLAssetExt.xsd $(ProjectDir)\FireML\</PostBuildEvent>
+$(SolutionDir)\FireEngine.Utilities.AssetXSDGenerator\bin\Debug\FireEngine.Utilities.AssetXSDGenerator.exe $(ProjectDir)\FireML\XSD\FireMLAssetExt.xsd $(ProjectDir)\FireML\
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

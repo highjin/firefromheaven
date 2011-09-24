@@ -4,7 +4,10 @@ using System.Text;
 using System.IO;
 using FireEngine.FireMLEngine.Compiler;
 using FireEngine.FireMLEngine;
+using FireEngine.FireMLEngine.Bson;
 using FireEngine.FireML.Editor;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.IO;
 
 namespace FireEngine.FireML.Editor
 {
@@ -52,8 +55,8 @@ namespace FireEngine.FireML.Editor
                 return;
             }
 
-            
-  
+            BsonExporter bsonExporter = new BsonExporter(result);
+            bsonExporter.Export();
         }
 
         
