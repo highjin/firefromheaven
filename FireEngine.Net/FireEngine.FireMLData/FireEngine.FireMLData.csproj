@@ -61,9 +61,6 @@
       <Name>FireEngine.Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="schema0.xsd" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -73,7 +70,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\xsd.exe" $(TargetPath) /o:$(ProjectDir)
+    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\xsd.exe" $(TargetPath) /o:$(ProjectDir)
 $(SolutionDir)\FireEngine.Utilities.DataXSDGenerator\bin\Debug\FireEngine.Utilities.DataXSDGenerator.exe $(ProjectDir)\schema0.xsd</PostBuildEvent>
   </PropertyGroup>
 </Project>
