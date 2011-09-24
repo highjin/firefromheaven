@@ -75,7 +75,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\xsd.exe" $(TargetPath) /o:$(ProjectDir)
+    <PostBuildEvent>xsd.exe $(TargetPath) /o:$(ProjectDir)
 $(SolutionDir)\FireEngine.Utilities.DataXSDGenerator\bin\Debug\FireEngine.Utilities.DataXSDGenerator.exe $(ProjectDir)\schema0.xsd</PostBuildEvent>
   </PropertyGroup>
 </Project>
