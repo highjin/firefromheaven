@@ -56,22 +56,22 @@ namespace FireEngine.FireML.Editor
                 return;
             }
 
-            /*JsonWriterSettings jsonSettings = new JsonWriterSettings();
-            jsonSettings.NewLineChars = "\r\n";
-            jsonSettings.OutputMode = JsonOutputMode.JavaScript;
-            jsonSettings.Indent = true;
-            jsonSettings.IndentChars = "  ";
-            StreamWriter streamWriter = new StreamWriter(new FileStream("out.txt", FileMode.Create));
-            JsonWriter jsonWriter = new JsonWriter(streamWriter, jsonSettings);
-            BsonSerializer.Serialize<FireMLRoot>(jsonWriter, result);
-            jsonWriter.Close();*/
-
             Stream bsonStream = new FileStream(savePath, FileMode.Create);
             BsonBuffer bsonBuffer = new BsonBuffer();
             BsonBinaryWriterSettings bsonSettings = new BsonBinaryWriterSettings();
             BsonBinaryWriter bsonWriter = new BsonBinaryWriter(bsonStream, bsonBuffer, bsonSettings);
             BsonSerializer.Serialize<FireMLRoot>(bsonWriter, result);
             bsonWriter.Close();
+
+            JsonWriterSettings jsonSettings = new JsonWriterSettings();
+            jsonSettings.NewLineChars = "\r\n";
+            jsonSettings.OutputMode = JsonOutputMode.JavaScript;
+            jsonSettings.Indent = true;
+            jsonSettings.IndentChars = "  ";
+            StreamWriter streamWriter = new StreamWriter(new FileStream(savePath + ".json", FileMode.Create));
+            JsonWriter jsonWriter = new JsonWriter(streamWriter, jsonSettings);
+            BsonSerializer.Serialize<FireMLRoot>(jsonWriter, result);
+            jsonWriter.Close();
         }
 
         

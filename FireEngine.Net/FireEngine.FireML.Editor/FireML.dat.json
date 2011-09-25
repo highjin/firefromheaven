@@ -1,0 +1,2573 @@
+{
+  "MainPlot" : {
+    "ID" : 1,
+    "Name" : null,
+    "Content" : [{
+        "_t" : "DialogStmt",
+        "ID" : 2,
+        "Text" : "Hello Fire Engine!"
+      }, {
+        "_t" : "FunctionCallStmt",
+        "ID" : 3,
+        "Name" : "MyNewFunc",
+        "ParamMap" : { },
+        "ReturnDest" : null,
+        "ParaStr" : null
+      }, {
+        "_t" : "SelectStmt",
+        "ID" : 4,
+        "OptionList" : [{
+            "ID" : 0,
+            "Value" : {
+              "_t" : "IntConst",
+              "Value" : 0
+            },
+            "Text" : "test"
+          }, {
+            "ID" : 0,
+            "Value" : {
+              "_t" : "IntConst",
+              "Value" : 1
+            },
+            "Text" : "cold"
+          }],
+        "Return" : {
+          "DataType" : 0,
+          "Location" : { },
+          "LeftValue" : {
+            "_t" : "VarRef",
+            "VarName" : "功能选择"
+          }
+        }
+      }, {
+        "_t" : "BackgroundStmt",
+        "ID" : 5,
+        "Img" : null,
+        "Asset" : "video1"
+      }, {
+        "_t" : "SwitchStmt",
+        "ID" : 6,
+        "SwitchCaseList" : [{
+            "ID" : 7,
+            "Value" : {
+              "_t" : "IntConst",
+              "Value" : 0
+            },
+            "CaseContent" : [{
+                "_t" : "IncludeStmt",
+                "ID" : 8,
+                "SubPlot" : "test"
+              }]
+          }, {
+            "ID" : 9,
+            "Value" : {
+              "_t" : "IntConst",
+              "Value" : 1
+            },
+            "CaseContent" : [{
+                "_t" : "IncludeStmt",
+                "ID" : 10,
+                "SubPlot" : "cold"
+              }]
+          }],
+        "Expression" : {
+          "_t" : "LeftValueExpr",
+          "DataType" : 0,
+          "Location" : { },
+          "LeftValue" : {
+            "_t" : "VarRef",
+            "VarName" : "功能选择"
+          }
+        }
+      }]
+  },
+  "SubPlotMap" : {
+    "test" : {
+      "ID" : 11,
+      "Name" : "test",
+      "Content" : [{
+          "_t" : "DialogStmt",
+          "ID" : 12,
+          "Text" : "表达式：1+2+3 = ?"
+        }, {
+          "_t" : "EchoStmt",
+          "ID" : 13,
+          "Expression" : {
+            "_t" : "AddExpr",
+            "DataType" : 2,
+            "Location" : { },
+            "RightValue" : null,
+            "FirstOp" : {
+              "_t" : "AddExpr",
+              "DataType" : 2,
+              "Location" : { },
+              "RightValue" : null,
+              "FirstOp" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 2,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "IntConst",
+                  "Value" : 1
+                }
+              },
+              "SecondOp" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 2,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "IntConst",
+                  "Value" : 2
+                }
+              }
+            },
+            "SecondOp" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 2,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "IntConst",
+                "Value" : 3
+              }
+            }
+          }
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 14,
+          "Text" : "字符串："
+        }, {
+          "_t" : "ExpressionStmt",
+          "ID" : 15,
+          "ExpressionList" : [{
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "a"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "StringConst",
+                  "Value" : "Hello"
+                }
+              }
+            }, {
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "b"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "StringConst",
+                  "Value" : "World!"
+                }
+              }
+            }]
+        }, {
+          "_t" : "EchoStmt",
+          "ID" : 16,
+          "Expression" : {
+            "_t" : "AddExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "RightValue" : null,
+            "FirstOp" : {
+              "_t" : "LeftValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "LeftValue" : {
+                "_t" : "VarRef",
+                "VarName" : "a"
+              }
+            },
+            "SecondOp" : {
+              "_t" : "LeftValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "LeftValue" : {
+                "_t" : "VarRef",
+                "VarName" : "b"
+              }
+            }
+          }
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 17,
+          "Text" : "嵌入式变量："
+        }, {
+          "_t" : "ExpressionStmt",
+          "ID" : 18,
+          "ExpressionList" : [{
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "root"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "StringConst",
+                  "Value" : "img/"
+                }
+              }
+            }]
+        }, {
+          "_t" : "ActorStmt",
+          "ID" : 19,
+          "Name" : "英",
+          "Img" : "{$root}ying.png",
+          "Asset" : null,
+          "Avatar" : null,
+          "AvaAsset" : null,
+          "Layer" : null,
+          "Position" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 20,
+          "Text" : "循环5次："
+        }, {
+          "_t" : "ExpressionStmt",
+          "ID" : 21,
+          "ExpressionList" : [{
+              "_t" : "AssignExpr",
+              "DataType" : 2,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "counter"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 2,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "IntConst",
+                  "Value" : 1
+                }
+              }
+            }]
+        }, {
+          "_t" : "LoopStmt",
+          "ID" : 22,
+          "Condition" : {
+            "_t" : "LessEquExpr",
+            "DataType" : 1,
+            "Location" : { },
+            "RightValue" : null,
+            "FirstOp" : {
+              "_t" : "LeftValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "LeftValue" : {
+                "_t" : "VarRef",
+                "VarName" : "counter"
+              }
+            },
+            "SecondOp" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 2,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "IntConst",
+                "Value" : 5
+              }
+            }
+          },
+          "Content" : [{
+              "_t" : "DialogStmt",
+              "ID" : 23,
+              "Text" : "第{$counter}次循环"
+            }, {
+              "_t" : "ExpressionStmt",
+              "ID" : 24,
+              "ExpressionList" : [{
+                  "_t" : "AssignExpr",
+                  "DataType" : 0,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "LeftExpr" : {
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "counter"
+                    }
+                  },
+                  "RightExpr" : {
+                    "_t" : "AddExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "RightValue" : null,
+                    "FirstOp" : {
+                      "_t" : "LeftValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "LeftValue" : {
+                        "_t" : "VarRef",
+                        "VarName" : "counter"
+                      }
+                    },
+                    "SecondOp" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 2,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "IntConst",
+                        "Value" : 1
+                      }
+                    }
+                  }
+                }]
+            }]
+        }]
+    },
+    "cold" : {
+      "ID" : 25,
+      "Name" : "cold",
+      "Content" : [{
+          "_t" : "MusicStmt",
+          "ID" : 26,
+          "Source" : null,
+          "Asset" : "奇怪的东西",
+          "Loop" : false,
+          "FadeIn" : "00:00:00.5000000"
+        }, {
+          "_t" : "BackgroundStmt",
+          "ID" : 27,
+          "Img" : "test2/bg01.jpg",
+          "Asset" : null
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 28,
+          "Name" : "英",
+          "ParamMap" : {
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa06nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "awr"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 29,
+          "Text" : "对了大俄啊……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 30,
+          "Name" : "伊娥",
+          "ParamMap" : {
+            "showname" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "“俄狄浦斯”"
+              }
+            },
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa01nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "asm"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : ["“俄狄浦斯”", "fa01nm"]
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 31,
+          "Text" : "……我说，你们兄妹俩是日本人吗？（大鲁迅全集……）"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 32,
+          "Name" : "英",
+          "ParamMap" : {
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa06nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "awr"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 33,
+          "Text" : "等一下，为什么是伊俄代替俄底浦斯？"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 34,
+          "Name" : "伊娥",
+          "ParamMap" : {
+            "showname" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "伊娥"
+              }
+            },
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa01wr"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "asm"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 35,
+          "Text" : "对不起，但是作者说俄底浦斯还没有画出来，所以……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 36,
+          "Name" : "英",
+          "ParamMap" : {
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa06nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "awr"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 37,
+          "Text" : "好吧，那就只能凑合了，继续……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 38,
+          "Name" : "黎",
+          "ParamMap" : {
+            "showname" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "“义”"
+              }
+            },
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa03nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "anm"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 39,
+          "Text" : "问题是，我和英的名字不能这么称呼啊。会引起歧义的。"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 40,
+          "Name" : "英",
+          "ParamMap" : {
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa06nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "awr"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 41,
+          "Text" : "再等一下啊！俄底浦斯也就罢了，怎么连我的义都是山寨版的！"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 42,
+          "Name" : "黎",
+          "ParamMap" : {
+            "showname" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "黎"
+              }
+            },
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa03sy"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "asr"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : ["黎", "fa03sy", "asr"]
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 43,
+          "Text" : "呜呜，英好无情啊……人家好不容易出场的说……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 44,
+          "Name" : "伊娥",
+          "ParamMap" : {
+            "showname" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "伊娥"
+              }
+            },
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa01wr"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "asm"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 45,
+          "Text" : "对不起，但是作者说,义也没画出来……作者说他们很抱歉……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 46,
+          "Name" : "英",
+          "ParamMap" : {
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa06nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "awr"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 47,
+          "Text" : "好，好吧……这个也凑合了……不画画就不要做游戏测试啊……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 48,
+          "Name" : "伊娥",
+          "ParamMap" : {
+            "showname" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "“俄底浦斯”"
+              }
+            },
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa01wr"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "asm"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 49,
+          "Text" : "请问，刚才义说会引起歧义，这是为什么呢？"
+        }, {
+          "_t" : "ActorStmt",
+          "ID" : 50,
+          "Name" : null,
+          "Img" : null,
+          "Asset" : null,
+          "Avatar" : null,
+          "AvaAsset" : null,
+          "Layer" : null,
+          "Position" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 51,
+          "Text" : "这里，因为伊俄太有礼貌，无法说出“为什么？！”这种台词……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 52,
+          "Name" : "英",
+          "ParamMap" : {
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa06nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "awr"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 53,
+          "Text" : "那个，伊俄，剧本上好像不是这么写的……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 54,
+          "Name" : "伊娥",
+          "ParamMap" : {
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa01lg"
+              }
+            },
+            "showname" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "伊娥"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "asm"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 55,
+          "Text" : "对，对不起……呜呜……"
+        }, {
+          "_t" : "FunctionCallStmt",
+          "ID" : 56,
+          "Name" : "英",
+          "ParamMap" : {
+            "img" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "fa06nm"
+              }
+            },
+            "avatar" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 0,
+              "Location" : null,
+              "RightValue" : {
+                "_t" : "StringConst",
+                "Value" : "awr"
+              }
+            }
+          },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "DialogStmt",
+          "ID" : 57,
+          "Text" : "那么，就只好这样了……！！"
+        }, {
+          "_t" : "MusicVolStmt",
+          "ID" : 58,
+          "Amplitude" : 1.5,
+          "TransitionTime" : "00:00:00.3000000"
+        }, {
+          "_t" : "SelectStmt",
+          "ID" : 59,
+          "OptionList" : [{
+              "ID" : 0,
+              "Value" : {
+                "_t" : "IntConst",
+                "Value" : 0
+              },
+              "Text" : "淘汰伊娥"
+            }, {
+              "ID" : 0,
+              "Value" : {
+                "_t" : "IntConst",
+                "Value" : 1
+              },
+              "Text" : "可怜伊娥"
+            }],
+          "Return" : {
+            "DataType" : 0,
+            "Location" : { },
+            "LeftValue" : {
+              "_t" : "VarRef",
+              "VarName" : "xuanzezhi"
+            }
+          }
+        }, {
+          "_t" : "MusicStopStmt",
+          "ID" : 60,
+          "FadeOut" : "00:00:00"
+        }, {
+          "_t" : "SwitchStmt",
+          "ID" : 61,
+          "SwitchCaseList" : [{
+              "ID" : 62,
+              "Value" : {
+                "_t" : "IntConst",
+                "Value" : 0
+              },
+              "CaseContent" : [{
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 63,
+                  "Name" : "英",
+                  "ParamMap" : {
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa06nm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "awr"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 64,
+                  "Text" : "伊俄，对不起，请把潘叫过来……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 65,
+                  "Name" : "伊娥",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "伊娥"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa01wr"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 66,
+                  "Text" : "对，对不起……呜呜……不要淘汰我……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 67,
+                  "Name" : "小潘",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "潘多拉"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa01sd"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "anm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 68,
+                  "Text" : "伊俄，抱歉，但是作者强行让我登入了……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 69,
+                  "Name" : "英",
+                  "ParamMap" : {
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa06nm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "awr"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 70,
+                  "Text" : "好了同志们，要快啊！片场租金很贵的"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 71,
+                  "Name" : "小潘",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "“俄狄浦斯”"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa01sd"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "anm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 72,
+                  "Text" : "为什么？！"
+                }, {
+                  "_t" : "ActorStmt",
+                  "ID" : 73,
+                  "Name" : null,
+                  "Img" : null,
+                  "Asset" : null,
+                  "Avatar" : null,
+                  "AvaAsset" : null,
+                  "Layer" : null,
+                  "Position" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 74,
+                  "Text" : "这里，潘多拉以迅雷的速度入戏了……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 75,
+                  "Name" : "黎",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa03sr"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asr"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "anm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : ["fa03sr", "asr"]
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 76,
+                  "Text" : "好！好气势！不愧是我的潘！"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 77,
+                  "Name" : "伊娥",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "伊娥"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa01wr"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 78,
+                  "Text" : "为什么黎就可以说错话呜……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 79,
+                  "Name" : "英",
+                  "ParamMap" : {
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa06nm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "awr"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 80,
+                  "Text" : "当然是因为只有这一个男性画好了……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 81,
+                  "Name" : "伊娥",
+                  "ParamMap" : {
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa01lg"
+                      }
+                    },
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "伊娥"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 82,
+                  "Text" : "呜呜……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 83,
+                  "Name" : "黎",
+                  "ParamMap" : {
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asr"
+                      }
+                    },
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "黎"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa03nm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 84,
+                  "Text" : "不好了！作者说时间不够，让我们赶紧结束呜……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 85,
+                  "Name" : "英",
+                  "ParamMap" : {
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa06nm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "awr"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 86,
+                  "Text" : "难，难道，换人是个错误……！"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 87,
+                  "Name" : "badend",
+                  "ParamMap" : { },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }]
+            }, {
+              "ID" : 88,
+              "Value" : {
+                "_t" : "IntConst",
+                "Value" : 1
+              },
+              "CaseContent" : [{
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 89,
+                  "Name" : "英",
+                  "ParamMap" : {
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa06nm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "awr"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 90,
+                  "Text" : "伊俄，好吧，再给你一次机会！一定要加油啊~"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 91,
+                  "Name" : "伊娥",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "伊娥"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa01wr"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 92,
+                  "Text" : "为什么？！"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 93,
+                  "Name" : "黎",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa03sy"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asr"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "anm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : ["fa03sy", "asr"]
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 94,
+                  "Text" : "好！好气势！不愧是我的伊俄！"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 95,
+                  "Name" : "黎",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "“义”"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa03nm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "anm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 96,
+                  "Text" : "因为，你看，“大义凛然”是个成词，这样显得我太凛然了，不好……（旁白：凛然的义~）而大英呢……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 97,
+                  "Name" : "伊娥",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "“俄狄浦斯”"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa01nm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 98,
+                  "Text" : "大英呢？"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 99,
+                  "Name" : "黎",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "“义”"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa03sm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : ["“义”", "fa03sm", "asm"]
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 100,
+                  "Text" : "众所周知，大英，就是传说中的 大 学 英 语 啊。"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 101,
+                  "Name" : "伊娥",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "“俄狄浦斯”"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa01lg"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : ["“俄狄浦斯”", "fa01lg"]
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 102,
+                  "Text" : "……那我也是大学俄语啊！！呜呜……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 103,
+                  "Name" : "黎",
+                  "ParamMap" : {
+                    "showname" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "“义”"
+                      }
+                    },
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa03sm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "asm"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : ["“义”", "fa03sm", "asm"]
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 104,
+                  "Text" : "……对不起，我本来就是苏联人，没有大学俄语这种概念……"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 105,
+                  "Name" : "英",
+                  "ParamMap" : {
+                    "img" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "fa06nm"
+                      }
+                    },
+                    "avatar" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 0,
+                      "Location" : null,
+                      "RightValue" : {
+                        "_t" : "StringConst",
+                        "Value" : "awr"
+                      }
+                    }
+                  },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 106,
+                  "Text" : "……你们两个啊！给我好好开会！"
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 107,
+                  "Text" : "…………………………"
+                }, {
+                  "_t" : "DialogStmt",
+                  "ID" : 108,
+                  "Text" : "什么……我们成功了！GE达成~~~"
+                }, {
+                  "_t" : "FunctionCallStmt",
+                  "ID" : 109,
+                  "Name" : "goodend",
+                  "ParamMap" : { },
+                  "ReturnDest" : null,
+                  "ParaStr" : null
+                }]
+            }],
+          "Expression" : {
+            "_t" : "LeftValueExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "LeftValue" : {
+              "_t" : "VarRef",
+              "VarName" : "xuanzezhi"
+            }
+          }
+        }]
+    }
+  },
+  "FuncDefMap" : {
+    "MyNewFunc" : {
+      "ID" : 110,
+      "Name" : "MyNewFunc",
+      "ParaMap" : { },
+      "FuncDefContent" : [{
+          "_t" : "DialogStmt",
+          "ID" : 111,
+          "Text" : "Hello New World!"
+        }],
+      "ParaStrMap" : []
+    },
+    "MyFunc" : {
+      "ID" : 112,
+      "Name" : "MyFunc",
+      "ParaMap" : {
+        "a" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "IntConst",
+            "Value" : 0
+          },
+          "ParameterType" : 0
+        },
+        "b" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "IntConst",
+            "Value" : 1
+          },
+          "ParameterType" : 0
+        }
+      },
+      "FuncDefContent" : [{
+          "_t" : "DialogStmt",
+          "ID" : 113,
+          "Text" : "Hello Function!"
+        }, {
+          "_t" : "EchoStmt",
+          "ID" : 114,
+          "Expression" : {
+            "_t" : "LeftValueExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "LeftValue" : {
+              "_t" : "VarRef",
+              "VarName" : "a"
+            }
+          }
+        }, {
+          "_t" : "ReturnStmt",
+          "ID" : 115,
+          "Expression" : {
+            "_t" : "LeftValueExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "LeftValue" : {
+              "_t" : "VarRef",
+              "VarName" : "a"
+            }
+          }
+        }],
+      "ParaStrMap" : [[1, ["a"]], [2, ["a", "b"]]]
+    },
+    "AnotherFunc" : {
+      "ID" : 116,
+      "Name" : "AnotherFunc",
+      "ParaMap" : { },
+      "FuncDefContent" : [{
+          "_t" : "DialogStmt",
+          "ID" : 117,
+          "Text" : "Hello~~~"
+        }],
+      "ParaStrMap" : []
+    },
+    "英" : {
+      "ID" : 118,
+      "Name" : "英",
+      "ParaMap" : {
+        "img" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "fa06nm"
+          },
+          "ParameterType" : 0
+        },
+        "avatar" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "awr"
+          },
+          "ParameterType" : 0
+        }
+      },
+      "FuncDefContent" : [{
+          "_t" : "ExpressionStmt",
+          "ID" : 119,
+          "ExpressionList" : [{
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "imgStr"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "AddExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "AddExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 4,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "StringConst",
+                      "Value" : "test2/in_"
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "LeftValueExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "img"
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "StringConst",
+                    "Value" : ".png"
+                  }
+                }
+              }
+            }, {
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "avatarStr"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "AddExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "AddExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 4,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "StringConst",
+                      "Value" : "test2/e_in_"
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "LeftValueExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "img"
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "StringConst",
+                    "Value" : ".png"
+                  }
+                }
+              }
+            }]
+        }, {
+          "_t" : "ActorStmt",
+          "ID" : 120,
+          "Name" : "英",
+          "Img" : "{$imgStr}",
+          "Asset" : null,
+          "Avatar" : "{$avatarStr}",
+          "AvaAsset" : null,
+          "Layer" : null,
+          "Position" : null
+        }],
+      "ParaStrMap" : [[1, ["img"]], [2, ["img", "avatar"]]]
+    },
+    "伊娥" : {
+      "ID" : 121,
+      "Name" : "伊娥",
+      "ParaMap" : {
+        "showname" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "伊娥"
+          },
+          "ParameterType" : 0
+        },
+        "img" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "fa01wr"
+          },
+          "ParameterType" : 0
+        },
+        "avatar" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "asm"
+          },
+          "ParameterType" : 0
+        }
+      },
+      "FuncDefContent" : [{
+          "_t" : "ExpressionStmt",
+          "ID" : 122,
+          "ExpressionList" : [{
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "imgStr"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "AddExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "AddExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 4,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "StringConst",
+                      "Value" : "test2/io_"
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "LeftValueExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "img"
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "StringConst",
+                    "Value" : ".png"
+                  }
+                }
+              }
+            }, {
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "avatarStr"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "AddExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "AddExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 4,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "StringConst",
+                      "Value" : "test2/e_io_"
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "LeftValueExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "img"
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "StringConst",
+                    "Value" : ".png"
+                  }
+                }
+              }
+            }]
+        }, {
+          "_t" : "ActorStmt",
+          "ID" : 123,
+          "Name" : "{$showname}",
+          "Img" : "{$imgStr}",
+          "Asset" : null,
+          "Avatar" : "{$avatarStr}",
+          "AvaAsset" : null,
+          "Layer" : null,
+          "Position" : null
+        }],
+      "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
+    },
+    "黎" : {
+      "ID" : 124,
+      "Name" : "黎",
+      "ParaMap" : {
+        "showname" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "黎"
+          },
+          "ParameterType" : 0
+        },
+        "img" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "fa03nm"
+          },
+          "ParameterType" : 0
+        },
+        "avatar" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "anm"
+          },
+          "ParameterType" : 0
+        }
+      },
+      "FuncDefContent" : [{
+          "_t" : "ExpressionStmt",
+          "ID" : 125,
+          "ExpressionList" : [{
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "imgStr"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "AddExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "AddExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 4,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "StringConst",
+                      "Value" : "test2/li_"
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "LeftValueExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "img"
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "StringConst",
+                    "Value" : ".png"
+                  }
+                }
+              }
+            }, {
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "avatarStr"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "AddExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "AddExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 4,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "StringConst",
+                      "Value" : "test2/e_li_"
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "LeftValueExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "img"
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "StringConst",
+                    "Value" : ".png"
+                  }
+                }
+              }
+            }]
+        }, {
+          "_t" : "ActorStmt",
+          "ID" : 126,
+          "Name" : "{$showname}",
+          "Img" : "{$imgStr}",
+          "Asset" : null,
+          "Avatar" : "{$avatarStr}",
+          "AvaAsset" : null,
+          "Layer" : null,
+          "Position" : null
+        }],
+      "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
+    },
+    "小潘" : {
+      "ID" : 127,
+      "Name" : "小潘",
+      "ParaMap" : {
+        "showname" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "潘多拉"
+          },
+          "ParameterType" : 0
+        },
+        "img" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "fa01sd"
+          },
+          "ParameterType" : 0
+        },
+        "avatar" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : {
+            "_t" : "StringConst",
+            "Value" : "anm"
+          },
+          "ParameterType" : 0
+        }
+      },
+      "FuncDefContent" : [{
+          "_t" : "ExpressionStmt",
+          "ID" : 128,
+          "ExpressionList" : [{
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "imgStr"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "AddExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "AddExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 4,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "StringConst",
+                      "Value" : "test2/sc_"
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "LeftValueExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "img"
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "StringConst",
+                    "Value" : ".png"
+                  }
+                }
+              }
+            }, {
+              "_t" : "AssignExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "LeftExpr" : {
+                "DataType" : 0,
+                "Location" : { },
+                "LeftValue" : {
+                  "_t" : "VarRef",
+                  "VarName" : "avatarStr"
+                }
+              },
+              "RightExpr" : {
+                "_t" : "AddExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "AddExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 4,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "StringConst",
+                      "Value" : "test2/e_sc_"
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "LeftValueExpr",
+                    "DataType" : 0,
+                    "Location" : { },
+                    "LeftValue" : {
+                      "_t" : "VarRef",
+                      "VarName" : "img"
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 4,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "StringConst",
+                    "Value" : ".png"
+                  }
+                }
+              }
+            }]
+        }, {
+          "_t" : "ActorStmt",
+          "ID" : 129,
+          "Name" : "{$showname}",
+          "Img" : "{$imgStr}",
+          "Asset" : null,
+          "Avatar" : "{$avatarStr}",
+          "AvaAsset" : null,
+          "Layer" : null,
+          "Position" : null
+        }],
+      "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
+    },
+    "badend" : {
+      "ID" : 130,
+      "Name" : "badend",
+      "ParaMap" : { },
+      "FuncDefContent" : [{
+          "_t" : "DialogStmt",
+          "ID" : 131,
+          "Text" : "Bad End!"
+        }],
+      "ParaStrMap" : []
+    },
+    "goodend" : {
+      "ID" : 132,
+      "Name" : "goodend",
+      "ParaMap" : { },
+      "FuncDefContent" : [{
+          "_t" : "DialogStmt",
+          "ID" : 133,
+          "Text" : "Good End!"
+        }],
+      "ParaStrMap" : []
+    }
+  },
+  "ActionLayerMap" : { },
+  "AssetMap" : {
+    "1-04 町, 時の流れ, 人" : {
+      "ID" : 134,
+      "Name" : "1-04 町, 時の流れ, 人",
+      "AssetData" : {
+        "_t" : "MusicAsset",
+        "Name" : "1-04 町, 時の流れ, 人",
+        "Access" : 1,
+        "Source" : "music/music1.mp3",
+        "Group" : null,
+        "Title" : "町, 時の流れ, 人",
+        "Artist" : "Shinji Orito, Magome Togoshi, Jun Maeda",
+        "LyricsBy" : null,
+        "MusicBy" : null,
+        "Description" : null,
+        "Lyrics" : null,
+        "LRC" : null
+      }
+    },
+    "1-05 渚" : {
+      "ID" : 135,
+      "Name" : "1-05 渚",
+      "AssetData" : {
+        "_t" : "MusicAsset",
+        "Name" : "1-05 渚",
+        "Access" : 1,
+        "Source" : "music/music2.mp3",
+        "Group" : null,
+        "Title" : "渚",
+        "Artist" : "Shinji Orito, Magome Togoshi, Jun Maeda",
+        "LyricsBy" : null,
+        "MusicBy" : null,
+        "Description" : null,
+        "Lyrics" : null,
+        "LRC" : null
+      }
+    },
+    "nagisa1_1" : {
+      "ID" : 136,
+      "Name" : "nagisa1_1",
+      "AssetData" : {
+        "_t" : "CGAsset",
+        "Name" : "nagisa1_1",
+        "Access" : 1,
+        "Group" : "1",
+        "Source" : "cg/nagisa1_1.jpg"
+      }
+    },
+    "nagisa1_2" : {
+      "ID" : 137,
+      "Name" : "nagisa1_2",
+      "AssetData" : {
+        "_t" : "CGAsset",
+        "Name" : "nagisa1_2",
+        "Access" : 1,
+        "Group" : "1",
+        "Source" : "cg/nagisa1_2.jpg"
+      }
+    },
+    "nagisa1_3" : {
+      "ID" : 138,
+      "Name" : "nagisa1_3",
+      "AssetData" : {
+        "_t" : "CGAsset",
+        "Name" : "nagisa1_3",
+        "Access" : 1,
+        "Group" : "1",
+        "Source" : "cg/nagisa1_3.jpg"
+      }
+    },
+    "一切" : {
+      "ID" : 139,
+      "Name" : "一切",
+      "AssetData" : {
+        "_t" : "MusicAsset",
+        "Name" : "一切",
+        "Access" : 1,
+        "Source" : "/Music/一切献给你.mp3",
+        "Group" : null,
+        "Title" : "一切献给你",
+        "Artist" : "幽寂，普罗奈尔",
+        "LyricsBy" : "车前草",
+        "MusicBy" : "车前草",
+        "Description" : null,
+        "Lyrics" : "......",
+        "LRC" : null
+      }
+    },
+    "LRCSample" : {
+      "ID" : 140,
+      "Name" : "LRCSample",
+      "AssetData" : {
+        "_t" : "MusicAsset",
+        "Name" : "LRCSample",
+        "Access" : 0,
+        "Source" : "/Music/LRCSample.mp3",
+        "Group" : null,
+        "Title" : "Test",
+        "Artist" : null,
+        "LyricsBy" : null,
+        "MusicBy" : null,
+        "Description" : "以下抄自百度百科",
+        "Lyrics" : null,
+        "LRC" : "\n          [ti:依赖]\n      　　[ar:蔡健雅]\n      　　[al:MY SPACE]\n      　　[by:Chapter Chang]\n      　　[offset:0]\n      　　[00:00.50]蔡健雅 - 依赖\n      　　[00:07.94]词、曲：蔡健雅、陶晶莹\n      　　[00:11.60]关了灯把房间整理好　\n      　　[00:15.48]凌晨三点还是睡不著\n      　　[00:19.64]你应该是不在　所以把电话挂掉\n      　　[00:30.39]在黑暗手表跟着心跳\n      　　[00:34.57]怎么慢它停也停不了\n      　　[00:39.70]我应该只是心情不好\n      　　[00:45.00]那又怎样\n      　　[00:48.50]但本来是这样\n      　　[01:21.36]朋友们对我的安慰\n      　　[01:25.20]都是同样的一个话题\n      　　[01:29.73]我一定要变得更坚强\n      　　[01:34.68]说很简单\n      　　[00:38.50]但是做却很难\n      　　[00:53.00][01:43.88][02:11.23]虽然无所谓写在脸上\n      　　[00:58.21][01:48.44][02:15.79]我还是舍不得让你离开　\n      　　[01:02.97][01:53.50][02:20.60]虽然闭着眼假装听不到\n      　　[01:07.84][01:58.23][02:25.11][02:33.15]你对爱　已不再　想依赖\n    "
+      }
+    },
+    "CG测试1" : {
+      "ID" : 141,
+      "Name" : "CG测试1",
+      "AssetData" : {
+        "_t" : "CGAsset",
+        "Name" : "CG测试1",
+        "Access" : 1,
+        "Group" : null,
+        "Source" : "/CG/pic1.jpg"
+      }
+    },
+    "CG测试2" : {
+      "ID" : 142,
+      "Name" : "CG测试2",
+      "AssetData" : {
+        "_t" : "CGAsset",
+        "Name" : "CG测试2",
+        "Access" : 0,
+        "Group" : null,
+        "Source" : "/CG/pic2.jpg"
+      }
+    },
+    "CG测试3" : {
+      "ID" : 143,
+      "Name" : "CG测试3",
+      "AssetData" : {
+        "_t" : "CGAsset",
+        "Name" : "CG测试3",
+        "Access" : 0,
+        "Group" : null,
+        "Source" : "dsaadff"
+      }
+    },
+    "asdfasd" : {
+      "ID" : 144,
+      "Name" : "asdfasd",
+      "AssetData" : {
+        "_t" : "ActorAsset",
+        "Name" : "asdfasd",
+        "Access" : 0,
+        "Group" : null,
+        "Source" : "weqrwreq"
+      }
+    },
+    "video1" : {
+      "ID" : 145,
+      "Name" : "video1",
+      "AssetData" : {
+        "_t" : "VideoAsset",
+        "Name" : "video1",
+        "Access" : 0,
+        "Source" : "asdfad"
+      }
+    },
+    "newTest" : {
+      "ID" : 146,
+      "Name" : "newTest",
+      "AssetData" : {
+        "_t" : "CGAsset",
+        "Name" : "newTest",
+        "Access" : 0,
+        "Group" : null,
+        "Source" : "qwerweq.jpg"
+      }
+    }
+  }
+}
