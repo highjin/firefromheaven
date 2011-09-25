@@ -6,6 +6,8 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
+#include "binary_iarchive.hpp"
+
 #include "RuntimeKernel.h"
 using namespace FireMLEngine;
 
@@ -34,4 +36,5 @@ RuntimeKernel* RuntimeKernel::sharedRuntimeKernel() {
     
 	return &runtimeKernelInstance;
 }
+
 
