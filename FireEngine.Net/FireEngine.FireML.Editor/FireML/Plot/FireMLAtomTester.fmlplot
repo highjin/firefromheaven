@@ -3,7 +3,10 @@
 
   <MainPlot>
     Hello Fire Engine!
-    
+    字符串字符串字符串
+    Chinese is above and below.
+    功能选择功能选择功能选择
+
     <MyNewFunc/>
     
     <select return="$功能选择">
