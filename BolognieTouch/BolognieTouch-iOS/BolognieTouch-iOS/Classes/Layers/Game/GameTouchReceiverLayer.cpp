@@ -11,6 +11,12 @@
 #include "GameScene.h"
 #include "ScriptHolderManager.h"
 
+//for debug [[[
+#include "RuntimeKernel.h"
+#include "DialogStmt.h"
+using namespace FireMLEngine;
+//]]]
+
 using namespace cocos2d;
 
 GameTouchReceiverLayer::GameTouchReceiverLayer()
@@ -51,21 +57,25 @@ void GameTouchReceiverLayer::next() {
     switch(opState) {
         case 0:
             gameScene->getBackgroundLayer()->show("图书馆大厅.jpg");
-            gameScene->getConversationLayer()->show("大家好~");
+            //gameScene->getConversationLayer()->show("大家好~");
+            gameScene->getConversationLayer()->show(((DialogStmt*)(RuntimeKernel::sharedRuntimeKernel()->getRoot()->mainPlot.content[0]))->text.c_str());
             break;
             
         case 1:
             gameScene->getCharacterLayer()->show("老师_闭目.png", ccp(250, 0));
-            gameScene->getConversationLayer()->show("“我是波洛革涅的第一美男，路德维希·克莱因教授。”", "路德维希"); 
+            //gameScene->getConversationLayer()->show("“我是波洛革涅的第一美男，路德维希·克莱因教授。”", "路德维希");
+            gameScene->getConversationLayer()->show(((DialogStmt*)(RuntimeKernel::sharedRuntimeKernel()->getRoot()->mainPlot.content[1]))->text.c_str());            
             break;
             
         case 2:
             gameScene->getCharacterLayer()->show("老师_微笑.png", ccp(250, 0)); 
-            gameScene->getConversationLayer()->show("“这里是图书馆哦~”", "路德维希");
+            //gameScene->getConversationLayer()->show("“这里是图书馆哦~”", "路德维希");
+            gameScene->getConversationLayer()->show(((DialogStmt*)(RuntimeKernel::sharedRuntimeKernel()->getRoot()->mainPlot.content[2]))->text.c_str());            
             break;
             
         case 3:
-            gameScene->getConversationLayer()->show("“由于菠萝被水彩化了，我决定出门走走。”", "路德维希");
+            //gameScene->getConversationLayer()->show("“由于菠萝被水彩化了，我决定出门走走。”", "路德维希");
+            gameScene->getConversationLayer()->show(((DialogStmt*)(RuntimeKernel::sharedRuntimeKernel()->getRoot()->mainPlot.content[3]))->text.c_str());            
             break; 
             
         case 4:

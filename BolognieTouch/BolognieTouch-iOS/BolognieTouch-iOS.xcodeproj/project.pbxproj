@@ -192,6 +192,13 @@
 		C19160EF14295950003C5260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19160EE14295950003C5260 /* main.m */; };
 		C19160F214295950003C5260 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19160F114295950003C5260 /* AppController.mm */; };
 		C19160F514295950003C5260 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19160F414295950003C5260 /* RootViewController.mm */; };
+		C19E7E40142EA2AE0051A2E8 /* RuntimeKernel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19E7E3E142EA2AE0051A2E8 /* RuntimeKernel.cpp */; };
+		C19E7E45142EA3050051A2E8 /* bson.c in Sources */ = {isa = PBXBuildFile; fileRef = C19E7E42142EA3050051A2E8 /* bson.c */; };
+		C19E7E48142EA3110051A2E8 /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C19E7E46142EA3110051A2E8 /* encoding.c */; };
+		C19E7E4E142EA4E80051A2E8 /* FireML.dat in Resources */ = {isa = PBXBuildFile; fileRef = C19E7E4D142EA4E80051A2E8 /* FireML.dat */; };
+		C19E7E51142EA5080051A2E8 /* BsonReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19E7E50142EA5080051A2E8 /* BsonReader.cpp */; };
+		C19E7E54142EA5CF0051A2E8 /* BlankASTVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19E7E53142EA5CF0051A2E8 /* BlankASTVisitor.cpp */; };
+		C19E7E56142EBB6C0051A2E8 /* numbers.c in Sources */ = {isa = PBXBuildFile; fileRef = C19E7E55142EBB6C0051A2E8 /* numbers.c */; };
 		C1D614D314299FDD00F67223 /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1D614C814299FDD00F67223 /* test1.jpg */; };
 		C1D614DA14299FDD00F67223 /* opbg.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D614D014299FDD00F67223 /* opbg.png */; };
 		C1D614DB14299FDD00F67223 /* 复调1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D614D214299FDD00F67223 /* 复调1.mp3 */; };
@@ -540,6 +547,26 @@
 		C19160F114295950003C5260 /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ios/AppController.mm; sourceTree = "<group>"; };
 		C19160F314295950003C5260 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ios/RootViewController.h; sourceTree = "<group>"; };
 		C19160F414295950003C5260 /* RootViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = RootViewController.mm; path = ios/RootViewController.mm; sourceTree = "<group>"; };
+		C19E7E36142EA2AD0051A2E8 /* ASTNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTNode.h; sourceTree = "<group>"; };
+		C19E7E37142EA2AD0051A2E8 /* Definition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
+		C19E7E38142EA2AD0051A2E8 /* DialogStmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogStmt.h; sourceTree = "<group>"; };
+		C19E7E39142EA2AD0051A2E8 /* IASTVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASTVisitor.h; sourceTree = "<group>"; };
+		C19E7E3A142EA2AD0051A2E8 /* PlotDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotDef.h; sourceTree = "<group>"; };
+		C19E7E3B142EA2AD0051A2E8 /* Statement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statement.h; sourceTree = "<group>"; };
+		C19E7E3E142EA2AE0051A2E8 /* RuntimeKernel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RuntimeKernel.cpp; sourceTree = "<group>"; };
+		C19E7E3F142EA2AE0051A2E8 /* RuntimeKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeKernel.h; sourceTree = "<group>"; };
+		C19E7E42142EA3050051A2E8 /* bson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bson.c; path = libs/Bson/bson.c; sourceTree = "<group>"; };
+		C19E7E43142EA3050051A2E8 /* bson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bson.h; path = libs/Bson/bson.h; sourceTree = "<group>"; };
+		C19E7E44142EA3050051A2E8 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform.h; path = libs/Bson/platform.h; sourceTree = "<group>"; };
+		C19E7E46142EA3110051A2E8 /* encoding.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encoding.c; path = "../../Library/mongo-c-driver/src/encoding.c"; sourceTree = "<group>"; };
+		C19E7E47142EA3110051A2E8 /* encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = "../../Library/mongo-c-driver/src/encoding.h"; sourceTree = "<group>"; };
+		C19E7E4A142EA3C50051A2E8 /* FireMLRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireMLRoot.h; sourceTree = "<group>"; };
+		C19E7E4D142EA4E80051A2E8 /* FireML.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = FireML.dat; path = ../../../../../FireEngine.Net/FireEngine.FireML.Editor/FireML.dat; sourceTree = "<group>"; };
+		C19E7E4F142EA5020051A2E8 /* BsonReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BsonReader.h; sourceTree = "<group>"; };
+		C19E7E50142EA5080051A2E8 /* BsonReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BsonReader.cpp; sourceTree = "<group>"; };
+		C19E7E52142EA5C60051A2E8 /* BlankASTVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankASTVisitor.h; sourceTree = "<group>"; };
+		C19E7E53142EA5CF0051A2E8 /* BlankASTVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlankASTVisitor.cpp; sourceTree = "<group>"; };
+		C19E7E55142EBB6C0051A2E8 /* numbers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = numbers.c; path = "../../Library/mongo-c-driver/src/numbers.c"; sourceTree = "<group>"; };
 		C1D614C814299FDD00F67223 /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
 		C1D614D014299FDD00F67223 /* opbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opbg.png; sourceTree = "<group>"; };
 		C1D614D214299FDD00F67223 /* 复调1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "复调1.mp3"; sourceTree = "<group>"; };
@@ -702,6 +729,8 @@
 		C1915F6C1429594E003C5260 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				C19E7E34142EA2AD0051A2E8 /* FireMLEngine */,
+				C19E7E2C142EA2260051A2E8 /* Bson */,
 				C1915F6D1429594E003C5260 /* cocos2dx */,
 				C19160D714295950003C5260 /* CocosDenshion */,
 			);
@@ -1196,9 +1225,68 @@
 			name = ios;
 			sourceTree = "<group>";
 		};
+		C19E7E2C142EA2260051A2E8 /* Bson */ = {
+			isa = PBXGroup;
+			children = (
+				C19E7E46142EA3110051A2E8 /* encoding.c */,
+				C19E7E47142EA3110051A2E8 /* encoding.h */,
+				C19E7E42142EA3050051A2E8 /* bson.c */,
+				C19E7E43142EA3050051A2E8 /* bson.h */,
+				C19E7E55142EBB6C0051A2E8 /* numbers.c */,
+				C19E7E44142EA3050051A2E8 /* platform.h */,
+			);
+			name = Bson;
+			sourceTree = "<group>";
+		};
+		C19E7E34142EA2AD0051A2E8 /* FireMLEngine */ = {
+			isa = PBXGroup;
+			children = (
+				C19E7E35142EA2AD0051A2E8 /* AST */,
+				C19E7E3C142EA2AE0051A2E8 /* Expr */,
+				C19E7E3D142EA2AE0051A2E8 /* Runtime */,
+				C19E7E4A142EA3C50051A2E8 /* FireMLRoot.h */,
+				C19E7E4F142EA5020051A2E8 /* BsonReader.h */,
+				C19E7E50142EA5080051A2E8 /* BsonReader.cpp */,
+			);
+			name = FireMLEngine;
+			path = libs/FireMLEngine;
+			sourceTree = "<group>";
+		};
+		C19E7E35142EA2AD0051A2E8 /* AST */ = {
+			isa = PBXGroup;
+			children = (
+				C19E7E36142EA2AD0051A2E8 /* ASTNode.h */,
+				C19E7E37142EA2AD0051A2E8 /* Definition.h */,
+				C19E7E38142EA2AD0051A2E8 /* DialogStmt.h */,
+				C19E7E39142EA2AD0051A2E8 /* IASTVisitor.h */,
+				C19E7E3A142EA2AD0051A2E8 /* PlotDef.h */,
+				C19E7E3B142EA2AD0051A2E8 /* Statement.h */,
+				C19E7E52142EA5C60051A2E8 /* BlankASTVisitor.h */,
+				C19E7E53142EA5CF0051A2E8 /* BlankASTVisitor.cpp */,
+			);
+			path = AST;
+			sourceTree = "<group>";
+		};
+		C19E7E3C142EA2AE0051A2E8 /* Expr */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Expr;
+			sourceTree = "<group>";
+		};
+		C19E7E3D142EA2AE0051A2E8 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				C19E7E3E142EA2AE0051A2E8 /* RuntimeKernel.cpp */,
+				C19E7E3F142EA2AE0051A2E8 /* RuntimeKernel.h */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
 		C1D614C514299FDD00F67223 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				C19E7E4D142EA4E80051A2E8 /* FireML.dat */,
 				C1170183142AF86B00E018E1 /* Characters */,
 				C1D614C614299FDD00F67223 /* Background */,
 				C1D614C714299FDD00F67223 /* CG */,
@@ -1436,6 +1524,7 @@
 				C1EFD25F142C621800E8B482 /* iTunesArtwork in Resources */,
 				C1EFD262142C644300E8B482 /* Default-Landscape~ipad.png in Resources */,
 				C1EFD263142C644300E8B482 /* Default-Portrait~ipad.png in Resources */,
+				C19E7E4E142EA4E80051A2E8 /* FireML.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1566,6 +1655,12 @@
 				C1170180142AF73100E018E1 /* GameCharacterLayer.cpp in Sources */,
 				C1EFD256142C039500E8B482 /* GameConversationLayer.cpp in Sources */,
 				C17CFD08142D01500079E897 /* ScriptHolderManager.cpp in Sources */,
+				C19E7E40142EA2AE0051A2E8 /* RuntimeKernel.cpp in Sources */,
+				C19E7E45142EA3050051A2E8 /* bson.c in Sources */,
+				C19E7E48142EA3110051A2E8 /* encoding.c in Sources */,
+				C19E7E51142EA5080051A2E8 /* BsonReader.cpp in Sources */,
+				C19E7E54142EA5CF0051A2E8 /* BlankASTVisitor.cpp in Sources */,
+				C19E7E56142EBB6C0051A2E8 /* numbers.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

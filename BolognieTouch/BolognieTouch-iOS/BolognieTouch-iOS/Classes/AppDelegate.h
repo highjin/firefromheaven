@@ -45,6 +45,10 @@ public:
     @param  the pointer of the application
     */
     virtual void applicationWillEnterForeground();
+    
+    //add by Wander
+    void loadTextures();
+    void loadFireML();
 };
 
 #endif // _APP_DELEGATE_H_

@@ -21,11 +21,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "BolognieTouch-iOS/Classes/Layers/Game/GameTouchReceiverLayer.cpp"
-         timestampString = "338499956.82024"
+         timestampString = "338608354.56516"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
          landmarkName = "GameTouchReceiverLayer::ccTouchesEnded(cocos2d::CCSet *touches, cocos2d::CCEvent *event)"
          landmarkType = "5">
       </FileBreakpoint>

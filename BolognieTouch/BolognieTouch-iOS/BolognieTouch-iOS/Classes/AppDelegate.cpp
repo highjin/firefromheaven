@@ -10,8 +10,12 @@
 
 #include "cocos2d.h"
 #include "MainMenuScene.h"
+#include "RuntimeKernel.h"
+
+#include "BsonReader.h"
 
 USING_NS_CC;
+using namespace FireMLEngine;
 
 AppDelegate::AppDelegate()
 {
@@ -91,9 +95,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     //add by Wander
     pDirector->setProjection(CCDirectorProjection2D);
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gui_small_atlas.plist");
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gui_big_atlas.plist");
-    
+    loadTextures();
+    loadFireML();
 
 	// create a scene. it's an autorelease object
 	CCScene *pScene = MainMenuScene::node();
@@ -120,4 +123,19 @@ void AppDelegate::applicationWillEnterForeground()
 	
 	// if you use SimpleAudioEngine, it must resume here
 	// SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+}
+
+void AppDelegate::loadTextures() {
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gui_small_atlas.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gui_big_atlas.plist");
+}
+
+void AppDelegate::loadFireML() {
+    BsonReader reader;
+    FireMLRoot* root = RuntimeKernel::sharedRuntimeKernel()->getRoot();
+    
+    const char* fullPath = CCFileUtils::fullPathFromRelativePath("FireML.dat");
+    reader.readTo(fullPath, root);
+    
+    printf("FireML loaded. ");
 }
