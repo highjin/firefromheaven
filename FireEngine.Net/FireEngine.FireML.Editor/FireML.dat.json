@@ -3,31 +3,99 @@
     "ID" : 1,
     "Name" : null,
     "Content" : [{
-        "_t" : "DialogStmt",
+        "_t" : "BackgroundStmt",
         "ID" : 2,
-        "Text" : "Hello Fire Engine!"
+        "Img" : "图书馆大厅.jpg",
+        "Asset" : null
       }, {
         "_t" : "DialogStmt",
         "ID" : 3,
-        "Text" : "字符串字符串字符串"
+        "Text" : "大家好~"
       }, {
         "_t" : "DialogStmt",
         "ID" : 4,
-        "Text" : "Chinese is above and below."
+        "Text" : "“我是波洛革涅的第一美男，路德维希·克莱因教授。”"
       }, {
         "_t" : "DialogStmt",
         "ID" : 5,
-        "Text" : "功能选择功能选择功能选择"
+        "Text" : "“这里是图书馆哦~”"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 6,
+        "Text" : "“由于菠萝被水彩化了，我决定出门走走。”"
+      }, {
+        "_t" : "BackgroundStmt",
+        "ID" : 7,
+        "Img" : "波洛革涅城.jpg",
+        "Asset" : null
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 8,
+        "Text" : "波洛革涅城，是一个古老的大学城。\r\n它是围绕着波洛革涅大学建成的。"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 9,
+        "Text" : "这所大学的历史，可以追溯到14世纪中叶，是神圣罗马帝国所开设的大学。"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 10,
+        "Text" : "波洛革涅有法学院、神学院、医学院。\r\n但最知名的还是它的哲学院。哇咔咔……"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 11,
+        "Text" : "“总之呢，先出大门再说。”"
+      }, {
+        "_t" : "BackgroundStmt",
+        "ID" : 12,
+        "Img" : "图书馆门前.jpg",
+        "Asset" : null
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 13,
+        "Text" : "图书馆门前。"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 14,
+        "Text" : "“嗯，图书真好呀。”"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 15,
+        "Text" : "“路德维希老师？您要去哪里？”"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 16,
+        "Text" : "“是小安呀~”"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 17,
+        "Text" : "“我去哪里都可以呀。小安想去哪里呢？”"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 18,
+        "Text" : "“我想去哲学路~”"
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 19,
+        "Text" : "“好呀。”"
+      }, {
+        "_t" : "BackgroundStmt",
+        "ID" : 20,
+        "Img" : "校园小路.jpg",
+        "Asset" : null
+      }, {
+        "_t" : "DialogStmt",
+        "ID" : 21,
+        "Text" : "这里是哲学路。"
       }, {
         "_t" : "FunctionCallStmt",
-        "ID" : 6,
+        "ID" : 22,
         "Name" : "MyNewFunc",
         "ParamMap" : { },
         "ReturnDest" : null,
         "ParaStr" : null
       }, {
         "_t" : "SelectStmt",
-        "ID" : 7,
+        "ID" : 23,
         "OptionList" : [{
             "ID" : 0,
             "Value" : {
@@ -53,32 +121,32 @@
         }
       }, {
         "_t" : "BackgroundStmt",
-        "ID" : 8,
+        "ID" : 24,
         "Img" : null,
         "Asset" : "video1"
       }, {
         "_t" : "SwitchStmt",
-        "ID" : 9,
+        "ID" : 25,
         "SwitchCaseList" : [{
-            "ID" : 10,
+            "ID" : 26,
             "Value" : {
               "_t" : "IntConst",
               "Value" : 0
             },
             "CaseContent" : [{
                 "_t" : "IncludeStmt",
-                "ID" : 11,
+                "ID" : 27,
                 "SubPlot" : "test"
               }]
           }, {
-            "ID" : 12,
+            "ID" : 28,
             "Value" : {
               "_t" : "IntConst",
               "Value" : 1
             },
             "CaseContent" : [{
                 "_t" : "IncludeStmt",
-                "ID" : 13,
+                "ID" : 29,
                 "SubPlot" : "cold"
               }]
           }],
@@ -95,15 +163,15 @@
   },
   "SubPlotMap" : {
     "test" : {
-      "ID" : 14,
+      "ID" : 30,
       "Name" : "test",
       "Content" : [{
           "_t" : "DialogStmt",
-          "ID" : 15,
+          "ID" : 31,
           "Text" : "表达式：1+2+3 = ?"
         }, {
           "_t" : "EchoStmt",
-          "ID" : 16,
+          "ID" : 32,
           "Expression" : {
             "_t" : "AddExpr",
             "DataType" : 2,
@@ -145,11 +213,11 @@
           }
         }, {
           "_t" : "DialogStmt",
-          "ID" : 17,
+          "ID" : 33,
           "Text" : "字符串："
         }, {
           "_t" : "ExpressionStmt",
-          "ID" : 18,
+          "ID" : 34,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -197,7 +265,7 @@
             }]
         }, {
           "_t" : "EchoStmt",
-          "ID" : 19,
+          "ID" : 35,
           "Expression" : {
             "_t" : "AddExpr",
             "DataType" : 0,
@@ -224,11 +292,11 @@
           }
         }, {
           "_t" : "DialogStmt",
-          "ID" : 20,
+          "ID" : 36,
           "Text" : "嵌入式变量："
         }, {
           "_t" : "ExpressionStmt",
-          "ID" : 21,
+          "ID" : 37,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -254,7 +322,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 22,
+          "ID" : 38,
           "Name" : "英",
           "Img" : "{$root}ying.png",
           "Asset" : null,
@@ -264,11 +332,11 @@
           "Position" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 23,
+          "ID" : 39,
           "Text" : "循环5次："
         }, {
           "_t" : "ExpressionStmt",
-          "ID" : 24,
+          "ID" : 40,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 2,
@@ -294,7 +362,7 @@
             }]
         }, {
           "_t" : "LoopStmt",
-          "ID" : 25,
+          "ID" : 41,
           "Condition" : {
             "_t" : "LessEquExpr",
             "DataType" : 1,
@@ -321,11 +389,11 @@
           },
           "Content" : [{
               "_t" : "DialogStmt",
-              "ID" : 26,
+              "ID" : 42,
               "Text" : "第{$counter}次循环"
             }, {
               "_t" : "ExpressionStmt",
-              "ID" : 27,
+              "ID" : 43,
               "ExpressionList" : [{
                   "_t" : "AssignExpr",
                   "DataType" : 0,
@@ -368,23 +436,23 @@
         }]
     },
     "cold" : {
-      "ID" : 28,
+      "ID" : 44,
       "Name" : "cold",
       "Content" : [{
           "_t" : "MusicStmt",
-          "ID" : 29,
+          "ID" : 45,
           "Source" : null,
           "Asset" : "奇怪的东西",
           "Loop" : false,
           "FadeIn" : "00:00:00.5000000"
         }, {
           "_t" : "BackgroundStmt",
-          "ID" : 30,
+          "ID" : 46,
           "Img" : "test2/bg01.jpg",
           "Asset" : null
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 31,
+          "ID" : 47,
           "Name" : "英",
           "ParamMap" : {
             "img" : {
@@ -410,11 +478,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 32,
+          "ID" : 48,
           "Text" : "对了大俄啊……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 33,
+          "ID" : 49,
           "Name" : "伊娥",
           "ParamMap" : {
             "showname" : {
@@ -449,11 +517,11 @@
           "ParaStr" : ["“俄狄浦斯”", "fa01nm"]
         }, {
           "_t" : "DialogStmt",
-          "ID" : 34,
+          "ID" : 50,
           "Text" : "……我说，你们兄妹俩是日本人吗？（大鲁迅全集……）"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 35,
+          "ID" : 51,
           "Name" : "英",
           "ParamMap" : {
             "img" : {
@@ -479,11 +547,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 36,
+          "ID" : 52,
           "Text" : "等一下，为什么是伊俄代替俄底浦斯？"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 37,
+          "ID" : 53,
           "Name" : "伊娥",
           "ParamMap" : {
             "showname" : {
@@ -518,11 +586,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 38,
+          "ID" : 54,
           "Text" : "对不起，但是作者说俄底浦斯还没有画出来，所以……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 39,
+          "ID" : 55,
           "Name" : "英",
           "ParamMap" : {
             "img" : {
@@ -548,11 +616,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 40,
+          "ID" : 56,
           "Text" : "好吧，那就只能凑合了，继续……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 41,
+          "ID" : 57,
           "Name" : "黎",
           "ParamMap" : {
             "showname" : {
@@ -587,11 +655,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 42,
+          "ID" : 58,
           "Text" : "问题是，我和英的名字不能这么称呼啊。会引起歧义的。"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 43,
+          "ID" : 59,
           "Name" : "英",
           "ParamMap" : {
             "img" : {
@@ -617,11 +685,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 44,
+          "ID" : 60,
           "Text" : "再等一下啊！俄底浦斯也就罢了，怎么连我的义都是山寨版的！"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 45,
+          "ID" : 61,
           "Name" : "黎",
           "ParamMap" : {
             "showname" : {
@@ -656,11 +724,11 @@
           "ParaStr" : ["黎", "fa03sy", "asr"]
         }, {
           "_t" : "DialogStmt",
-          "ID" : 46,
+          "ID" : 62,
           "Text" : "呜呜，英好无情啊……人家好不容易出场的说……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 47,
+          "ID" : 63,
           "Name" : "伊娥",
           "ParamMap" : {
             "showname" : {
@@ -695,11 +763,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 48,
+          "ID" : 64,
           "Text" : "对不起，但是作者说,义也没画出来……作者说他们很抱歉……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 49,
+          "ID" : 65,
           "Name" : "英",
           "ParamMap" : {
             "img" : {
@@ -725,11 +793,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 50,
+          "ID" : 66,
           "Text" : "好，好吧……这个也凑合了……不画画就不要做游戏测试啊……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 51,
+          "ID" : 67,
           "Name" : "伊娥",
           "ParamMap" : {
             "showname" : {
@@ -764,11 +832,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 52,
+          "ID" : 68,
           "Text" : "请问，刚才义说会引起歧义，这是为什么呢？"
         }, {
           "_t" : "ActorStmt",
-          "ID" : 53,
+          "ID" : 69,
           "Name" : null,
           "Img" : null,
           "Asset" : null,
@@ -778,11 +846,11 @@
           "Position" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 54,
+          "ID" : 70,
           "Text" : "这里，因为伊俄太有礼貌，无法说出“为什么？！”这种台词……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 55,
+          "ID" : 71,
           "Name" : "英",
           "ParamMap" : {
             "img" : {
@@ -808,11 +876,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 56,
+          "ID" : 72,
           "Text" : "那个，伊俄，剧本上好像不是这么写的……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 57,
+          "ID" : 73,
           "Name" : "伊娥",
           "ParamMap" : {
             "img" : {
@@ -847,11 +915,11 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 58,
+          "ID" : 74,
           "Text" : "对，对不起……呜呜……"
         }, {
           "_t" : "FunctionCallStmt",
-          "ID" : 59,
+          "ID" : 75,
           "Name" : "英",
           "ParamMap" : {
             "img" : {
@@ -877,16 +945,16 @@
           "ParaStr" : null
         }, {
           "_t" : "DialogStmt",
-          "ID" : 60,
+          "ID" : 76,
           "Text" : "那么，就只好这样了……！！"
         }, {
           "_t" : "MusicVolStmt",
-          "ID" : 61,
+          "ID" : 77,
           "Amplitude" : 1.5,
           "TransitionTime" : "00:00:00.3000000"
         }, {
           "_t" : "SelectStmt",
-          "ID" : 62,
+          "ID" : 78,
           "OptionList" : [{
               "ID" : 0,
               "Value" : {
@@ -912,20 +980,20 @@
           }
         }, {
           "_t" : "MusicStopStmt",
-          "ID" : 63,
+          "ID" : 79,
           "FadeOut" : "00:00:00"
         }, {
           "_t" : "SwitchStmt",
-          "ID" : 64,
+          "ID" : 80,
           "SwitchCaseList" : [{
-              "ID" : 65,
+              "ID" : 81,
               "Value" : {
                 "_t" : "IntConst",
                 "Value" : 0
               },
               "CaseContent" : [{
                   "_t" : "FunctionCallStmt",
-                  "ID" : 66,
+                  "ID" : 82,
                   "Name" : "英",
                   "ParamMap" : {
                     "img" : {
@@ -951,11 +1019,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 67,
+                  "ID" : 83,
                   "Text" : "伊俄，对不起，请把潘叫过来……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 68,
+                  "ID" : 84,
                   "Name" : "伊娥",
                   "ParamMap" : {
                     "showname" : {
@@ -990,11 +1058,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 69,
+                  "ID" : 85,
                   "Text" : "对，对不起……呜呜……不要淘汰我……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 70,
+                  "ID" : 86,
                   "Name" : "小潘",
                   "ParamMap" : {
                     "showname" : {
@@ -1029,11 +1097,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 71,
+                  "ID" : 87,
                   "Text" : "伊俄，抱歉，但是作者强行让我登入了……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 72,
+                  "ID" : 88,
                   "Name" : "英",
                   "ParamMap" : {
                     "img" : {
@@ -1059,11 +1127,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 73,
+                  "ID" : 89,
                   "Text" : "好了同志们，要快啊！片场租金很贵的"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 74,
+                  "ID" : 90,
                   "Name" : "小潘",
                   "ParamMap" : {
                     "showname" : {
@@ -1098,11 +1166,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 75,
+                  "ID" : 91,
                   "Text" : "为什么？！"
                 }, {
                   "_t" : "ActorStmt",
-                  "ID" : 76,
+                  "ID" : 92,
                   "Name" : null,
                   "Img" : null,
                   "Asset" : null,
@@ -1112,11 +1180,11 @@
                   "Position" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 77,
+                  "ID" : 93,
                   "Text" : "这里，潘多拉以迅雷的速度入戏了……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 78,
+                  "ID" : 94,
                   "Name" : "黎",
                   "ParamMap" : {
                     "showname" : {
@@ -1151,11 +1219,11 @@
                   "ParaStr" : ["fa03sr", "asr"]
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 79,
+                  "ID" : 95,
                   "Text" : "好！好气势！不愧是我的潘！"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 80,
+                  "ID" : 96,
                   "Name" : "伊娥",
                   "ParamMap" : {
                     "showname" : {
@@ -1190,11 +1258,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 81,
+                  "ID" : 97,
                   "Text" : "为什么黎就可以说错话呜……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 82,
+                  "ID" : 98,
                   "Name" : "英",
                   "ParamMap" : {
                     "img" : {
@@ -1220,11 +1288,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 83,
+                  "ID" : 99,
                   "Text" : "当然是因为只有这一个男性画好了……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 84,
+                  "ID" : 100,
                   "Name" : "伊娥",
                   "ParamMap" : {
                     "img" : {
@@ -1259,11 +1327,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 85,
+                  "ID" : 101,
                   "Text" : "呜呜……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 86,
+                  "ID" : 102,
                   "Name" : "黎",
                   "ParamMap" : {
                     "avatar" : {
@@ -1298,11 +1366,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 87,
+                  "ID" : 103,
                   "Text" : "不好了！作者说时间不够，让我们赶紧结束呜……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 88,
+                  "ID" : 104,
                   "Name" : "英",
                   "ParamMap" : {
                     "img" : {
@@ -1328,25 +1396,25 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 89,
+                  "ID" : 105,
                   "Text" : "难，难道，换人是个错误……！"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 90,
+                  "ID" : 106,
                   "Name" : "badend",
                   "ParamMap" : { },
                   "ReturnDest" : null,
                   "ParaStr" : null
                 }]
             }, {
-              "ID" : 91,
+              "ID" : 107,
               "Value" : {
                 "_t" : "IntConst",
                 "Value" : 1
               },
               "CaseContent" : [{
                   "_t" : "FunctionCallStmt",
-                  "ID" : 92,
+                  "ID" : 108,
                   "Name" : "英",
                   "ParamMap" : {
                     "img" : {
@@ -1372,11 +1440,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 93,
+                  "ID" : 109,
                   "Text" : "伊俄，好吧，再给你一次机会！一定要加油啊~"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 94,
+                  "ID" : 110,
                   "Name" : "伊娥",
                   "ParamMap" : {
                     "showname" : {
@@ -1411,11 +1479,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 95,
+                  "ID" : 111,
                   "Text" : "为什么？！"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 96,
+                  "ID" : 112,
                   "Name" : "黎",
                   "ParamMap" : {
                     "showname" : {
@@ -1450,11 +1518,11 @@
                   "ParaStr" : ["fa03sy", "asr"]
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 97,
+                  "ID" : 113,
                   "Text" : "好！好气势！不愧是我的伊俄！"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 98,
+                  "ID" : 114,
                   "Name" : "黎",
                   "ParamMap" : {
                     "showname" : {
@@ -1489,11 +1557,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 99,
+                  "ID" : 115,
                   "Text" : "因为，你看，“大义凛然”是个成词，这样显得我太凛然了，不好……（旁白：凛然的义~）而大英呢……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 100,
+                  "ID" : 116,
                   "Name" : "伊娥",
                   "ParamMap" : {
                     "showname" : {
@@ -1528,11 +1596,11 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 101,
+                  "ID" : 117,
                   "Text" : "大英呢？"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 102,
+                  "ID" : 118,
                   "Name" : "黎",
                   "ParamMap" : {
                     "showname" : {
@@ -1567,11 +1635,11 @@
                   "ParaStr" : ["“义”", "fa03sm", "asm"]
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 103,
+                  "ID" : 119,
                   "Text" : "众所周知，大英，就是传说中的 大 学 英 语 啊。"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 104,
+                  "ID" : 120,
                   "Name" : "伊娥",
                   "ParamMap" : {
                     "showname" : {
@@ -1606,11 +1674,11 @@
                   "ParaStr" : ["“俄狄浦斯”", "fa01lg"]
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 105,
+                  "ID" : 121,
                   "Text" : "……那我也是大学俄语啊！！呜呜……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 106,
+                  "ID" : 122,
                   "Name" : "黎",
                   "ParamMap" : {
                     "showname" : {
@@ -1645,11 +1713,11 @@
                   "ParaStr" : ["“义”", "fa03sm", "asm"]
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 107,
+                  "ID" : 123,
                   "Text" : "……对不起，我本来就是苏联人，没有大学俄语这种概念……"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 108,
+                  "ID" : 124,
                   "Name" : "英",
                   "ParamMap" : {
                     "img" : {
@@ -1675,19 +1743,19 @@
                   "ParaStr" : null
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 109,
+                  "ID" : 125,
                   "Text" : "……你们两个啊！给我好好开会！"
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 110,
+                  "ID" : 126,
                   "Text" : "…………………………"
                 }, {
                   "_t" : "DialogStmt",
-                  "ID" : 111,
+                  "ID" : 127,
                   "Text" : "什么……我们成功了！GE达成~~~"
                 }, {
                   "_t" : "FunctionCallStmt",
-                  "ID" : 112,
+                  "ID" : 128,
                   "Name" : "goodend",
                   "ParamMap" : { },
                   "ReturnDest" : null,
@@ -1708,18 +1776,18 @@
   },
   "FuncDefMap" : {
     "MyNewFunc" : {
-      "ID" : 113,
+      "ID" : 129,
       "Name" : "MyNewFunc",
       "ParaMap" : { },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 114,
+          "ID" : 130,
           "Text" : "Hello New World!"
         }],
       "ParaStrMap" : []
     },
     "MyFunc" : {
-      "ID" : 115,
+      "ID" : 131,
       "Name" : "MyFunc",
       "ParaMap" : {
         "a" : {
@@ -1743,11 +1811,11 @@
       },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 116,
+          "ID" : 132,
           "Text" : "Hello Function!"
         }, {
           "_t" : "EchoStmt",
-          "ID" : 117,
+          "ID" : 133,
           "Expression" : {
             "_t" : "LeftValueExpr",
             "DataType" : 0,
@@ -1759,7 +1827,7 @@
           }
         }, {
           "_t" : "ReturnStmt",
-          "ID" : 118,
+          "ID" : 134,
           "Expression" : {
             "_t" : "LeftValueExpr",
             "DataType" : 0,
@@ -1773,18 +1841,18 @@
       "ParaStrMap" : [[1, ["a"]], [2, ["a", "b"]]]
     },
     "AnotherFunc" : {
-      "ID" : 119,
+      "ID" : 135,
       "Name" : "AnotherFunc",
       "ParaMap" : { },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 120,
+          "ID" : 136,
           "Text" : "Hello~~~"
         }],
       "ParaStrMap" : []
     },
     "英" : {
-      "ID" : 121,
+      "ID" : 137,
       "Name" : "英",
       "ParaMap" : {
         "img" : {
@@ -1808,7 +1876,7 @@
       },
       "FuncDefContent" : [{
           "_t" : "ExpressionStmt",
-          "ID" : 122,
+          "ID" : 138,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -1916,7 +1984,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 123,
+          "ID" : 139,
           "Name" : "英",
           "Img" : "{$imgStr}",
           "Asset" : null,
@@ -1928,7 +1996,7 @@
       "ParaStrMap" : [[1, ["img"]], [2, ["img", "avatar"]]]
     },
     "伊娥" : {
-      "ID" : 124,
+      "ID" : 140,
       "Name" : "伊娥",
       "ParaMap" : {
         "showname" : {
@@ -1961,7 +2029,7 @@
       },
       "FuncDefContent" : [{
           "_t" : "ExpressionStmt",
-          "ID" : 125,
+          "ID" : 141,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -2069,7 +2137,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 126,
+          "ID" : 142,
           "Name" : "{$showname}",
           "Img" : "{$imgStr}",
           "Asset" : null,
@@ -2081,7 +2149,7 @@
       "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
     },
     "黎" : {
-      "ID" : 127,
+      "ID" : 143,
       "Name" : "黎",
       "ParaMap" : {
         "showname" : {
@@ -2114,7 +2182,7 @@
       },
       "FuncDefContent" : [{
           "_t" : "ExpressionStmt",
-          "ID" : 128,
+          "ID" : 144,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -2222,7 +2290,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 129,
+          "ID" : 145,
           "Name" : "{$showname}",
           "Img" : "{$imgStr}",
           "Asset" : null,
@@ -2234,7 +2302,7 @@
       "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
     },
     "小潘" : {
-      "ID" : 130,
+      "ID" : 146,
       "Name" : "小潘",
       "ParaMap" : {
         "showname" : {
@@ -2267,7 +2335,7 @@
       },
       "FuncDefContent" : [{
           "_t" : "ExpressionStmt",
-          "ID" : 131,
+          "ID" : 147,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -2375,7 +2443,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 132,
+          "ID" : 148,
           "Name" : "{$showname}",
           "Img" : "{$imgStr}",
           "Asset" : null,
@@ -2387,23 +2455,23 @@
       "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
     },
     "badend" : {
-      "ID" : 133,
+      "ID" : 149,
       "Name" : "badend",
       "ParaMap" : { },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 134,
+          "ID" : 150,
           "Text" : "Bad End!"
         }],
       "ParaStrMap" : []
     },
     "goodend" : {
-      "ID" : 135,
+      "ID" : 151,
       "Name" : "goodend",
       "ParaMap" : { },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 136,
+          "ID" : 152,
           "Text" : "Good End!"
         }],
       "ParaStrMap" : []
@@ -2412,7 +2480,7 @@
   "ActionLayerMap" : { },
   "AssetMap" : {
     "1-04 町, 時の流れ, 人" : {
-      "ID" : 137,
+      "ID" : 153,
       "Name" : "1-04 町, 時の流れ, 人",
       "AssetData" : {
         "_t" : "MusicAsset",
@@ -2430,7 +2498,7 @@
       }
     },
     "1-05 渚" : {
-      "ID" : 138,
+      "ID" : 154,
       "Name" : "1-05 渚",
       "AssetData" : {
         "_t" : "MusicAsset",
@@ -2448,7 +2516,7 @@
       }
     },
     "nagisa1_1" : {
-      "ID" : 139,
+      "ID" : 155,
       "Name" : "nagisa1_1",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -2459,7 +2527,7 @@
       }
     },
     "nagisa1_2" : {
-      "ID" : 140,
+      "ID" : 156,
       "Name" : "nagisa1_2",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -2470,7 +2538,7 @@
       }
     },
     "nagisa1_3" : {
-      "ID" : 141,
+      "ID" : 157,
       "Name" : "nagisa1_3",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -2481,7 +2549,7 @@
       }
     },
     "一切" : {
-      "ID" : 142,
+      "ID" : 158,
       "Name" : "一切",
       "AssetData" : {
         "_t" : "MusicAsset",
@@ -2499,7 +2567,7 @@
       }
     },
     "LRCSample" : {
-      "ID" : 143,
+      "ID" : 159,
       "Name" : "LRCSample",
       "AssetData" : {
         "_t" : "MusicAsset",
@@ -2517,7 +2585,7 @@
       }
     },
     "CG测试1" : {
-      "ID" : 144,
+      "ID" : 160,
       "Name" : "CG测试1",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -2528,7 +2596,7 @@
       }
     },
     "CG测试2" : {
-      "ID" : 145,
+      "ID" : 161,
       "Name" : "CG测试2",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -2539,7 +2607,7 @@
       }
     },
     "CG测试3" : {
-      "ID" : 146,
+      "ID" : 162,
       "Name" : "CG测试3",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -2550,7 +2618,7 @@
       }
     },
     "asdfasd" : {
-      "ID" : 147,
+      "ID" : 163,
       "Name" : "asdfasd",
       "AssetData" : {
         "_t" : "ActorAsset",
@@ -2561,7 +2629,7 @@
       }
     },
     "video1" : {
-      "ID" : 148,
+      "ID" : 164,
       "Name" : "video1",
       "AssetData" : {
         "_t" : "VideoAsset",
@@ -2571,7 +2639,7 @@
       }
     },
     "newTest" : {
-      "ID" : 149,
+      "ID" : 165,
       "Name" : "newTest",
       "AssetData" : {
         "_t" : "CGAsset",
