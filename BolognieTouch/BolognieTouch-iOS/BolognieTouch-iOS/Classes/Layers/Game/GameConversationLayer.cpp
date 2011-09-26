@@ -11,7 +11,7 @@
 #include "ScriptHolderManager.h"
 using namespace cocos2d;
 
-GameConversationLayer::GameConversationLayer() : name(NULL), dialog(NULL), dialogSub(NULL), isDialogVisible(false), isNameVisible(false), dialogCharNum(0), dialogSubCharNum(0), perWordAnimationScheduled(false) {
+GameConversationLayer::GameConversationLayer() : name(NULL), dialog(NULL), dialogSub(NULL), isDialogVisible(false), isNameVisible(false), dialogCharNum(0), dialogSubCharNum(0), state(HiddenByScript) {
 }
 
 GameConversationLayer::~GameConversationLayer() {
@@ -69,6 +69,7 @@ void GameConversationLayer::show(const char* dialog, const char* name) {
     dialogBackground->setOpacity(255);  //TODO: transition
     
     //begin per-word animation scheduler
+    state = Animating;
     schedulePerWordAnimation();
     
     if (name != NULL && strlen(name) > 0 ) {
@@ -83,7 +84,7 @@ void GameConversationLayer::show(const char* dialog, const char* name) {
     
 }
 
-void GameConversationLayer::append(const char *dialog) {
+/*void GameConversationLayer::append(const char *dialog) {
     dialogSubCharNum = dialogCharNum;
     int newByteLength = strlen(this->dialog) + strlen(dialog) + 1;
     
@@ -103,7 +104,7 @@ void GameConversationLayer::append(const char *dialog) {
     }
     
     //dialogLabel->setString(this->dialog);
-}
+}*/
 
 void GameConversationLayer::hide() {
     cleanupOldConversation();
@@ -117,7 +118,8 @@ void GameConversationLayer::hide() {
 
 void GameConversationLayer::cleanupOldConversation() {
     
-    if (perWordAnimationScheduled) {
+    if (state == Animating) {
+        state = HiddenByScript;
         unschedulePerWordAnimation();
     }
     
@@ -143,8 +145,9 @@ void GameConversationLayer::cleanupOldConversation() {
 void GameConversationLayer::perWordAnimationScheduler(ccTime delta) {
     if (dialogCharNum == 0) {
         dialogLabel->setString("");
+        state = Finished;
         unschedulePerWordAnimation();
-        assert(dialogSubCharNum = 0);
+        assert(dialogSubCharNum == 0);
     } else {
         dialogSubCharNum++; 
         utf8_substr((utf8*)dialog, 0, dialogSubCharNum, (utf8*)dialogSub);
@@ -152,30 +155,66 @@ void GameConversationLayer::perWordAnimationScheduler(ccTime delta) {
     }
     
     if (dialogSubCharNum >= dialogCharNum) {
+        state = Finished;
+        unschedulePerWordAnimation();
+    } else if (dialogSub[strlen(dialogSub) - 1] == '\n') {   //line break
+        state = LineBreakWaiting;
         unschedulePerWordAnimation();
     }
 }
 
 void GameConversationLayer::schedulePerWordAnimation() {
     schedule(schedule_selector(GameConversationLayer::perWordAnimationScheduler), 0.075f);
-    perWordAnimationScheduled = true;
     //TODO: 0.5f -> property
     
+    if (state != LineBreakWaiting) {
     ScriptHolderManager::sharedScriptHolderManager()->registerScriptHolder(this, WaitOnRelease, GameConversationLayer::onTouchHandler);
+    }
 }
 
 void GameConversationLayer::unschedulePerWordAnimation() {
     unschedule(schedule_selector(GameConversationLayer::perWordAnimationScheduler));
-    perWordAnimationScheduled = false;
     
-    ScriptHolderManager::sharedScriptHolderManager()->releaseScriptHolder(this);
+    if (state == Finished) {
+        ScriptHolderManager::sharedScriptHolderManager()->releaseScriptHolder(this);
+    }
 }
 
-void GameConversationLayer::onTouchHandler(void* sender) {
-    GameConversationLayer* layer = (GameConversationLayer*) sender;
-    layer->dialogSubCharNum = layer->dialogCharNum;
-    layer->unschedulePerWordAnimation();
+void GameConversationLayer::onTouchHandler(void* owner) {
+    GameConversationLayer* layer = (GameConversationLayer*) owner;
     
-    layer->dialogLabel->setString(layer->dialog);
+    if (layer->state == Animating) {
+        //find '\n'
+        
+        int lineBreakPos;
+        for ( lineBreakPos = strlen(layer->dialogSub); lineBreakPos < strlen(layer->dialog); lineBreakPos++) {
+            if (layer->dialog[lineBreakPos] == '\n') {
+                break;
+            }
+        }
+        
+        if (lineBreakPos >= strlen(layer->dialog) - 1) { //at the end of the string, or no line break
+            layer->dialogSubCharNum = layer->dialogCharNum;
+            layer->dialogLabel->setString(layer->dialog);
+            layer->state = Finished;
+        } else {    //stop at line break
+            //layer->dialogSubCharNum = lineBreakPos + 1;
+            //utf8_substr((utf8*)layer->dialog, 0, layer->dialogSubCharNum, (utf8*)layer->dialogSub);
+            strncpy(layer->dialogSub, layer->dialog, lineBreakPos + 1);
+            layer->dialogSub[lineBreakPos + 1] = '\0';
+            layer->dialogSubCharNum = utf8_strlen((utf8*)layer->dialogSub);
+            
+            layer->dialogLabel->setString(layer->dialogSub);
+            layer->state = LineBreakWaiting;
+        }
+        
+        layer->unschedulePerWordAnimation();
+        
+    } else if (layer->state == LineBreakWaiting) {
+        layer->schedulePerWordAnimation();
+        layer->state = Animating;
+    }
+    
+
 }
 

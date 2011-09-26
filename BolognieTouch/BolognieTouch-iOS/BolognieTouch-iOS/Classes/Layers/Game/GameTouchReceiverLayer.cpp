@@ -48,6 +48,7 @@ void GameTouchReceiverLayer::ccTouchesEnded(cocos2d::CCSet *touches, cocos2d::CC
     }
 }
 
+/*
 void GameTouchReceiverLayer::next() {
     GameScene* gameScene = (GameScene*) getParent();
     
@@ -155,7 +156,7 @@ void GameTouchReceiverLayer::next() {
         CCTouchDispatcher::sharedDispatcher()->removeDelegate(this);    //seems a bug in cocos2d?
         CCDirector::sharedDirector()->replaceScene(MainMenuScene::node());
     }
-}
+}*/
 
 void GameTouchReceiverLayer::onExit() {
     //do nothing

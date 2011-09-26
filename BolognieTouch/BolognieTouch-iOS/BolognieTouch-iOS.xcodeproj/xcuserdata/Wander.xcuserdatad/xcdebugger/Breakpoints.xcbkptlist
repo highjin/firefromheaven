@@ -139,5 +139,61 @@
          landmarkName = "BsonReader::visit(PlotDef* plotDef)"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/Classes/Layers/Game/GameConversationLayer.cpp"
+         timestampString = "338691227.422842"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "190"
+         endingLineNumber = "190"
+         landmarkName = "GameConversationLayer::onTouchHandler(void* owner)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/Classes/Layers/Game/GameConversationLayer.cpp"
+         timestampString = "338690100.939253"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "157"
+         endingLineNumber = "157"
+         landmarkName = "GameConversationLayer::perWordAnimationScheduler(ccTime delta)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/Classes/Layers/Game/GameConversationLayer.cpp"
+         timestampString = "338690889.255037"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "161"
+         endingLineNumber = "161"
+         landmarkName = "GameConversationLayer::perWordAnimationScheduler(ccTime delta)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/Classes/Layers/Game/GameConversationLayer.cpp"
+         timestampString = "338691350.710777"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "213"
+         endingLineNumber = "213"
+         landmarkName = "GameConversationLayer::onTouchHandler(void* owner)"
+         landmarkType = "5">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

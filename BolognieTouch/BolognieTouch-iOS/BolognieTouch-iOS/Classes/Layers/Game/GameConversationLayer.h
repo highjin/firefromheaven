@@ -11,6 +11,12 @@
 
 #include "cocos2d.h"
 
+typedef enum  {
+    HiddenByScript = 0,
+    Animating = 1,
+    LineBreakWaiting = 2,
+    Finished = 3
+} GameConversationState;
 
 class GameConversationLayer : public cocos2d::CCLayer {
 private:
@@ -32,7 +38,7 @@ private:
 
     void schedulePerWordAnimation();
     void unschedulePerWordAnimation();
-    bool perWordAnimationScheduled;
+    GameConversationState state;
     
 public:
     GameConversationLayer();
@@ -41,12 +47,12 @@ public:
     LAYER_NODE_FUNC(GameConversationLayer); 
     
     void show(const char* dialog, const char* name = NULL);
-    void append(const char* dialog);
+    //void append(const char* dialog);
     void hide();
     //TODO: hidden by right click
     
     void perWordAnimationScheduler(cocos2d::ccTime delta);
-    static void onTouchHandler(void* sender);
+    static void onTouchHandler(void* owner);
 };
 
 #endif

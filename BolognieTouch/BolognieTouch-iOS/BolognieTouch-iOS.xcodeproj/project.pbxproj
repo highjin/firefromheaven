@@ -207,6 +207,7 @@
 		C1D614F51429A32500F67223 /* MainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D614F31429A32500F67223 /* MainMenuScene.cpp */; };
 		C1DBD1B6142FAC2D00B3A26B /* RuntimeASTVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1DBD1B5142FAC2D00B3A26B /* RuntimeASTVisitor.cpp */; };
 		C1DBD1BD142FF09700B3A26B /* FireML.dat in Resources */ = {isa = PBXBuildFile; fileRef = C1DBD1BC142FF09700B3A26B /* FireML.dat */; };
+		C1DBD1C214300ABF00B3A26B /* BlankExprVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1DBD1C114300ABF00B3A26B /* BlankExprVisitor.cpp */; };
 		C1EFD256142C039500E8B482 /* GameConversationLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1EFD255142C039500E8B482 /* GameConversationLayer.cpp */; };
 		C1EFD25F142C621800E8B482 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = C1EFD25E142C621700E8B482 /* iTunesArtwork */; };
 		C1EFD262142C644300E8B482 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C1EFD260142C644000E8B482 /* Default-Landscape~ipad.png */; };
@@ -586,6 +587,22 @@
 		C1DBD1BA142FDB1300B3A26B /* PositionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PositionData.h; path = DataStructure/PositionData.h; sourceTree = "<group>"; };
 		C1DBD1BB142FDB7200B3A26B /* ActorStmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorStmt.h; sourceTree = "<group>"; };
 		C1DBD1BC142FF09700B3A26B /* FireML.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = FireML.dat; path = ../../../../../FireEngine.Net/FireEngine.FireML.Editor/FireML.dat; sourceTree = "<group>"; };
+		C1DBD1BE1430096300B3A26B /* Expression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expression.h; sourceTree = "<group>"; };
+		C1DBD1BF14300A3100B3A26B /* IExprVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IExprVisitor.h; sourceTree = "<group>"; };
+		C1DBD1C014300AB800B3A26B /* BlankExprVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankExprVisitor.h; sourceTree = "<group>"; };
+		C1DBD1C114300ABF00B3A26B /* BlankExprVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlankExprVisitor.cpp; sourceTree = "<group>"; };
+		C1DBD1C314300CF500B3A26B /* RightValueExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightValueExpr.h; sourceTree = "<group>"; };
+		C1DBD1C414300D7000B3A26B /* Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
+		C1DBD1C514300FD600B3A26B /* RightValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightValue.h; sourceTree = "<group>"; };
+		C1DBD1C61430117300B3A26B /* FireMLDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireMLDataType.h; sourceTree = "<group>"; };
+		C1DBD1C7143011CF00B3A26B /* IntConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntConst.h; sourceTree = "<group>"; };
+		C1DBD1C81430143500B3A26B /* FloatConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatConst.h; sourceTree = "<group>"; };
+		C1DBD1C9143014AB00B3A26B /* StringConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringConst.h; sourceTree = "<group>"; };
+		C1DBD1CA1430160600B3A26B /* BinaryLogicExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryLogicExpr.h; sourceTree = "<group>"; };
+		C1DBD1CB1430167200B3A26B /* BinaryAlgoExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryAlgoExpr.h; sourceTree = "<group>"; };
+		C1DBD1CC1430185900B3A26B /* BinaryExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryExpr.h; sourceTree = "<group>"; };
+		C1DBD1CD1430196300B3A26B /* BinaryCmpExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryCmpExpr.h; sourceTree = "<group>"; };
+		C1DBD1CE143019BB00B3A26B /* MonoExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoExpr.h; sourceTree = "<group>"; };
 		C1EFD254142C038C00E8B482 /* GameConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConversationLayer.h; sourceTree = "<group>"; };
 		C1EFD255142C039500E8B482 /* GameConversationLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameConversationLayer.cpp; sourceTree = "<group>"; };
 		C1EFD257142C19BF00E8B482 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = Classes/Utils/utf8.h; sourceTree = "<group>"; };
@@ -1282,6 +1299,22 @@
 		C19E7E3C142EA2AE0051A2E8 /* Expr */ = {
 			isa = PBXGroup;
 			children = (
+				C1DBD1BE1430096300B3A26B /* Expression.h */,
+				C1DBD1CB1430167200B3A26B /* BinaryAlgoExpr.h */,
+				C1DBD1CD1430196300B3A26B /* BinaryCmpExpr.h */,
+				C1DBD1CA1430160600B3A26B /* BinaryLogicExpr.h */,
+				C1DBD1BF14300A3100B3A26B /* IExprVisitor.h */,
+				C1DBD1C014300AB800B3A26B /* BlankExprVisitor.h */,
+				C1DBD1C114300ABF00B3A26B /* BlankExprVisitor.cpp */,
+				C1DBD1C314300CF500B3A26B /* RightValueExpr.h */,
+				C1DBD1C7143011CF00B3A26B /* IntConst.h */,
+				C1DBD1C81430143500B3A26B /* FloatConst.h */,
+				C1DBD1C9143014AB00B3A26B /* StringConst.h */,
+				C1DBD1C514300FD600B3A26B /* RightValue.h */,
+				C1DBD1C414300D7000B3A26B /* Value.h */,
+				C1DBD1C61430117300B3A26B /* FireMLDataType.h */,
+				C1DBD1CC1430185900B3A26B /* BinaryExpr.h */,
+				C1DBD1CE143019BB00B3A26B /* MonoExpr.h */,
 			);
 			path = Expr;
 			sourceTree = "<group>";
@@ -1697,6 +1730,7 @@
 				C19E7E56142EBB6C0051A2E8 /* numbers.c in Sources */,
 				C19E7E5A142EDBA40051A2E8 /* BsonReader.cpp in Sources */,
 				C1DBD1B6142FAC2D00B3A26B /* RuntimeASTVisitor.cpp in Sources */,
+				C1DBD1C214300ABF00B3A26B /* BlankExprVisitor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
