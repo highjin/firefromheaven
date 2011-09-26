@@ -6,8 +6,9 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#include "MainMenuLayer.h"
 #include "GameScene.h"
+#include "MainMenuLayer.h"
+
 using namespace cocos2d;
 
 bool MainMenuLayer::init() {

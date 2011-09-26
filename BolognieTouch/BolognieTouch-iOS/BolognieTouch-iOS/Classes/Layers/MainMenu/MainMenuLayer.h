@@ -10,6 +10,7 @@
 #define BolognieTouch_iOS_MainMenuLayer_h
 
 #include "cocos2d.h"
+
 class MainMenuLayer : public cocos2d::CCLayer {
 private:
     cocos2d::CCMenu *mainMenu;

@@ -71,7 +71,7 @@ void GameConversationLayer::show(const char* dialog, const char* name) {
     //begin per-word animation scheduler
     schedulePerWordAnimation();
     
-    if (name != NULL) {
+    if (name != NULL && strlen(name) > 0 ) {
         this->name = new char[strlen(name) + 1];
         strcpy(this->name, name);
         nameLabel->setString(this->name);

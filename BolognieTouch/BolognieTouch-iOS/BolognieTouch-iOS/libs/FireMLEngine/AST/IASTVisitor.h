@@ -9,6 +9,10 @@
 #ifndef BolognieTouch_iOS_IASTVisitor_h
 #define BolognieTouch_iOS_IASTVisitor_h
 
+#define AST_ACCEPT_FUNC virtual void accept(IASTVisitor* visitor) { \
+                            visitor->visit(this); \
+                        }
+
 namespace FireMLEngine {
     
     class FireMLRoot;

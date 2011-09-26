@@ -16,9 +16,8 @@ namespace FireMLEngine {
     class DialogStmt : public Statement {
     public:
         std::string text;
-        virtual void accept(IASTVisitor* visitor) {
-            visitor->visit(this);
-        }
+        
+        AST_ACCEPT_FUNC;
     };
 }
 

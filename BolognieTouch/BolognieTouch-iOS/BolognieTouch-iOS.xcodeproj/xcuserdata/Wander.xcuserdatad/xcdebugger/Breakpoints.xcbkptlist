@@ -21,12 +21,122 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "BolognieTouch-iOS/Classes/Layers/Game/GameTouchReceiverLayer.cpp"
-         timestampString = "338608354.56516"
+         timestampString = "338671464.661966"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
          landmarkName = "GameTouchReceiverLayer::ccTouchesEnded(cocos2d::CCSet *touches, cocos2d::CCEvent *event)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/libs/FireMLEngine/Runtime/RuntimeKernel.cpp"
+         timestampString = "338672292.933823"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
+         landmarkName = "RuntimeKernel::next()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/libs/FireMLEngine/Runtime/RuntimeData.h"
+         timestampString = "338685321.704099"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
+         landmarkName = "reset()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/libs/FireMLEngine/Runtime/RuntimeKernel.cpp"
+         timestampString = "338672708.784687"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
+         landmarkName = "RuntimeKernel::sharedRuntimeKernel()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/Classes/Scenes/GameScene.cpp"
+         timestampString = "338672858.249337"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
+         landmarkName = "GameScene::init()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/libs/FireMLEngine/BsonReader/BsonReader.cpp"
+         timestampString = "338685321.704099"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "16"
+         endingLineNumber = "16">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/Classes/Scenes/GameScene.cpp"
+         timestampString = "338686211.657045"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
+         landmarkName = "GameScene::actor(std::string&amp; img, std::string&amp; layer, PositionData position)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/libs/FireMLEngine/BsonReader/BsonReader.cpp"
+         timestampString = "338688152.223398"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
+         landmarkName = "BsonReader::readPosition(bson_iterator *it, PositionData* position)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/libs/FireMLEngine/BsonReader/BsonReader.cpp"
+         timestampString = "338688152.223398"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "138"
+         endingLineNumber = "138"
+         landmarkName = "BsonReader::visit(PlotDef* plotDef)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

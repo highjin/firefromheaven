@@ -1,38 +1,27 @@
 //
-//  BsonReader.h
+//  RuntimeASTVisitor.h
 //  BolognieTouch-iOS
 //
-//  Created by  on 11-9-24.
+//  Created by  on 11-9-25.
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#ifndef BolognieTouch_iOS_BsonReader_h
-#define BolognieTouch_iOS_BsonReader_h
+#ifndef BolognieTouch_iOS_RuntimeASTVisitor_h
+#define BolognieTouch_iOS_RuntimeASTVisitor_h
 
 #include "IASTVisitor.h"
-#include "ASTNode.h"
-#include "FireMLRoot.h"
-#include "PositionData.h"
-#include <stack>
-
-#define MONGO_USE_LONG_LONG_INT //FIXME: where to put this define?
-#include "bson.h"
-
 
 namespace FireMLEngine {
-    class BsonReader : public IASTVisitor {
     
+    class RuntimeKernel;
+    
+    class RuntimeASTVisitor : public IASTVisitor {
     private:
-        std::stack<bson_iterator*> bsonItStack;
-        void addId(bson_iterator* it, ASTNode* node);
-        FireMLRoot* root;
-        
-        void readPosition(bson_iterator* it, PositionData* position);
+        RuntimeKernel* kernel;
         
     public:
-        BsonReader();
         
-        void readTo(const char* bsonFileName, FireMLRoot* root);
+        RuntimeASTVisitor (RuntimeKernel* kernel);
         
         virtual void visit(FireMLRoot* root);
         virtual void visit(ActionLayerDef* actionLayerDef);

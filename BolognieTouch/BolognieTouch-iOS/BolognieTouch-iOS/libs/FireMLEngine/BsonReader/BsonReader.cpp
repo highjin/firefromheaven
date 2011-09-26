@@ -10,7 +10,18 @@
 #include "bson.h"
 #include "stdio.h"
 #include "DialogStmt.h"
+#include "BackgroundStmt.h"
+#include "ActorStmt.h"
+#include <assert.h>
+#include <string.h>
 using namespace FireMLEngine;
+
+#define BSON_KEY_AND_TYPE(it)   const char* key = bson_iterator_key(it); \
+                                bson_type type = bson_iterator_type(it);
+#define STR_EQUALS(str1, str2)  (strcmp((str1), (str2)) == 0)
+#define BSON_READ_STR(it)       (type == BSON_NULL ? "" : bson_iterator_string(it))
+#define BSON_KEY_IS(str)        (STR_EQUALS(key, str))
+
 
 BsonReader::BsonReader() {
     
@@ -45,12 +56,39 @@ void BsonReader::addId(bson_iterator *it, FireMLEngine::ASTNode *node) {
     root->nodeMap[node->_id] = node;
 }
 
+void BsonReader::readPosition(bson_iterator *it, PositionData* position) {
+    
+    if (bson_iterator_type(it) == BSON_NULL) {
+        position->x = 0;
+        position->y = 0;
+        return;
+    }
+    
+    bson_iterator subIt;
+    bson_iterator_subiterator(it, &subIt);
+    
+    int x, y;
+    
+    while (bson_iterator_next(&subIt) != BSON_EOO) {
+        BSON_KEY_AND_TYPE(&subIt);
+        if (STR_EQUALS(key, "X")) {
+            x = bson_iterator_int(&subIt);
+        } else if (BSON_KEY_IS("Y")) {
+            y = bson_iterator_int(&subIt);
+        }
+    }
+    
+    position->x = x;
+    position->y = y;
+}
+
 void BsonReader::visit(FireMLRoot* root) {
     bson_iterator* it = bsonItStack.top();
     
     while(bson_iterator_next(it) != BSON_EOO) {
-        const char* key = bson_iterator_key(it);
-        if (strcmp(key, "MainPlot") == 0) {
+        BSON_KEY_AND_TYPE(it);
+        
+        if (BSON_KEY_IS("MainPlot")) {
             bson_iterator mainPlotIt;
             bson_iterator_subiterator(it, &mainPlotIt);
             
@@ -70,10 +108,11 @@ void BsonReader::visit(PlotDef* plotDef) {
     bson_iterator* it = bsonItStack.top();
     
     while(bson_iterator_next(it) != BSON_EOO) {
-        const char* key  = bson_iterator_key(it);
-        if (strcmp(key, "ID") == 0) {
+        BSON_KEY_AND_TYPE(it);
+        
+        if (BSON_KEY_IS("ID")) {
             addId(it, plotDef);
-        } else if (strcmp(key, "Content") == 0) {
+        } else if (BSON_KEY_IS("Content")) {
             bson_iterator contentIt;
             bson_iterator_subiterator(it, &contentIt);
             while (bson_iterator_next(&contentIt) != BSON_EOO) {
@@ -83,11 +122,15 @@ void BsonReader::visit(PlotDef* plotDef) {
                 bson_iterator_subiterator(&contentIt, &stmtIt);
                 
                 bson_iterator_next(&stmtIt);    //assuming _t is the first element
-                const char* type = bson_iterator_string(&stmtIt);
+                const char* _t = bson_iterator_string(&stmtIt);
                 bsonItStack.push(&stmtIt);
                 
-                if (strcmp(type, "DialogStmt") == 0) {
+                if (STR_EQUALS(_t, "DialogStmt")) {
                     plotDef->createNewStatement<DialogStmt>()->accept(this);
+                } else if (STR_EQUALS(_t, "BackgroundStmt")) {
+                    plotDef->createNewStatement<BackgroundStmt>()->accept(this);
+                } else if (STR_EQUALS(_t, "ActorStmt")) {
+                    plotDef->createNewStatement<ActorStmt>()->accept(this);
                 }
                 //TODO: other type of statement
                 
@@ -105,16 +148,40 @@ void BsonReader::visit(MusicStopStmt* musicStopStmt) { }
 void BsonReader::visit(MusicVolStmt* musicVolStmt) { }
 void BsonReader::visit(SwitchStmt* switchStmt) { }
 void BsonReader::visit(SelectStmt* selectStmt) { }
-void BsonReader::visit(ActorStmt* actorStmt) { }
+
+void BsonReader::visit(ActorStmt* actorStmt) {
+    bson_iterator* it = bsonItStack.top();
+    
+    while (bson_iterator_next(it) != BSON_EOO) {
+        BSON_KEY_AND_TYPE(it);
+        
+        if (BSON_KEY_IS("ID")) {
+            addId(it, actorStmt);
+        } else if (BSON_KEY_IS("Name")) {
+            actorStmt->name = BSON_READ_STR(it);
+        } else if (BSON_KEY_IS("Img")) {
+            actorStmt->img = BSON_READ_STR(it);
+        } else if (BSON_KEY_IS("Asset")) {
+            actorStmt->asset = BSON_READ_STR(it);
+        } else if (BSON_KEY_IS("Avatar")) {
+            actorStmt->avatar = BSON_READ_STR(it);
+        } else if (BSON_KEY_IS("Layer")) {
+            actorStmt->layer = BSON_READ_STR(it);
+        } else if (BSON_KEY_IS("Position")) {
+            readPosition(it, &(actorStmt->position));
+        }
+    }
+}
 
 void BsonReader::visit(DialogStmt* dialogStmt) {
     bson_iterator* it = bsonItStack.top();
     
     while (bson_iterator_next(it) != BSON_EOO) {
         const char* key = bson_iterator_key(it);
-        if (strcmp(key, "ID") == 0) {
+        if (BSON_KEY_IS("ID")) {
             addId(it, dialogStmt);
-        } else if (strcmp(key, "Text") == 0) {
+        } else if (BSON_KEY_IS("Text")) {
+            assert(bson_iterator_type(it) == BSON_STRING);
             dialogStmt->text = bson_iterator_string(it);
         }
     }
@@ -122,7 +189,22 @@ void BsonReader::visit(DialogStmt* dialogStmt) {
 
 void BsonReader::visit(IfStmt* ifStmt) { }
 void BsonReader::visit(LoopStmt* loopStmt) { }
-void BsonReader::visit(BackgroundStmt* backgroundStmt) { }
+                           
+void BsonReader::visit(BackgroundStmt* backgroundStmt) {
+    bson_iterator* it = bsonItStack.top();
+    while (bson_iterator_next(it) != BSON_EOO) {
+        const char* key = bson_iterator_key(it);
+        bson_type type = bson_iterator_type(it);
+        if (BSON_KEY_IS("ID")) {
+            addId(it, backgroundStmt);
+        } else if (BSON_KEY_IS("Img")) {
+            backgroundStmt->img = BSON_READ_STR(it);
+        } else if (BSON_KEY_IS("Asset")) {
+            backgroundStmt->asset = BSON_READ_STR(it);
+        }
+    }
+}
+                           
 void BsonReader::visit(EchoStmt* echoStmt) { }
 void BsonReader::visit(IncludeStmt* includeStmt) { }
 void BsonReader::visit(BreakStmt* breakStmt) { }
