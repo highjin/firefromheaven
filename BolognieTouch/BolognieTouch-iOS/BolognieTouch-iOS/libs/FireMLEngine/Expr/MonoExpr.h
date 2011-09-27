@@ -24,11 +24,23 @@ namespace FireMLEngine {
             }
         }
         
-        template <class T>
+        /*template <class T>
         T* createOp() {
+            if (op != NULL) {
+                delete op;
+            }
+            
             T* newOp = new T();
             op = newOp;
             return newOp;
+        }*/
+        
+        void setOp(Expression* op) {
+            if (this->op != NULL) {
+                delete op;
+            }
+            
+            this->op = op;
         }
         
         inline Expression* getOp() { return op; }

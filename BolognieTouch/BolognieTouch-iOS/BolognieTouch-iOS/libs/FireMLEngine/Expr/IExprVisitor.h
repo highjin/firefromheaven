@@ -31,8 +31,8 @@ namespace FireMLEngine {
     class NotExpr;
     class OrExpr;
     class PowExpr;
-    class RightValueExpr;
     class SubExpr;
+    class RightValueExpr;
     
     class IExprVisitor {
     public:
@@ -52,8 +52,8 @@ namespace FireMLEngine {
         virtual void visit(NotExpr* notExpr) = 0;
         virtual void visit(OrExpr* orExpr) = 0;
         virtual void visit(PowExpr* powExpr) = 0;
-        virtual void visit(RightValueExpr* rightValueExpr) = 0;
         virtual void visit(SubExpr* subExpr) = 0;
+        virtual void visit(RightValueExpr* rightValueExpr) = 0;
     };
 }
 

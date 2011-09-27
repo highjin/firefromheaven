@@ -29,8 +29,8 @@ namespace FireMLEngine {
         virtual void visit(NotExpr* notExpr);
         virtual void visit(OrExpr* orExpr);
         virtual void visit(PowExpr* powExpr);
-        virtual void visit(RightValueExpr* rightValueExpr);
         virtual void visit(SubExpr* subExpr);
+        virtual void visit(RightValueExpr* rightValueExpr);
     };
 }
 

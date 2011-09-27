@@ -17,6 +17,9 @@
 
 namespace FireMLEngine {
     
+    /**
+     Store a const, or represent other expressions
+     */
     class RightValueExpr : public Expression {
     private:
         RightValue* rightValue;
@@ -29,16 +32,23 @@ namespace FireMLEngine {
             }
         }
         
-        template <class T>
+        /*template <class T>
         T* createRightValue() {
             T* newRightValue = new T();
             rightValue = newRightValue;
             return newRightValue;
-        }
+        }*/
         
+        void setRightValue(RightValue* rightValue) {
+            if (this->rightValue != NULL) {
+                delete this->rightValue;
+            }
+            
+            this->rightValue = rightValue;
+        }
         inline RightValue* getRightValue() { return rightValue; }
         
-        virtual void accept(IExprVisitor* visitor) = 0;
+        EXPR_ACCEPT_FUNC
     };
 }
 

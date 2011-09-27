@@ -14,9 +14,10 @@
 #include "FireMLRoot.h"
 #include "PositionData.h"
 #include <stack>
+#include <vector>
 
-#define MONGO_USE_LONG_LONG_INT //FIXME: where to put this define?
-#include "bson.h"
+#include "BsonReaderMacro.h"
+
 
 
 namespace FireMLEngine {
@@ -33,6 +34,7 @@ namespace FireMLEngine {
         BsonReader();
         
         void readTo(const char* bsonFileName, FireMLRoot* root);
+        void visitMainContent(std::vector<Statement*>& target);
         
         virtual void visit(FireMLRoot* root);
         virtual void visit(ActionLayerDef* actionLayerDef);

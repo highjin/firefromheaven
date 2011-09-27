@@ -62,6 +62,7 @@
 		C16180FA142A9CF5001A18C0 /* 图书馆门前.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F4142A9CF5001A18C0 /* 图书馆门前.jpg */; };
 		C16180FB142A9CF5001A18C0 /* 校园小路.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F5142A9CF5001A18C0 /* 校园小路.jpg */; };
 		C16180FE142AA34A001A18C0 /* GameTouchReceiverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16180FD142AA34A001A18C0 /* GameTouchReceiverLayer.cpp */; };
+		C16636F0143183A70024ACA0 /* BsonExprReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16636EE143183A70024ACA0 /* BsonExprReader.cpp */; };
 		C17CFD08142D01500079E897 /* ScriptHolderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C17CFD06142D014F0079E897 /* ScriptHolderManager.cpp */; };
 		C1915F441429594E003C5260 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F431429594E003C5260 /* QuartzCore.framework */; };
 		C1915F461429594E003C5260 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F451429594E003C5260 /* OpenGLES.framework */; };
@@ -275,6 +276,28 @@
 		C16180F5142A9CF5001A18C0 /* 校园小路.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "校园小路.jpg"; sourceTree = "<group>"; };
 		C16180FC142AA342001A18C0 /* GameTouchReceiverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTouchReceiverLayer.h; sourceTree = "<group>"; };
 		C16180FD142AA34A001A18C0 /* GameTouchReceiverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTouchReceiverLayer.cpp; sourceTree = "<group>"; };
+		C16636D6143179130024ACA0 /* AndExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndExpr.h; sourceTree = "<group>"; };
+		C16636D8143179B60024ACA0 /* OrExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrExpr.h; sourceTree = "<group>"; };
+		C16636D9143179CE0024ACA0 /* NegativeExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NegativeExpr.h; sourceTree = "<group>"; };
+		C16636DA143179EA0024ACA0 /* NotExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotExpr.h; sourceTree = "<group>"; };
+		C16636DB143179F80024ACA0 /* AddExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExpr.h; sourceTree = "<group>"; };
+		C16636DC14317A240024ACA0 /* MulExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulExpr.h; sourceTree = "<group>"; };
+		C16636DD14317A570024ACA0 /* DivExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DivExpr.h; sourceTree = "<group>"; };
+		C16636DE14317A640024ACA0 /* SubExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubExpr.h; sourceTree = "<group>"; };
+		C16636DF14317A750024ACA0 /* PowExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowExpr.h; sourceTree = "<group>"; };
+		C16636E014317A890024ACA0 /* GreatExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreatExpr.h; sourceTree = "<group>"; };
+		C16636E114317A9D0024ACA0 /* NeqExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeqExpr.h; sourceTree = "<group>"; };
+		C16636E314317AC70024ACA0 /* EquExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquExpr.h; sourceTree = "<group>"; };
+		C16636E414317ADA0024ACA0 /* LessEquExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessEquExpr.h; sourceTree = "<group>"; };
+		C16636E514317B210024ACA0 /* GreatEquExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreatEquExpr.h; sourceTree = "<group>"; };
+		C16636E614317B2F0024ACA0 /* LessExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessExpr.h; sourceTree = "<group>"; };
+		C16636E714317B430024ACA0 /* AssignExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignExpr.h; sourceTree = "<group>"; };
+		C16636E814317B700024ACA0 /* LeftValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftValue.h; sourceTree = "<group>"; };
+		C16636E914317BE40024ACA0 /* VarRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VarRef.h; sourceTree = "<group>"; };
+		C16636EA14317CA80024ACA0 /* LeftValueExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftValueExpr.h; sourceTree = "<group>"; };
+		C16636EE143183A70024ACA0 /* BsonExprReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BsonExprReader.cpp; path = BsonReader/BsonExprReader.cpp; sourceTree = "<group>"; };
+		C16636EF143183A70024ACA0 /* BsonExprReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BsonExprReader.h; path = BsonReader/BsonExprReader.h; sourceTree = "<group>"; };
+		C16636F2143184220024ACA0 /* BsonReaderMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BsonReaderMacro.h; path = BsonReader/BsonReaderMacro.h; sourceTree = "<group>"; };
 		C17CFD06142D014F0079E897 /* ScriptHolderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScriptHolderManager.cpp; path = Classes/Utils/ScriptHolderManager.cpp; sourceTree = "<group>"; };
 		C17CFD07142D01500079E897 /* ScriptHolderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScriptHolderManager.h; path = Classes/Utils/ScriptHolderManager.h; sourceTree = "<group>"; };
 		C1915F3F1429594E003C5260 /* BolognieTouch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BolognieTouch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1304,6 +1327,15 @@
 				C1DBD1CD1430196300B3A26B /* BinaryCmpExpr.h */,
 				C1DBD1CA1430160600B3A26B /* BinaryLogicExpr.h */,
 				C1DBD1BF14300A3100B3A26B /* IExprVisitor.h */,
+				C16636D9143179CE0024ACA0 /* NegativeExpr.h */,
+				C16636DA143179EA0024ACA0 /* NotExpr.h */,
+				C16636DB143179F80024ACA0 /* AddExpr.h */,
+				C16636DC14317A240024ACA0 /* MulExpr.h */,
+				C16636DD14317A570024ACA0 /* DivExpr.h */,
+				C16636DE14317A640024ACA0 /* SubExpr.h */,
+				C16636DF14317A750024ACA0 /* PowExpr.h */,
+				C16636E014317A890024ACA0 /* GreatExpr.h */,
+				C16636E114317A9D0024ACA0 /* NeqExpr.h */,
 				C1DBD1C014300AB800B3A26B /* BlankExprVisitor.h */,
 				C1DBD1C114300ABF00B3A26B /* BlankExprVisitor.cpp */,
 				C1DBD1C314300CF500B3A26B /* RightValueExpr.h */,
@@ -1315,6 +1347,16 @@
 				C1DBD1C61430117300B3A26B /* FireMLDataType.h */,
 				C1DBD1CC1430185900B3A26B /* BinaryExpr.h */,
 				C1DBD1CE143019BB00B3A26B /* MonoExpr.h */,
+				C16636D6143179130024ACA0 /* AndExpr.h */,
+				C16636D8143179B60024ACA0 /* OrExpr.h */,
+				C16636E314317AC70024ACA0 /* EquExpr.h */,
+				C16636E414317ADA0024ACA0 /* LessEquExpr.h */,
+				C16636E514317B210024ACA0 /* GreatEquExpr.h */,
+				C16636E614317B2F0024ACA0 /* LessExpr.h */,
+				C16636E714317B430024ACA0 /* AssignExpr.h */,
+				C16636E814317B700024ACA0 /* LeftValue.h */,
+				C16636EA14317CA80024ACA0 /* LeftValueExpr.h */,
+				C16636E914317BE40024ACA0 /* VarRef.h */,
 			);
 			path = Expr;
 			sourceTree = "<group>";
@@ -1337,8 +1379,11 @@
 		C19E7E57142ED2A30051A2E8 /* BsonReader */ = {
 			isa = PBXGroup;
 			children = (
+				C16636EE143183A70024ACA0 /* BsonExprReader.cpp */,
+				C16636EF143183A70024ACA0 /* BsonExprReader.h */,
 				C19E7E58142EDBA40051A2E8 /* BsonReader.cpp */,
 				C19E7E59142EDBA40051A2E8 /* BsonReader.h */,
+				C16636F2143184220024ACA0 /* BsonReaderMacro.h */,
 			);
 			name = BsonReader;
 			sourceTree = "<group>";
@@ -1731,6 +1776,7 @@
 				C19E7E5A142EDBA40051A2E8 /* BsonReader.cpp in Sources */,
 				C1DBD1B6142FAC2D00B3A26B /* RuntimeASTVisitor.cpp in Sources */,
 				C1DBD1C214300ABF00B3A26B /* BlankExprVisitor.cpp in Sources */,
+				C16636F0143183A70024ACA0 /* BsonExprReader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

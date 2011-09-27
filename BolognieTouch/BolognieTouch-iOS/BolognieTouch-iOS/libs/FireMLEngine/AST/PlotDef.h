@@ -27,12 +27,12 @@ namespace FireMLEngine {
         /**
          Create a new statement with type of T, and put it into the end of content list. 
          */
-        template <class T>
+        /*template <class T>
         T* createNewStatement() {
             T* newStat = new T();
             content.push_back(newStat);
             return newStat;
-        }
+        }*/
         
         AST_ACCEPT_FUNC;
     };

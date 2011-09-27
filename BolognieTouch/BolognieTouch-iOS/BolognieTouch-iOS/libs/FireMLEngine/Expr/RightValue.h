@@ -20,7 +20,9 @@ namespace FireMLEngine {
         virtual FireMLDataType getDataType() const = 0;
         virtual std::string toString() const = 0;
         virtual bool toBoolean() const = 0;
-        virtual bool equals(const RightValue* value) const = 0;
+        virtual int toInt() const = 0;
+        virtual float toFloat() const = 0;
+        virtual bool equals(const RightValue* ref) const = 0;
     };
 }
 

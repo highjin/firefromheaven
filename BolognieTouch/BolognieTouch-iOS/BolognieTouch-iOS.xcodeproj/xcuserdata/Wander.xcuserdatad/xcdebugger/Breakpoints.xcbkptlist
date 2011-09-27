@@ -117,26 +117,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "BolognieTouch-iOS/libs/FireMLEngine/BsonReader/BsonReader.cpp"
-         timestampString = "338688152.223398"
+         timestampString = "338791167.446914"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "72"
-         endingLineNumber = "72"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
          landmarkName = "BsonReader::readPosition(bson_iterator *it, PositionData* position)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "BolognieTouch-iOS/libs/FireMLEngine/BsonReader/BsonReader.cpp"
-         timestampString = "338688152.223398"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
-         landmarkName = "BsonReader::visit(PlotDef* plotDef)"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -193,6 +179,20 @@
          startingLineNumber = "213"
          endingLineNumber = "213"
          landmarkName = "GameConversationLayer::onTouchHandler(void* owner)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "BolognieTouch-iOS/libs/FireMLEngine/BsonReader/BsonReader.cpp"
+         timestampString = "338792335.550698"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
+         landmarkName = "BsonReader::visitMainContent(std::vector&lt;Statement*&gt;&amp; target)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

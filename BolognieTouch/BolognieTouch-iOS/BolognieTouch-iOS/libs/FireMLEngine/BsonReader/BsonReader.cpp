@@ -16,11 +16,6 @@
 #include <string.h>
 using namespace FireMLEngine;
 
-#define BSON_KEY_AND_TYPE(it)   const char* key = bson_iterator_key(it); \
-                                bson_type type = bson_iterator_type(it);
-#define STR_EQUALS(str1, str2)  (strcmp((str1), (str2)) == 0)
-#define BSON_READ_STR(it)       (type == BSON_NULL ? "" : bson_iterator_string(it))
-#define BSON_KEY_IS(str)        (STR_EQUALS(key, str))
 
 
 BsonReader::BsonReader() {
@@ -82,6 +77,39 @@ void BsonReader::readPosition(bson_iterator *it, PositionData* position) {
     position->y = y;
 }
 
+void BsonReader::visitMainContent(std::vector<Statement*>& target) {
+    bson_iterator* it = bsonItStack.top();
+    while (bson_iterator_next(it) != BSON_EOO) {
+        //read statements
+        
+        bson_iterator stmtIt;
+        bson_iterator_subiterator(it, &stmtIt);
+        
+        bson_iterator_next(&stmtIt);    //assuming _t is the first element
+        const char* _t = bson_iterator_string(&stmtIt);
+        
+        Statement* statement;
+        
+        if (STR_EQUALS(_t, "DialogStmt")) {
+            statement = new DialogStmt();
+        } else if (STR_EQUALS(_t, "BackgroundStmt")) {
+            statement = new BackgroundStmt();
+        } else if (STR_EQUALS(_t, "ActorStmt")) {
+            statement = new ActorStmt();
+        } else {
+            continue;   //for debug, ignoring unimplemented type
+        }
+        //TODO: other type of statement
+        
+        bsonItStack.push(&stmtIt);
+        statement->accept(this);
+        bsonItStack.pop();
+        
+        target.push_back(statement);
+        //the owner of target will in charge of deleting this statement
+    }
+}
+
 void BsonReader::visit(FireMLRoot* root) {
     bson_iterator* it = bsonItStack.top();
     
@@ -115,28 +143,9 @@ void BsonReader::visit(PlotDef* plotDef) {
         } else if (BSON_KEY_IS("Content")) {
             bson_iterator contentIt;
             bson_iterator_subiterator(it, &contentIt);
-            while (bson_iterator_next(&contentIt) != BSON_EOO) {
-                //read statements
-                
-                bson_iterator stmtIt;
-                bson_iterator_subiterator(&contentIt, &stmtIt);
-                
-                bson_iterator_next(&stmtIt);    //assuming _t is the first element
-                const char* _t = bson_iterator_string(&stmtIt);
-                bsonItStack.push(&stmtIt);
-                
-                if (STR_EQUALS(_t, "DialogStmt")) {
-                    plotDef->createNewStatement<DialogStmt>()->accept(this);
-                } else if (STR_EQUALS(_t, "BackgroundStmt")) {
-                    plotDef->createNewStatement<BackgroundStmt>()->accept(this);
-                } else if (STR_EQUALS(_t, "ActorStmt")) {
-                    plotDef->createNewStatement<ActorStmt>()->accept(this);
-                }
-                //TODO: other type of statement
-                
-                
-                bsonItStack.pop();
-            }
+            bsonItStack.push(&contentIt);
+            visitMainContent(plotDef->content);
+            bsonItStack.pop();
         }
     }
 }

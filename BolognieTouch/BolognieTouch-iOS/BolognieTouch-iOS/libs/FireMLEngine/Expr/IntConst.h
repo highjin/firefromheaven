@@ -27,11 +27,19 @@ namespace FireMLEngine {
             return ss.str();
         }
         
+        virtual float toFloat() const {
+            return (float)value;
+        }
+        
+        virtual int toInt() const {
+            return value;
+        }
+        
         virtual bool toBoolean() const {
             return value != 0;
         }
         
-        virtual bool equals(const RightValue* ref) {
+        virtual bool equals(const RightValue* ref) const {
             return (ref->getDataType() == Int) && (((IntConst*)ref)->value == value);
         }
     };

@@ -28,8 +28,13 @@ namespace FireMLEngine {
             }
         }
         
+        /*
         template <class T>
         T* createFirstOp() {
+            if (firstOp != NULL) {
+                delete firstOp;
+            }
+            
             T* newFirstOp = new T();
             firstOp = newFirstOp;
             return newFirstOp;
@@ -37,9 +42,29 @@ namespace FireMLEngine {
         
         template <class T>
         T* createSecondOp() {
+            if (secondOp != NULL) {
+                delete secondOp;
+            }
+            
             T* newSecondOp = new T();
             secondOp = newSecondOp;
             return newSecondOp;
+        }*/
+        
+        void setFirstOp(Expression* op) {
+            if (firstOp != NULL) {
+                delete firstOp;
+            }
+            
+            this->firstOp = op;
+        }
+        
+        void setSecondOp(Expression* op) {
+            if (firstOp != NULL) {
+                delete secondOp;
+            }
+            
+            this->secondOp = op;
         }
         
         inline Expression* getFirstOp() { return firstOp; }
