@@ -11,7 +11,11 @@
        $s = "abc" + "def";
        ]]>
      </expr>
-    
+
+    <echo>$a</echo>
+    <echo>$b</echo>
+    <echo>$f</echo>
+    <echo>$s</echo>
     
     <bg img="图书馆大厅.jpg"/>
     大家好~
