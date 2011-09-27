@@ -47,9 +47,13 @@
     <bg img="校园小路.jpg"/>
     <actor/>
     这里是哲学路。
+    
+  </MainPlot>
+
+  <SubPlot name="test">
 
     <MyNewFunc/>
-    
+
     <select return="$功能选择">
       test
       cold
@@ -66,9 +70,6 @@
       </case>
     </switch>
     
-  </MainPlot>
-
-  <SubPlot name="test">
     表达式：1+2+3 = ?
     <echo>1+2+3</echo>
     

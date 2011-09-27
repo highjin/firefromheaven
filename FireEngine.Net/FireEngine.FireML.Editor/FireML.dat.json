@@ -444,86 +444,86 @@
         "_t" : "DialogStmt",
         "ID" : 35,
         "Text" : "这里是哲学路。"
-      }, {
-        "_t" : "FunctionCallStmt",
-        "ID" : 36,
-        "Name" : "MyNewFunc",
-        "ParamMap" : { },
-        "ReturnDest" : null,
-        "ParaStr" : null
-      }, {
-        "_t" : "SelectStmt",
-        "ID" : 37,
-        "OptionList" : [{
-            "ID" : 0,
-            "Value" : {
-              "_t" : "IntConst",
-              "Value" : 0
-            },
-            "Text" : "test"
-          }, {
-            "ID" : 0,
-            "Value" : {
-              "_t" : "IntConst",
-              "Value" : 1
-            },
-            "Text" : "cold"
-          }],
-        "Return" : {
-          "DataType" : 0,
-          "Location" : { },
-          "LeftValue" : {
-            "_t" : "VarRef",
-            "VarName" : "功能选择"
-          }
-        }
-      }, {
-        "_t" : "BackgroundStmt",
-        "ID" : 38,
-        "Img" : null,
-        "Asset" : "video1"
-      }, {
-        "_t" : "SwitchStmt",
-        "ID" : 39,
-        "SwitchCaseList" : [{
-            "ID" : 40,
-            "Value" : {
-              "_t" : "IntConst",
-              "Value" : 0
-            },
-            "CaseContent" : [{
-                "_t" : "IncludeStmt",
-                "ID" : 41,
-                "SubPlot" : "test"
-              }]
-          }, {
-            "ID" : 42,
-            "Value" : {
-              "_t" : "IntConst",
-              "Value" : 1
-            },
-            "CaseContent" : [{
-                "_t" : "IncludeStmt",
-                "ID" : 43,
-                "SubPlot" : "cold"
-              }]
-          }],
-        "Expression" : {
-          "_t" : "LeftValueExpr",
-          "DataType" : 0,
-          "Location" : { },
-          "LeftValue" : {
-            "_t" : "VarRef",
-            "VarName" : "功能选择"
-          }
-        }
       }]
   },
   "SubPlotMap" : {
     "test" : {
-      "ID" : 44,
+      "ID" : 36,
       "Name" : "test",
       "Content" : [{
+          "_t" : "FunctionCallStmt",
+          "ID" : 37,
+          "Name" : "MyNewFunc",
+          "ParamMap" : { },
+          "ReturnDest" : null,
+          "ParaStr" : null
+        }, {
+          "_t" : "SelectStmt",
+          "ID" : 38,
+          "OptionList" : [{
+              "ID" : 0,
+              "Value" : {
+                "_t" : "IntConst",
+                "Value" : 0
+              },
+              "Text" : "test"
+            }, {
+              "ID" : 0,
+              "Value" : {
+                "_t" : "IntConst",
+                "Value" : 1
+              },
+              "Text" : "cold"
+            }],
+          "Return" : {
+            "DataType" : 0,
+            "Location" : { },
+            "LeftValue" : {
+              "_t" : "VarRef",
+              "VarName" : "功能选择"
+            }
+          }
+        }, {
+          "_t" : "BackgroundStmt",
+          "ID" : 39,
+          "Img" : null,
+          "Asset" : "video1"
+        }, {
+          "_t" : "SwitchStmt",
+          "ID" : 40,
+          "SwitchCaseList" : [{
+              "ID" : 41,
+              "Value" : {
+                "_t" : "IntConst",
+                "Value" : 0
+              },
+              "CaseContent" : [{
+                  "_t" : "IncludeStmt",
+                  "ID" : 42,
+                  "SubPlot" : "test"
+                }]
+            }, {
+              "ID" : 43,
+              "Value" : {
+                "_t" : "IntConst",
+                "Value" : 1
+              },
+              "CaseContent" : [{
+                  "_t" : "IncludeStmt",
+                  "ID" : 44,
+                  "SubPlot" : "cold"
+                }]
+            }],
+          "Expression" : {
+            "_t" : "LeftValueExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "LeftValue" : {
+              "_t" : "VarRef",
+              "VarName" : "功能选择"
+            }
+          }
+        }, {
           "_t" : "DialogStmt",
           "ID" : 45,
           "Text" : "表达式：1+2+3 = ?"
