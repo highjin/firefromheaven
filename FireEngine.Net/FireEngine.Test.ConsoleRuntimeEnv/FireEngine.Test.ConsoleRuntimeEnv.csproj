@@ -69,4 +69,8 @@
     <PreBuildEvent>$(SolutionDir)FireEngine.Test.ConsoleCompiler\bin\Debug\FireEngine.Test.ConsoleCompiler.exe ..\..\..\FireEngine.FireML.Editor\FireML\FireML.fml
 </PreBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

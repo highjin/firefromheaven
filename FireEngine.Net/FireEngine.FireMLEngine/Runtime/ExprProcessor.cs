@@ -301,7 +301,7 @@ namespace FireEngine.FireMLEngine.Runtime
         public void Visit(NegativeExpr negativeExpr, object[] args)
         {
             negativeExpr.Op.Accept(this);
-            RightValue v = readRightValue(negativeExpr);
+            RightValue v = readRightValue(negativeExpr.Op); //modified by Wander @ 2011
             if (v is IntConst)
             {
                 IntConst result = new IntConst();

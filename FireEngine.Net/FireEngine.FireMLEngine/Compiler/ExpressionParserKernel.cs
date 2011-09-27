@@ -197,7 +197,7 @@ namespace FireEngine.FireMLEngine.Compiler
                         RightValueExpr floatResult = new RightValueExpr();
                         FloatConst floatConst = new FloatConst();
                         floatConst.Value = float.Parse(matchTokenResult.Matched);
-                        floatResult.DataType = DataType.Int;
+                        floatResult.DataType = DataType.Float;  //modified by Wander @ 2011
                         floatResult.RightValue = floatConst;
                         floatResult.Location = loc.Offset(begin);
                         return floatResult;
