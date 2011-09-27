@@ -215,6 +215,95 @@
                 }
               }
             }
+          }, {
+            "_t" : "AssignExpr",
+            "DataType" : 2,
+            "Location" : { },
+            "RightValue" : null,
+            "LeftExpr" : {
+              "DataType" : 0,
+              "Location" : { },
+              "LeftValue" : {
+                "_t" : "VarRef",
+                "VarName" : "f"
+              }
+            },
+            "RightExpr" : {
+              "_t" : "SubExpr",
+              "DataType" : 2,
+              "Location" : { },
+              "RightValue" : null,
+              "FirstOp" : {
+                "_t" : "AddExpr",
+                "DataType" : 2,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 2,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "FloatConst",
+                    "Value" : 1.2000000476837158
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 2,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "FloatConst",
+                    "Value" : 2.2999999523162842
+                  }
+                }
+              },
+              "SecondOp" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 2,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "IntConst",
+                  "Value" : 5
+                }
+              }
+            }
+          }, {
+            "_t" : "AssignExpr",
+            "DataType" : 4,
+            "Location" : { },
+            "RightValue" : null,
+            "LeftExpr" : {
+              "DataType" : 0,
+              "Location" : { },
+              "LeftValue" : {
+                "_t" : "VarRef",
+                "VarName" : "s"
+              }
+            },
+            "RightExpr" : {
+              "_t" : "AddExpr",
+              "DataType" : 4,
+              "Location" : { },
+              "RightValue" : null,
+              "FirstOp" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "StringConst",
+                  "Value" : "abc"
+                }
+              },
+              "SecondOp" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 4,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "StringConst",
+                  "Value" : "def"
+                }
+              }
+            }
           }]
       }, {
         "_t" : "BackgroundStmt",
