@@ -217,7 +217,7 @@
             }
           }, {
             "_t" : "AssignExpr",
-            "DataType" : 2,
+            "DataType" : 3,
             "Location" : { },
             "RightValue" : null,
             "LeftExpr" : {
@@ -230,17 +230,17 @@
             },
             "RightExpr" : {
               "_t" : "SubExpr",
-              "DataType" : 2,
+              "DataType" : 3,
               "Location" : { },
               "RightValue" : null,
               "FirstOp" : {
                 "_t" : "AddExpr",
-                "DataType" : 2,
+                "DataType" : 3,
                 "Location" : { },
                 "RightValue" : null,
                 "FirstOp" : {
                   "_t" : "RightValueExpr",
-                  "DataType" : 2,
+                  "DataType" : 3,
                   "Location" : { },
                   "RightValue" : {
                     "_t" : "FloatConst",
@@ -249,7 +249,7 @@
                 },
                 "SecondOp" : {
                   "_t" : "RightValueExpr",
-                  "DataType" : 2,
+                  "DataType" : 3,
                   "Location" : { },
                   "RightValue" : {
                     "_t" : "FloatConst",
