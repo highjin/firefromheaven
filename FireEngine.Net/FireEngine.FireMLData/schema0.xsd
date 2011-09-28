@@ -24,24 +24,13 @@ AssetDataBase
     </xs:restriction>
   </xs:simpleType>
   <!--
-ActorAsset
+CGAsset
 -->
-  <xs:complexType name="ActorAsset">
+  <xs:complexType name="CGAsset">
     <xs:complexContent mixed="false">
       <xs:extension base="AssetDataBase">
         <xs:attribute name="Group" type="xs:string" />
         <xs:attribute name="src" type="xs:string" />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <!--
-PositionData
--->
-  <xs:complexType name="PositionData">
-    <xs:complexContent mixed="false">
-      <xs:extension base="FireMLDataBase">
-        <xs:attribute name="X" type="xs:int" use="required" />
-        <xs:attribute name="Y" type="xs:int" use="required" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -76,13 +65,24 @@ MusicAsset
     </xs:complexContent>
   </xs:complexType>
   <!--
-CGAsset
+ActorAsset
 -->
-  <xs:complexType name="CGAsset">
+  <xs:complexType name="ActorAsset">
     <xs:complexContent mixed="false">
       <xs:extension base="AssetDataBase">
         <xs:attribute name="Group" type="xs:string" />
         <xs:attribute name="src" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+PositionData
+-->
+  <xs:complexType name="PositionData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FireMLDataBase">
+        <xs:attribute name="X" type="xs:int" use="required" />
+        <xs:attribute name="Y" type="xs:int" use="required" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

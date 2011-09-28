@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
 
-  <MainPlot>
-    表达式
-
-    <expr>
-      <![CDATA[
-       $a = -1 + 2 + 2^5 - 3 * 4 / 5 ^ 6;
-       $f = 1.2 + 2.3 - 5;
-       $s = "abc" + "def";
-       ]]>
-    </expr>
-    
-    <!--<expr>$b = $a >= 1 && $a < 2 || !($a > 3); </expr>-->
-
-    <echo>$a</echo>
-    <!--<echo>$b</echo>-->
-    <echo>$f</echo>
-    <echo>$s</echo>
-    
+  <MainPlot>   
     <bg img="图书馆大厅.jpg"/>
     大家好~
     <actor img="老师_闭目.png" name="路德维希" position="250, 0"/>
@@ -61,6 +44,23 @@
 
   <SubPlot name="test">
 
+    表达式
+
+    <expr>
+      <![CDATA[
+       $a = -1 + 2 + 2^5 - 3 * 4 / 5 ^ 6;
+       $f = 1.2 + 2.3 - 5;
+       $s = "abc" + "def";
+       ]]>
+    </expr>
+
+    <!--<expr>$b = $a >= 1 && $a < 2 || !($a > 3); </expr>-->
+
+    <echo>$a</echo>
+    <!--<echo>$b</echo>-->
+    <echo>$f</echo>
+    <echo>$s</echo>
+    
     <MyNewFunc/>
 
     <select return="$功能选择">
