@@ -2,7 +2,9 @@
 <FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
 
   <MainPlot>
-     表达式
+    <echo>1+1</echo>
+    
+    <!--表达式
      <expr>
        <![CDATA[
        $a = -1 + 2 - 3 * 4 / 5 ^ 6;
@@ -16,6 +18,7 @@
     <echo>$b</echo>
     <echo>$f</echo>
     <echo>$s</echo>
+    -->
     
     <bg img="图书馆大厅.jpg"/>
     大家好~

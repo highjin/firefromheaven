@@ -126,7 +126,6 @@
     <Compile Include="StrVarRefProcessor.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Runtime\ExpressionCalculator.cs" />
     <Compile Include="Runtime\FormalScope.cs" />
     <Compile Include="Runtime\FuncReturnBehavior.cs" />
     <Compile Include="Runtime\IEngineFunctionCaller.cs" />
