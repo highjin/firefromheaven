@@ -35,6 +35,7 @@ public:
     virtual FireMLEngine::FuncReturnBehavior dialog(std::string& text, std::string& name);  //TODO: avatar
     virtual FireMLEngine::FuncReturnBehavior background(std::string& img);
     virtual FireMLEngine::FuncReturnBehavior actor(std::string& img, std::string& layer, FireMLEngine::PositionData position);    
+    virtual FireMLEngine::FuncReturnBehavior echo(std::string& text);
     virtual void end();
 };
 

@@ -22,6 +22,7 @@ namespace FireMLEngine {
             for(int i = 0; i < content.size(); i++) {
                 delete content[i];
             }
+            content.clear();
         }
         
         /**

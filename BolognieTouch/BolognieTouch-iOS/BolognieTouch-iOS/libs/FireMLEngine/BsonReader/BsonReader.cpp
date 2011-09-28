@@ -12,6 +12,8 @@
 #include "DialogStmt.h"
 #include "BackgroundStmt.h"
 #include "ActorStmt.h"
+#include "ExpressionStmt.h"
+#include "EchoStmt.h"
 #include <assert.h>
 #include <string.h>
 using namespace FireMLEngine;
@@ -65,7 +67,7 @@ void BsonReader::readPosition(bson_iterator *it, PositionData* position) {
     int x, y;
     
     while (bson_iterator_next(&subIt) != BSON_EOO) {
-        BSON_KEY_AND_TYPE(&subIt);
+        BSON_KEY(&subIt);
         if (STR_EQUALS(key, "X")) {
             x = bson_iterator_int(&subIt);
         } else if (BSON_KEY_IS("Y")) {
@@ -96,6 +98,10 @@ void BsonReader::visitMainContent(std::vector<Statement*>& target) {
             statement = new BackgroundStmt();
         } else if (STR_EQUALS(_t, "ActorStmt")) {
             statement = new ActorStmt();
+        } else if (STR_EQUALS(_t, "ExpressionStmt")) {
+            statement = new ExpressionStmt();
+        } else if (STR_EQUALS(_t, "EchoStmt")) {
+            statement = new EchoStmt();
         } else {
             continue;   //for debug, ignoring unimplemented type
         }
@@ -114,7 +120,7 @@ void BsonReader::visit(FireMLRoot* root) {
     bson_iterator* it = bsonItStack.top();
     
     while(bson_iterator_next(it) != BSON_EOO) {
-        BSON_KEY_AND_TYPE(it);
+        BSON_KEY(it);
         
         if (BSON_KEY_IS("MainPlot")) {
             bson_iterator mainPlotIt;
@@ -136,7 +142,7 @@ void BsonReader::visit(PlotDef* plotDef) {
     bson_iterator* it = bsonItStack.top();
     
     while(bson_iterator_next(it) != BSON_EOO) {
-        BSON_KEY_AND_TYPE(it);
+        BSON_KEY(it);
         
         if (BSON_KEY_IS("ID")) {
             addId(it, plotDef);
@@ -202,8 +208,7 @@ void BsonReader::visit(LoopStmt* loopStmt) { }
 void BsonReader::visit(BackgroundStmt* backgroundStmt) {
     bson_iterator* it = bsonItStack.top();
     while (bson_iterator_next(it) != BSON_EOO) {
-        const char* key = bson_iterator_key(it);
-        bson_type type = bson_iterator_type(it);
+        BSON_KEY_AND_TYPE(it);
         if (BSON_KEY_IS("ID")) {
             addId(it, backgroundStmt);
         } else if (BSON_KEY_IS("Img")) {
@@ -214,10 +219,44 @@ void BsonReader::visit(BackgroundStmt* backgroundStmt) {
     }
 }
                            
-void BsonReader::visit(EchoStmt* echoStmt) { }
+void BsonReader::visit(EchoStmt* echoStmt) { 
+    bson_iterator* it = bsonItStack.top();
+    while (bson_iterator_next(it) != BSON_EOO) {
+        BSON_KEY(it);
+        if (BSON_KEY_IS("ID")) {
+            addId(it, echoStmt);
+        } else if (BSON_KEY_IS("Expression")) {
+            bson_iterator exprIt;
+            bson_iterator_subiterator(it, &exprIt);
+            echoStmt->setExpression(exprReader.readExpr(&exprIt));
+        }
+    }
+}
+
+
 void BsonReader::visit(IncludeStmt* includeStmt) { }
 void BsonReader::visit(BreakStmt* breakStmt) { }
-void BsonReader::visit(ExpressionStmt* expressionStmt) { }
+
+void BsonReader::visit(ExpressionStmt* expressionStmt) {
+    bson_iterator* it = bsonItStack.top();
+    while (bson_iterator_next(it) != BSON_EOO) {
+        BSON_KEY(it);
+        if (BSON_KEY_IS("ID")) {
+            addId(it, expressionStmt);
+        } else if (BSON_KEY_IS("ExpressionList")) {
+            bson_iterator arrayIt;
+            bson_iterator_subiterator(it, &arrayIt);
+            while (bson_iterator_next(&arrayIt) != BSON_EOO) {
+                bson_iterator exprIt;
+                bson_iterator_subiterator(&arrayIt, &exprIt);
+                Expression* expr = exprReader.readExpr(&exprIt);
+                expressionStmt->expressionList.push_back(expr);
+            }
+        }
+        
+    }
+}
+
 void BsonReader::visit(ReturnStmt* returnStmt) { }
 
 void BsonReader::visit(ParameterDef* parameterDef) { }

@@ -68,6 +68,12 @@ FuncReturnBehavior GameScene::actor(std::string& img, std::string& layer, Positi
     return GotoNext;
 }
 
+FuncReturnBehavior GameScene::echo(std::string& text) {
+    conversationLayer->show(text.c_str());
+    return WaitForUser;
+}
+
+
 void GameScene::end() {
     touchReceiverLayer->setIsTouchEnabled(false);
     CCTouchDispatcher::sharedDispatcher()->removeDelegate(touchReceiverLayer);    //seems a bug in cocos2d?

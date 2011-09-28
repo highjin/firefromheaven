@@ -16,6 +16,8 @@ namespace FireMLEngine {
     class VarRef : public LeftValue {
     public:
         std::string varName;
+        
+        virtual LeftValueType getLeftValueType() const { return VarRefType; }
     };
 }
 

@@ -11,12 +11,14 @@
 
 #include "InstructionStack.h"
 #include "CallStack.h"
+#include "ScopeStack.h"
 
 namespace FireMLEngine {
     class RuntimeData {
     private:
         InstructionStack instructionStack;
         CallStack callStack;
+        ScopeStack scopeStack;
         
     public:
         std::string currentActorName;
@@ -28,6 +30,7 @@ namespace FireMLEngine {
         
         inline InstructionStack& getInstructionStack() { return instructionStack; }
         inline CallStack& getCallStack() { return callStack; }
+        inline ScopeStack& getScopeStack() { return scopeStack; }
         
         inline void reset() {
             instructionStack.clear();

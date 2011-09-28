@@ -17,6 +17,7 @@
 #include <vector>
 
 #include "BsonReaderMacro.h"
+#include "BsonExprReader.h"
 
 
 
@@ -27,6 +28,7 @@ namespace FireMLEngine {
         std::stack<bson_iterator*> bsonItStack;
         void addId(bson_iterator* it, ASTNode* node);
         FireMLRoot* root;
+        BsonExprReader exprReader;
         
         void readPosition(bson_iterator* it, PositionData* position);
         

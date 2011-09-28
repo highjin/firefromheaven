@@ -14,10 +14,16 @@
 
 namespace FireMLEngine {
     
+    typedef enum {
+        LeftValueExprType,
+        RightValueExprType
+    } ExpressionType;
+    
     class Expression {
     public:
         FireMLDataType dataType;
         
+        virtual ExpressionType getExpressionType() const = 0;
         virtual void accept(IExprVisitor* visitor) = 0;
     };
 }

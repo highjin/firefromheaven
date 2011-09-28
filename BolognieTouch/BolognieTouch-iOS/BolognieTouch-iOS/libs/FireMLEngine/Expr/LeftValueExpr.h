@@ -45,6 +45,7 @@ namespace FireMLEngine {
             this->leftValue = value;
         }
         
+        virtual ExpressionType getExpressionType() const { return LeftValueExprType; }
         
         inline LeftValue* getLeftValue() { return leftValue; }
         

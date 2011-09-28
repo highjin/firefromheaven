@@ -23,6 +23,7 @@ namespace FireMLEngine {
         RuntimeASTVisitor visitor;
         IEngineFunctionCaller* funcCaller;
         
+        
     public:
         RuntimeKernel();
         virtual ~RuntimeKernel();

@@ -10,6 +10,7 @@
 #define BolognieTouch_iOS_RuntimeASTVisitor_h
 
 #include "IASTVisitor.h"
+#include "ExprProcessor.h"
 
 namespace FireMLEngine {
     
@@ -18,6 +19,7 @@ namespace FireMLEngine {
     class RuntimeASTVisitor : public IASTVisitor {
     private:
         RuntimeKernel* kernel;
+        ExprProcessor exprProcessor;
         
     public:
         

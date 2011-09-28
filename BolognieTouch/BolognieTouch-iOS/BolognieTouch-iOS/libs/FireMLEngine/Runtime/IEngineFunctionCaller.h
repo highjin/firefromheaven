@@ -24,6 +24,7 @@ namespace  FireMLEngine {
         virtual FuncReturnBehavior dialog(std::string& text, std::string& name) = 0;
         virtual FuncReturnBehavior background(std::string& img) = 0; //TODO: asset
         virtual FuncReturnBehavior actor(std::string& img, std::string& layer, PositionData position) = 0;
+        virtual FuncReturnBehavior echo(std::string& text) = 0;
         virtual void end() = 0;
     };
 }

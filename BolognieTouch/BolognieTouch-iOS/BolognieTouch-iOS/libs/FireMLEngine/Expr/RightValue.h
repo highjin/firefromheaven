@@ -23,6 +23,7 @@ namespace FireMLEngine {
         virtual int toInt() const = 0;
         virtual float toFloat() const = 0;
         virtual bool equals(const RightValue* ref) const = 0;
+        virtual RightValue* clone() const = 0;
     };
 }
 

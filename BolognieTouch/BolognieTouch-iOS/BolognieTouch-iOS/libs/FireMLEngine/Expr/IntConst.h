@@ -42,6 +42,12 @@ namespace FireMLEngine {
         virtual bool equals(const RightValue* ref) const {
             return (ref->getDataType() == Int) && (((IntConst*)ref)->value == value);
         }
+        
+        virtual RightValue* clone() const {
+            IntConst* r = new IntConst();
+            r->value = value;
+            return r;
+        }
     };
 }
 

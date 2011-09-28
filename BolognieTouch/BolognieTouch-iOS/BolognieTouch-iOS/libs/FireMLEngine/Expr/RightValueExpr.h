@@ -39,14 +39,17 @@ namespace FireMLEngine {
             return newRightValue;
         }*/
         
-        void setRightValue(RightValue* rightValue) {
+        //rightValue will be deep cloned
+        void setRightValue(const RightValue* rightValue) {
             if (this->rightValue != NULL) {
                 delete this->rightValue;
             }
             
-            this->rightValue = rightValue;
+            this->rightValue = rightValue->clone();
         }
         inline RightValue* getRightValue() { return rightValue; }
+        
+        virtual ExpressionType getExpressionType() const { return RightValueExprType; }
         
         EXPR_ACCEPT_FUNC
     };

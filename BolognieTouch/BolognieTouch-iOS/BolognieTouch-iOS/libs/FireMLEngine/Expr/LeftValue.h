@@ -12,8 +12,14 @@
 #include "Value.h"
 
 namespace FireMLEngine {
+    
+    typedef enum {
+        VarRefType
+    } LeftValueType;
+    
     class LeftValue : public Value {
-
+    public:
+        virtual LeftValueType getLeftValueType() const = 0;
     };
 }
 

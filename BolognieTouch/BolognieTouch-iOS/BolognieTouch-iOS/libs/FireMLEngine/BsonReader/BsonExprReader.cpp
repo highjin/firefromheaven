@@ -28,6 +28,8 @@
 #include "RightValueExpr.h"
 #include "SubExpr.h"
 
+#include "VarRef.h"
+
 using namespace FireMLEngine;
 
 Expression* BsonExprReader::readExpr(bson_iterator *it) {
@@ -51,6 +53,8 @@ Expression* BsonExprReader::readExpr(bson_iterator *it) {
     else if (STR_EQUALS(_t, "OrExpr")) { expr = new OrExpr(); }
     else if (STR_EQUALS(_t, "PowExpr")) { expr = new PowExpr(); }
     else if (STR_EQUALS(_t, "SubExpr")) { expr = new SubExpr(); }
+    else if (STR_EQUALS(_t, "RightValueExpr")) { expr = new RightValueExpr(); }
+    else { assert(0); }
     
     bsonItStack.push(it);
     expr->accept(this);
@@ -112,6 +116,7 @@ void BsonExprReader::visitBinaryExpr(BinaryExpr* binaryExpr) {
 }
 
 RightValue* BsonExprReader::readRightValue(bson_iterator *it) {
+    bson_iterator_next(it);
     const char* _t = bson_iterator_string(it);
     bson_iterator_next(it); //assuming value is the next element
     
@@ -133,21 +138,95 @@ RightValue* BsonExprReader::readRightValue(bson_iterator *it) {
     }
 }
 
-void BsonExprReader::visit(AddExpr* addExpr) { }
-void BsonExprReader::visit(AndExpr* andExpr) { }
-void BsonExprReader::visit(AssignExpr* assignExpr) { }
-void BsonExprReader::visit(DivExpr* divExpr) { }
-void BsonExprReader::visit(EquExpr* equExpr) { }
-void BsonExprReader::visit(GreatEquExpr* greatEquExpr) { }
-void BsonExprReader::visit(GreatExpr* greatExpr) { }
-void BsonExprReader::visit(LeftValueExpr* leftValueExpr) { }
-void BsonExprReader::visit(LessEquExpr* lessEquExpr) { }
-void BsonExprReader::visit(LessExpr* lessExpr) { }
-void BsonExprReader::visit(MulExpr* mulExpr) { }
-void BsonExprReader::visit(NegativeExpr* negativeExpr) { }
-void BsonExprReader::visit(NeqExpr* neqExpr) { }
-void BsonExprReader::visit(NotExpr* notExpr) { }
-void BsonExprReader::visit(OrExpr* orExpr) { }
-void BsonExprReader::visit(PowExpr* powExpr) { }
-void BsonExprReader::visit(RightValueExpr* rightValueExpr) { }
-void BsonExprReader::visit(SubExpr* subExpr) { }
+LeftValue* BsonExprReader::readLeftValue(bson_iterator *it) {
+    bson_iterator_next(it);
+    const char* _t = bson_iterator_string(it);
+    bson_iterator_next(it); //assuming VarName is the next element
+    
+    if (STR_EQUALS(_t, "VarRef")) {
+        VarRef* varRef = new VarRef;
+        varRef->varName = bson_iterator_string(it);
+        return varRef;
+    }
+    
+    assert (0); //never reach here
+    return NULL;
+}
+
+
+void BsonExprReader::visit(AssignExpr* assignExpr) 
+{
+    bson_iterator* it = bsonItStack.top();
+    while (bson_iterator_next(it) != BSON_EOO) {
+        BSON_KEY_AND_TYPE(it);
+        
+        if (BSON_KEY_IS("DataType")) {
+            assignExpr->dataType = (FireMLDataType)bson_iterator_int(it);
+        } else if (BSON_KEY_IS("RightValue")) {
+            if (type != BSON_NULL) {
+                bson_iterator rightValueIt;
+                bson_iterator_subiterator(it, &rightValueIt);
+                assignExpr->setRightValue(readRightValue(&rightValueIt));
+            }
+        } else if (BSON_KEY_IS("LeftExpr")) {
+            bson_iterator leftExprIt;
+            bson_iterator_subiterator(it, &leftExprIt);
+            LeftValueExpr* leftExpr = new LeftValueExpr();
+            bsonItStack.push(&leftExprIt);
+            leftExpr->accept(this);
+            bsonItStack.pop();
+            assignExpr->setLeftExpr(leftExpr);
+        } else if (BSON_KEY_IS("RightExpr")) {
+            bson_iterator rightExprIt;
+            bson_iterator_subiterator(it, &rightExprIt);
+            assignExpr->setRightExpr(readExpr(&rightExprIt));
+        }
+    }
+}
+
+void BsonExprReader::visit(LeftValueExpr* leftValueExpr) {
+    bson_iterator* it = bsonItStack.top();
+    while (bson_iterator_next(it) != BSON_EOO) {
+        BSON_KEY(it);
+        
+        if (BSON_KEY_IS("DataType")) {
+            leftValueExpr->dataType = (FireMLDataType)bson_iterator_int(it);
+        } else if (BSON_KEY_IS("LeftValue")) {
+            bson_iterator leftValueIt;
+            bson_iterator_subiterator(it, &leftValueIt);
+            leftValueExpr->setLeftValue(readLeftValue(&leftValueIt));
+        }
+    }
+}
+
+void BsonExprReader::visit(RightValueExpr* rightValueExpr) 
+{
+    bson_iterator* it = bsonItStack.top();
+    while (bson_iterator_next(it) != BSON_EOO) {
+        BSON_KEY(it);
+        
+        if (BSON_KEY_IS("DataType")) {
+            rightValueExpr->dataType = (FireMLDataType)bson_iterator_int(it);
+        } else if (BSON_KEY_IS("RightValue")) {
+            bson_iterator rightValueIt;
+            bson_iterator_subiterator(it, &rightValueIt);
+            rightValueExpr->setRightValue(readRightValue(&rightValueIt));
+        }
+    }   
+}
+
+void BsonExprReader::visit(AddExpr* addExpr) { visitBinaryExpr(addExpr); }
+void BsonExprReader::visit(AndExpr* andExpr) { visitBinaryExpr(andExpr); }
+void BsonExprReader::visit(DivExpr* divExpr) { visitBinaryExpr(divExpr); }
+void BsonExprReader::visit(EquExpr* equExpr) { visitBinaryExpr(equExpr); }
+void BsonExprReader::visit(GreatEquExpr* greatEquExpr) { visitBinaryExpr(greatEquExpr); }
+void BsonExprReader::visit(GreatExpr* greatExpr) { visitBinaryExpr(greatExpr); }
+void BsonExprReader::visit(LessEquExpr* lessEquExpr) { visitBinaryExpr(lessEquExpr); }
+void BsonExprReader::visit(LessExpr* lessExpr) { visitBinaryExpr(lessExpr); }
+void BsonExprReader::visit(MulExpr* mulExpr) { visitBinaryExpr(mulExpr); }
+void BsonExprReader::visit(NegativeExpr* negativeExpr) { visitMonoExpr(negativeExpr); }
+void BsonExprReader::visit(NeqExpr* neqExpr) { visitBinaryExpr(neqExpr); }
+void BsonExprReader::visit(NotExpr* notExpr) { visitMonoExpr(notExpr); }
+void BsonExprReader::visit(OrExpr* orExpr) { visitBinaryExpr(orExpr); }
+void BsonExprReader::visit(PowExpr* powExpr) { visitBinaryExpr(powExpr); }
+void BsonExprReader::visit(SubExpr* subExpr) { visitBinaryExpr(subExpr); }

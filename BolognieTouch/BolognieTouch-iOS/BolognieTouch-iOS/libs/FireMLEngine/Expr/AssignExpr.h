@@ -38,7 +38,7 @@ namespace FireMLEngine {
             this->leftExpr = leftExpr;
         }
         
-        void setRightExpr(RightValueExpr* rightExpr) {
+        void setRightExpr(Expression* rightExpr) {
             if (this->rightExpr != NULL) {
                 delete this->rightExpr;
             }

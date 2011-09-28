@@ -11,9 +11,11 @@
 #include "DialogStmt.h"
 #include "BackgroundStmt.h"
 #include "ActorStmt.h"
+#include "EchoStmt.h"
+#include "ExpressionStmt.h"
 using namespace FireMLEngine;
 
-RuntimeASTVisitor::RuntimeASTVisitor(RuntimeKernel* kernel) : kernel(kernel) {
+RuntimeASTVisitor::RuntimeASTVisitor(RuntimeKernel* kernel) : kernel(kernel), exprProcessor(kernel) {
     
 }
 
@@ -25,7 +27,7 @@ void RuntimeASTVisitor::visit(ActionLayerDef* actionLayerDef) { }
 void RuntimeASTVisitor::visit(FunctionDef* functionDef) { }
 
 void RuntimeASTVisitor::visit(PlotDef* plotDef) {
-    //TODO: scope stack open
+    kernel->getRuntimeData()->getScopeStack().openLocalScope();
     kernel->getRuntimeData()->getInstructionStack().push(InstructionStack::CLOSE_LOCAL_SCOPE_FLAG);
     kernel->getRuntimeData()->getInstructionStack().push(plotDef->content);
     kernel->next();
@@ -60,11 +62,24 @@ void RuntimeASTVisitor::visit(BackgroundStmt* backgroundStmt) {
     //TODO: asset
 }
 
-void RuntimeASTVisitor::visit(EchoStmt* echoStmt) { }
+void RuntimeASTVisitor::visit(EchoStmt* echoStmt) { 
+    std::string result = exprProcessor.evalStr(echoStmt->getExpression());
+    kernel->behave(kernel->getFuncCaller()->echo(result));
+}
+
+
 void RuntimeASTVisitor::visit(IncludeStmt* includeStmt) { }
 void RuntimeASTVisitor::visit(BreakStmt* breakStmt) { }
-void RuntimeASTVisitor::visit(ExpressionStmt* expressionStmt) { }
+
+void RuntimeASTVisitor::visit(ExpressionStmt* expressionStmt) {
+    for (int i = 0; i < expressionStmt->expressionList.size(); i++) {
+        exprProcessor.eval(expressionStmt->expressionList[i]);
+    }
+    kernel->next();
+}
+
 void RuntimeASTVisitor::visit(ReturnStmt* returnStmt) { }
+
 
 void RuntimeASTVisitor::visit(ParameterDef* parameterDef) { }
 void RuntimeASTVisitor::visit(SelectOption* selectOption) { }

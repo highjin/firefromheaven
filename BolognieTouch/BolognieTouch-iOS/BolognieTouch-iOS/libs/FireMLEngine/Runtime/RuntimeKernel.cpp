@@ -42,10 +42,10 @@ void RuntimeKernel::next() {
         if (id == InstructionStack::ROOT_FLAG) {
             root.accept(&visitor);
         } else if (id == InstructionStack::CLOSE_LOCAL_SCOPE_FLAG) {
-            //TODO: scope
+            runtimeData.getScopeStack().closeScope();
             next();
         } else if (id == InstructionStack::CLOSE_FORMAL_SCOPE_FLAG) {
-            //TODO: scope
+            runtimeData.getScopeStack().closeScope();
             next();
         } else if (id == InstructionStack::CALL_FLAG) {
             CallStackElement elem = runtimeData.getCallStack().pop();

@@ -43,6 +43,12 @@ namespace FireMLEngine {
         virtual bool equals(const RightValue* ref) const {    //TODO: epsilon? 
             return (ref->getDataType() == Float) && (((FloatConst*)ref)->value == value);
         }
+        
+        virtual RightValue* clone() const {
+            FloatConst* r = new FloatConst();
+            r->value = value;
+            return r;
+        }
     };
 }
 

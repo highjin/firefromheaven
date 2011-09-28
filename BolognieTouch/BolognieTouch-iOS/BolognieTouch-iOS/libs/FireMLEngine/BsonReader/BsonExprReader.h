@@ -14,6 +14,7 @@
 #include "Expression.h"
 #include "MonoExpr.h"
 #include "BinaryExpr.h"
+#include "LeftValue.h"
 #include <stack>
 
 namespace FireMLEngine {
@@ -27,6 +28,7 @@ namespace FireMLEngine {
          read the right value (const) and return a new RightValue object. "it" should be pointed to the RightValue bson object, retrieved by bson_iterator_subiterator (not statement, not array). Caller's responsibility to delete this rightvalue when it is not used anymore. 
          */
         RightValue* readRightValue(bson_iterator* it);
+        LeftValue* readLeftValue(bson_iterator* it);
         
     public:
         /**
