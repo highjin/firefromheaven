@@ -20,26 +20,86 @@
             }
           },
           "SecondOp" : {
-            "_t" : "AddExpr",
+            "_t" : "SubExpr",
             "DataType" : 3,
             "Location" : { },
             "RightValue" : null,
             "FirstOp" : {
-              "_t" : "RightValueExpr",
-              "DataType" : 3,
+              "_t" : "AddExpr",
+              "DataType" : 2,
               "Location" : { },
-              "RightValue" : {
-                "_t" : "FloatConst",
-                "Value" : 1.2000000476837158
+              "RightValue" : null,
+              "FirstOp" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 2,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "IntConst",
+                  "Value" : 1
+                }
+              },
+              "SecondOp" : {
+                "_t" : "MulExpr",
+                "DataType" : 2,
+                "Location" : { },
+                "RightValue" : null,
+                "FirstOp" : {
+                  "_t" : "PowExpr",
+                  "DataType" : 2,
+                  "Location" : { },
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 2,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "IntConst",
+                      "Value" : 2
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 2,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "IntConst",
+                      "Value" : 2
+                    }
+                  }
+                },
+                "SecondOp" : {
+                  "_t" : "RightValueExpr",
+                  "DataType" : 2,
+                  "Location" : { },
+                  "RightValue" : {
+                    "_t" : "IntConst",
+                    "Value" : 3
+                  }
+                }
               }
             },
             "SecondOp" : {
-              "_t" : "RightValueExpr",
+              "_t" : "DivExpr",
               "DataType" : 3,
               "Location" : { },
-              "RightValue" : {
-                "_t" : "FloatConst",
-                "Value" : 2.2999999523162842
+              "RightValue" : null,
+              "FirstOp" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 3,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "FloatConst",
+                  "Value" : 5.0
+                }
+              },
+              "SecondOp" : {
+                "_t" : "RightValueExpr",
+                "DataType" : 3,
+                "Location" : { },
+                "RightValue" : {
+                  "_t" : "FloatConst",
+                  "Value" : 2.0
+                }
               }
             }
           }

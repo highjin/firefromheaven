@@ -2,7 +2,7 @@
 <FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
 
   <MainPlot>
-    <echo>"Test: " + (1.2 + 2.3)</echo>
+    <echo>"Test: " + (1 + 2^2 * 3 - 5.0 / 2.0)</echo>
     
     <!--表达式
      <expr>
