@@ -7,25 +7,40 @@
         "ID" : 2,
         "Expression" : {
           "_t" : "AddExpr",
-          "DataType" : 2,
+          "DataType" : 4,
           "Location" : { },
           "RightValue" : null,
           "FirstOp" : {
             "_t" : "RightValueExpr",
-            "DataType" : 2,
+            "DataType" : 4,
             "Location" : { },
             "RightValue" : {
-              "_t" : "IntConst",
-              "Value" : 1
+              "_t" : "StringConst",
+              "Value" : "Test: "
             }
           },
           "SecondOp" : {
-            "_t" : "RightValueExpr",
-            "DataType" : 2,
+            "_t" : "AddExpr",
+            "DataType" : 3,
             "Location" : { },
-            "RightValue" : {
-              "_t" : "IntConst",
-              "Value" : 1
+            "RightValue" : null,
+            "FirstOp" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 3,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "FloatConst",
+                "Value" : 1.2000000476837158
+              }
+            },
+            "SecondOp" : {
+              "_t" : "RightValueExpr",
+              "DataType" : 3,
+              "Location" : { },
+              "RightValue" : {
+                "_t" : "FloatConst",
+                "Value" : 2.2999999523162842
+              }
             }
           }
         }
