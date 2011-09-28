@@ -33,27 +33,57 @@
                 "Location" : { },
                 "RightValue" : null,
                 "FirstOp" : {
-                  "_t" : "NegativeExpr",
+                  "_t" : "AddExpr",
                   "DataType" : 2,
                   "Location" : { },
                   "RightValue" : null,
-                  "Op" : {
+                  "FirstOp" : {
+                    "_t" : "NegativeExpr",
+                    "DataType" : 2,
+                    "Location" : { },
+                    "RightValue" : null,
+                    "Op" : {
+                      "_t" : "RightValueExpr",
+                      "DataType" : 2,
+                      "Location" : { },
+                      "RightValue" : {
+                        "_t" : "IntConst",
+                        "Value" : 1
+                      }
+                    }
+                  },
+                  "SecondOp" : {
                     "_t" : "RightValueExpr",
                     "DataType" : 2,
                     "Location" : { },
                     "RightValue" : {
                       "_t" : "IntConst",
-                      "Value" : 1
+                      "Value" : 2
                     }
                   }
                 },
                 "SecondOp" : {
-                  "_t" : "RightValueExpr",
+                  "_t" : "PowExpr",
                   "DataType" : 2,
                   "Location" : { },
-                  "RightValue" : {
-                    "_t" : "IntConst",
-                    "Value" : 2
+                  "RightValue" : null,
+                  "FirstOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 2,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "IntConst",
+                      "Value" : 2
+                    }
+                  },
+                  "SecondOp" : {
+                    "_t" : "RightValueExpr",
+                    "DataType" : 2,
+                    "Location" : { },
+                    "RightValue" : {
+                      "_t" : "IntConst",
+                      "Value" : 5
+                    }
                   }
                 }
               },
