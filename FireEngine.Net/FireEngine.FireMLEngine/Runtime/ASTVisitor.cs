@@ -225,7 +225,7 @@ namespace FireEngine.FireMLEngine.Runtime
         public void Visit(EchoStmt echoStmt, object[] args)
         {
             string result = exprProcessor.EvalStr(echoStmt.Expression);
-            kernel.FuncCaller.Echo(result);
+            kernel.Behave(kernel.FuncCaller.Echo(result));
         }
 
         public void Visit(IncludeStmt includeStmt, object[] args)
