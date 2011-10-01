@@ -13,9 +13,12 @@
 #include "ActorStmt.h"
 #include "EchoStmt.h"
 #include "ExpressionStmt.h"
+#include "FunctionCallStmt.h"
+#include <map>
+using namespace std;
 using namespace FireMLEngine;
 
-RuntimeASTVisitor::RuntimeASTVisitor(RuntimeKernel* kernel) : kernel(kernel), exprProcessor(kernel) {
+RuntimeASTVisitor::RuntimeASTVisitor(RuntimeKernel* kernel) : kernel(kernel), exprProcessor(kernel), varRefProcessor(&(kernel->getRuntimeData()->getScopeStack())) {
     
 }
 
@@ -34,7 +37,33 @@ void RuntimeASTVisitor::visit(PlotDef* plotDef) {
 }
 
 void RuntimeASTVisitor::visit(ContinueStmt* continueStmt) { }
-void RuntimeASTVisitor::visit(FunctionCallStmt* funcCallStmt) { }
+
+void RuntimeASTVisitor::visit(FunctionCallStmt* funcCallStmt) { 
+    FormalScope* formalScope = kernel->getRuntimeData()->getScopeStack().openFormalScope();
+    for (map<string, Expression*>::iterator it = funcCallStmt->paramMap.begin(); it != funcCallStmt->paramMap.end(); ++it) {
+        string name = it->first;
+        Expression* expr = it->second;
+        const RightValue* rightValue = exprProcessor.eval(expr);
+        formalScope->setValue(it->first, *rightValue);
+    }
+    
+    kernel->getRuntimeData()->getScopeStack().openLocalScope();
+    
+    kernel->getRuntimeData()->getInstructionStack().push(InstructionStack::CALL_FLAG);
+    kernel->getRuntimeData()->getInstructionStack().push(InstructionStack::CLOSE_LOCAL_SCOPE_FLAG);
+    kernel->getRuntimeData()->getInstructionStack().push(InstructionStack::CLOSE_FORMAL_SCOPE_FLAG);
+    
+    kernel->getRuntimeData()->getInstructionStack().push(kernel->getRoot()->funcDefMap[funcCallStmt->name].funcDefContent);
+    
+    CallStackElement elem;
+    elem.destination = &(kernel->getRoot()->funcDefMap[funcCallStmt->name]);
+    elem.returnValueDest = exprProcessor.getVarName(funcCallStmt->getReturnDest());
+    kernel->getRuntimeData()->getCallStack().push(elem);
+    
+    kernel->next();
+}
+
+
 void RuntimeASTVisitor::visit(MusicStmt* musicStmt) { }
 void RuntimeASTVisitor::visit(MusicStopStmt* musicStopStmt) { }
 void RuntimeASTVisitor::visit(MusicVolStmt* musicVolStmt) { }
@@ -42,23 +71,25 @@ void RuntimeASTVisitor::visit(SwitchStmt* switchStmt) { }
 void RuntimeASTVisitor::visit(SelectStmt* selectStmt) { }
 
 void RuntimeASTVisitor::visit(ActorStmt* actorStmt) {
-    kernel->getRuntimeData()->currentActorName = actorStmt->name;
-    kernel->getRuntimeData()->currentActorAvatar = actorStmt->avatar; 
+    kernel->getRuntimeData()->currentActorName = varRefProcessor.replaceVarRef(actorStmt->name);
+    kernel->getRuntimeData()->currentActorAvatar = varRefProcessor.replaceVarRef(actorStmt->avatar); 
     //TODO: asset, layer
     
-    kernel->behave(kernel->getFuncCaller()->actor(actorStmt->img, actorStmt->layer, actorStmt->position));
+    string img = varRefProcessor.replaceVarRef(actorStmt->img);
+    kernel->behave(kernel->getFuncCaller()->actor(img, actorStmt->layer, actorStmt->position));
 }
 
 void RuntimeASTVisitor::visit(DialogStmt* dialogStmt) {
-    kernel->behave(kernel->getFuncCaller()->dialog(dialogStmt->text, kernel->getRuntimeData()->currentActorName));
-    //TODO: varRefProcessor.replace
+    string text = varRefProcessor.replaceVarRef(dialogStmt->text);
+    kernel->behave(kernel->getFuncCaller()->dialog(text, kernel->getRuntimeData()->currentActorName));
 }
 
 void RuntimeASTVisitor::visit(IfStmt* ifStmt) { }
 void RuntimeASTVisitor::visit(LoopStmt* loopStmt) { }
 
 void RuntimeASTVisitor::visit(BackgroundStmt* backgroundStmt) { 
-    kernel->behave(kernel->getFuncCaller()->background(backgroundStmt->img));
+    string img = varRefProcessor.replaceVarRef(backgroundStmt->img);
+    kernel->behave(kernel->getFuncCaller()->background(img));
     //TODO: asset
 }
 

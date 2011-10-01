@@ -35,6 +35,7 @@ namespace FireMLEngine {
         inline void reset() {
             instructionStack.clear();
             callStack.clear();
+            scopeStack.clear();
             
             instructionStack.push(InstructionStack::ROOT_FLAG);
             

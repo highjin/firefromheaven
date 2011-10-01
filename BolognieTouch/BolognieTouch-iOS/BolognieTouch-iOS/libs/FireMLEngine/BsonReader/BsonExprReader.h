@@ -36,6 +36,11 @@ namespace FireMLEngine {
          */
         Expression* readExpr(bson_iterator* it);
         
+        /**
+         Explicitly assign _t in case there is no _t in bson. (i.e ReturnDest)
+         */
+        Expression* readExpr(bson_iterator* it, const char* _t);
+        
         virtual void visit(AddExpr* addExpr);
         virtual void visit(AndExpr* andExpr);
         virtual void visit(AssignExpr* assignExpr);

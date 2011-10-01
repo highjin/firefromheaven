@@ -27,7 +27,7 @@ namespace FireMLEngine {
         
         inline std::list<int>& getRawData() { return instStack; }
         
-        inline void push(Statement* statement) {
+        inline void push(const Statement* statement) {
             instStack.push_back(statement->_id);
         }
         
@@ -35,7 +35,7 @@ namespace FireMLEngine {
             instStack.push_back(_id);
         }
         
-        void push(std::vector<Statement*> statementSequence) {
+        void push(const std::vector<Statement*>& statementSequence) {
             for (int i = statementSequence.size() - 1; i >= 0; i--) {
                 instStack.push_back(statementSequence[i]->_id);
             }

@@ -10,12 +10,17 @@
 #define BolognieTouch_iOS_FireMLRoot_h
 
 #include "PlotDef.h"
+#include "FunctionDef.h"
 #include <map>
+#include <string>
 
 namespace FireMLEngine {
     class FireMLRoot {
     public:
         PlotDef mainPlot;
+        
+        std::map<std::string, FunctionDef> funcDefMap;
+        
         std::map<int, ASTNode*> nodeMap;
         
         void accept(IASTVisitor* visitor) {

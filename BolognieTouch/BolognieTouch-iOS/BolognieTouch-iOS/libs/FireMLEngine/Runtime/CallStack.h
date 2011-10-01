@@ -26,7 +26,7 @@ namespace FireMLEngine {
         
     public:
         inline std::list<CallStackElement>& getRawData() { return callStack; }
-        inline void push(CallStackElement& element) {
+        inline void push(const CallStackElement& element) {
             callStack.push_back(element);
         }
         

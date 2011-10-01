@@ -39,6 +39,10 @@ namespace FireMLEngine {
         
     public:
         virtual ~ScopeStack() {
+            clear();
+        }
+        
+        void clear() {
             for (std::list<Scope*>::iterator it = scopeStack.begin(); it != scopeStack.end(); ++it) {
                 if ((*it) != NULL) {
                     delete (*it);
@@ -65,8 +69,6 @@ namespace FireMLEngine {
             --it;
             scopeStack.erase(it);
         }
-        
-        
         
         const RightValue* getValue(const std::string& varName) const {
             const Scope* scope = searchVar(varName);

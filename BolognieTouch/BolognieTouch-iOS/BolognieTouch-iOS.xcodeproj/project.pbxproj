@@ -64,6 +64,7 @@
 		C16180FB142A9CF5001A18C0 /* 校园小路.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C16180F5142A9CF5001A18C0 /* 校园小路.jpg */; };
 		C16180FE142AA34A001A18C0 /* GameTouchReceiverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16180FD142AA34A001A18C0 /* GameTouchReceiverLayer.cpp */; };
 		C16636F0143183A70024ACA0 /* BsonExprReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16636EE143183A70024ACA0 /* BsonExprReader.cpp */; };
+		C16BC4041436D6F80004E46F /* StrVarRefProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16BC4031436D6F70004E46F /* StrVarRefProcessor.cpp */; };
 		C17CFD08142D01500079E897 /* ScriptHolderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C17CFD06142D014F0079E897 /* ScriptHolderManager.cpp */; };
 		C1915F441429594E003C5260 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F431429594E003C5260 /* QuartzCore.framework */; };
 		C1915F461429594E003C5260 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1915F451429594E003C5260 /* OpenGLES.framework */; };
@@ -301,6 +302,11 @@
 		C16636EE143183A70024ACA0 /* BsonExprReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BsonExprReader.cpp; path = BsonReader/BsonExprReader.cpp; sourceTree = "<group>"; };
 		C16636EF143183A70024ACA0 /* BsonExprReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BsonExprReader.h; path = BsonReader/BsonExprReader.h; sourceTree = "<group>"; };
 		C16636F2143184220024ACA0 /* BsonReaderMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BsonReaderMacro.h; path = BsonReader/BsonReaderMacro.h; sourceTree = "<group>"; };
+		C16BC3FF1436C36B0004E46F /* FunctionDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionDef.h; sourceTree = "<group>"; };
+		C16BC4001436C36C0004E46F /* ParameterDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterDef.h; sourceTree = "<group>"; };
+		C16BC4011436C67A0004E46F /* FunctionCallStmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionCallStmt.h; sourceTree = "<group>"; };
+		C16BC4021436D60D0004E46F /* StrVarRefProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrVarRefProcessor.h; sourceTree = "<group>"; };
+		C16BC4031436D6F70004E46F /* StrVarRefProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StrVarRefProcessor.cpp; sourceTree = "<group>"; };
 		C17CFD06142D014F0079E897 /* ScriptHolderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScriptHolderManager.cpp; path = Classes/Utils/ScriptHolderManager.cpp; sourceTree = "<group>"; };
 		C17CFD07142D01500079E897 /* ScriptHolderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScriptHolderManager.h; path = Classes/Utils/ScriptHolderManager.h; sourceTree = "<group>"; };
 		C17E884E14326FDF00F914A5 /* ExpressionStmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionStmt.h; sourceTree = "<group>"; };
@@ -1306,6 +1312,8 @@
 				C19E7E3C142EA2AE0051A2E8 /* Expr */,
 				C19E7E3D142EA2AE0051A2E8 /* Runtime */,
 				C19E7E4A142EA3C50051A2E8 /* FireMLRoot.h */,
+				C16BC4021436D60D0004E46F /* StrVarRefProcessor.h */,
+				C16BC4031436D6F70004E46F /* StrVarRefProcessor.cpp */,
 			);
 			name = FireMLEngine;
 			path = libs/FireMLEngine;
@@ -1314,6 +1322,8 @@
 		C19E7E35142EA2AD0051A2E8 /* AST */ = {
 			isa = PBXGroup;
 			children = (
+				C16BC3FF1436C36B0004E46F /* FunctionDef.h */,
+				C16BC4001436C36C0004E46F /* ParameterDef.h */,
 				C19E7E36142EA2AD0051A2E8 /* ASTNode.h */,
 				C19E7E37142EA2AD0051A2E8 /* Definition.h */,
 				C19E7E38142EA2AD0051A2E8 /* DialogStmt.h */,
@@ -1326,6 +1336,7 @@
 				C1DBD1BB142FDB7200B3A26B /* ActorStmt.h */,
 				C17E884E14326FDF00F914A5 /* ExpressionStmt.h */,
 				C17E8850143281BA00F914A5 /* EchoStmt.h */,
+				C16BC4011436C67A0004E46F /* FunctionCallStmt.h */,
 			);
 			path = AST;
 			sourceTree = "<group>";
@@ -1795,6 +1806,7 @@
 				C1DBD1C214300ABF00B3A26B /* BlankExprVisitor.cpp in Sources */,
 				C16636F0143183A70024ACA0 /* BsonExprReader.cpp in Sources */,
 				C1137BDC143292CD00AF79B9 /* ExprProcessor.cpp in Sources */,
+				C16BC4041436D6F80004E46F /* StrVarRefProcessor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

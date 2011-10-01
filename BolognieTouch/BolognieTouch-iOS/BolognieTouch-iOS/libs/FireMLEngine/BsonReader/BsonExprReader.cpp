@@ -32,8 +32,7 @@
 
 using namespace FireMLEngine;
 
-Expression* BsonExprReader::readExpr(bson_iterator *it) {
-    const char* _t = bson_iterator_string(it);  //assuming _t is the first element
+Expression* BsonExprReader::readExpr(bson_iterator* it, const char* _t) {
     Expression* expr;
     
     if (STR_EQUALS(_t, "AddExpr")) { expr = new AddExpr(); }
@@ -61,6 +60,11 @@ Expression* BsonExprReader::readExpr(bson_iterator *it) {
     bsonItStack.pop();
     
     return expr;
+}
+
+Expression* BsonExprReader::readExpr(bson_iterator *it) {
+    const char* _t = bson_iterator_string(it);  //assuming _t is the first element
+    return readExpr(it, _t);
 }
 
 void BsonExprReader::visitMonoExpr(MonoExpr* monoExpr) {

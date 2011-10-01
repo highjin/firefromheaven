@@ -49,11 +49,15 @@ namespace FireMLEngine {
         }
         
         void setValue(const std::string& varName, const RightValue& value) {
-            if (variables.find(varName) != variables.end() && variables[varName] != NULL) {
-                delete variables[varName];
+            std::map<std::string, RightValue*>::iterator it = variables.find(varName);
+            
+            if (it != variables.end() && it->second != NULL) {
+                RightValue* oldRightValue = it->second;
+                delete oldRightValue;
             }
             
-            variables[varName] = value.clone();
+            RightValue* newRightValue = value.clone();
+            variables[varName] = newRightValue;
         }
         
         bool isExist(const std::string& varName) const {

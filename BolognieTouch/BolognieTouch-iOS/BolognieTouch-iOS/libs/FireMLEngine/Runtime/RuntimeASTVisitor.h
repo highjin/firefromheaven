@@ -11,6 +11,7 @@
 
 #include "IASTVisitor.h"
 #include "ExprProcessor.h"
+#include "StrVarRefProcessor.h"
 
 namespace FireMLEngine {
     
@@ -20,6 +21,7 @@ namespace FireMLEngine {
     private:
         RuntimeKernel* kernel;
         ExprProcessor exprProcessor;
+        StrVarRefProcessor varRefProcessor;
         
     public:
         
