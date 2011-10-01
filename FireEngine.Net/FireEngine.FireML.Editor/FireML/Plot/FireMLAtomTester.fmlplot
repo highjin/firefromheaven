@@ -2,9 +2,6 @@
 <FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
 
   <MainPlot>
-
-    <MyNewFunc/>
-    <Add a="3" b="4"/>
     <expr>
       $test = 123;
       $变量 = "成功~";
