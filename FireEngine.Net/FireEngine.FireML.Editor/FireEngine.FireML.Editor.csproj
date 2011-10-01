@@ -123,6 +123,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="FireML\Plot\BolognieFunc.fmlplot" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>echo FireML Assembly File - FireEngine &gt; $(ProjectDir)FireML\FireML.fml

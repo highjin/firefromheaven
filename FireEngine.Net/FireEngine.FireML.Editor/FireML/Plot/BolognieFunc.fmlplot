@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
+
+  <Function name="黎" doc="显示路德维希的立绘">
+    <para name="$表情" type="String" doc="将调用立绘“老师_{$表情}.png”"/>
+    <funcdef>
+      <actor img="老师_{$表情}.png" name="路德维希" position="250, 0"/>
+    </funcdef>
+  </Function>
+
+  <Function name="黎R" doc="在屏幕右侧显示路德维希的立绘">
+    <para name="$表情" type="String" doc="将调用立绘“老师_{$表情}.png”"/>
+    <funcdef>
+      <actor img="老师_{$表情}.png" name="路德维希" position="460, 0"/>
+    </funcdef>
+  </Function>
+
+  <Function name="安L" doc="在屏幕左侧显示安德烈亚斯的立绘">
+    <para name="$表情" type="String" doc="将调用立绘“小安_{$表情}.png”"/>
+    <funcdef>
+      <actor img="小安_{$表情}.png" name="安德烈亚斯" position="50, 10"/>
+    </funcdef>
+  </Function>
+  
+</FireML>

@@ -3,6 +3,57 @@
   <xs:include schemaLocation="FireMLTypes.xsd" />
   <xs:group name="Function">
     <xs:choice>
+      <xs:element name="黎" nillable="true">
+        <xs:annotation>
+          <xs:documentation>显示路德维希的立绘</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="表情" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>将调用立绘“老师_{$表情}.png”</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="黎R" nillable="true">
+        <xs:annotation>
+          <xs:documentation>在屏幕右侧显示路德维希的立绘</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="表情" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>将调用立绘“老师_{$表情}.png”</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="安L" nillable="true">
+        <xs:annotation>
+          <xs:documentation>在屏幕左侧显示安德烈亚斯的立绘</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="表情" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>将调用立绘“小安_{$表情}.png”</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
       <xs:element name="MyNewFunc" nillable="true">
         <xs:annotation>
           <xs:documentation>最新的函数哦</xs:documentation>
@@ -98,7 +149,7 @@
           </xs:attribute>
         </xs:complexType>
       </xs:element>
-      <xs:element name="黎" nillable="true">
+      <xs:element name="黎2" nillable="true">
         <xs:annotation>
           <xs:documentation>黎</xs:documentation>
         </xs:annotation>

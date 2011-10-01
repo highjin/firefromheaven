@@ -54,7 +54,7 @@
     </funcdef>
   </Function>
 
-  <Function name = "黎" doc="黎">
+  <Function name = "黎2" doc="黎">
     <para name = "$showname" default = "黎"/>
     <para name = "$img" default = "fa03nm"/>
     <para name = "$avatar" default = "anm"/>
