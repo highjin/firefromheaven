@@ -15,9 +15,9 @@
           </xs:attribute>
         </xs:complexType>
       </xs:element>
-      <xs:element name="MyFunc" nillable="true">
+      <xs:element name="Add" nillable="true">
         <xs:annotation>
-          <xs:documentation>我的测试函数</xs:documentation>
+          <xs:documentation>没用的函数——加法</xs:documentation>
         </xs:annotation>
         <xs:complexType>
           <xs:attribute name="a" type="xs:string" default="0">
@@ -27,7 +27,7 @@
           </xs:attribute>
           <xs:attribute name="b" type="xs:string" default="1">
             <xs:annotation>
-              <xs:documentation>啊啊啊</xs:documentation>
+              <xs:documentation>另一个没用的变量</xs:documentation>
             </xs:annotation>
           </xs:attribute>
           <xs:attribute name="par" type="ActualParameters">

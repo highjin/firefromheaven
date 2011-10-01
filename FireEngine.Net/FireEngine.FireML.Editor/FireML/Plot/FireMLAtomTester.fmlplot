@@ -4,7 +4,8 @@
   <MainPlot>
 
     <MyNewFunc/>
-    <MyFunc a="3" b="4"/>
+    <Add a="3" b="4" return="$result"/>
+    <echo>"FuncResult: " + $result</echo>
     
     <bg img="图书馆大厅.jpg"/>
     大家好~

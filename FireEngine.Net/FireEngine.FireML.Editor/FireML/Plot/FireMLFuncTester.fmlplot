@@ -7,15 +7,15 @@
     </funcdef>
   </Function>
   
-  <Function name="MyFunc" doc="我的测试函数">
+  <Function name="Add" doc="没用的函数——加法">
     <para name="$a" default="0" doc="一个没用的变量"/>
-    <para name="$b" default="1" doc="啊啊啊"/>
+    <para name="$b" default="1" doc="另一个没用的变量"/>
     <parastr>$a</parastr>
     <parastr>$a,$b</parastr>
     <funcdef>
       Hello Function!
-      <echo>$a</echo>
-      <return>$a</return>
+      <echo>$a+$b</echo>
+      <return>$a+$b</return>
     </funcdef>
   </Function>
   <Function name="AnotherFunc">
