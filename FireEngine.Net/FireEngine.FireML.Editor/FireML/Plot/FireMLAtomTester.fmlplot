@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
 
-  <MainPlot>   
+  <MainPlot>
+
+    <MyNewFunc/>
+    <MyFunc a="3" b="4"/>
+    
     <bg img="图书馆大厅.jpg"/>
     大家好~
     <actor img="老师_闭目.png" name="路德维希" position="250, 0"/>
