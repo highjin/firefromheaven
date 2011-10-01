@@ -21,5 +21,18 @@
       <actor img="小安_{$表情}.png" name="安德烈亚斯" position="50, 10"/>
     </funcdef>
   </Function>
+
+  <Function name="背景" doc="“bg”的别称">
+    <para name="$图" type="String" doc="将显示背景图“{$图}.jpg”"/>
+    <funcdef>
+      <bg img="{$图}.jpg"/>
+    </funcdef>
+  </Function>
+
+  <Function name="无立绘" doc="隐藏所有立绘">
+    <funcdef>
+      <actor/>
+    </funcdef>
+  </Function>
   
 </FireML>

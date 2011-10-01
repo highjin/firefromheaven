@@ -54,6 +54,35 @@
           </xs:attribute>
         </xs:complexType>
       </xs:element>
+      <xs:element name="背景" nillable="true">
+        <xs:annotation>
+          <xs:documentation>“bg”的别称</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="图" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>将显示背景图“{$图}.jpg”</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="无立绘" nillable="true">
+        <xs:annotation>
+          <xs:documentation>隐藏所有立绘</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
       <xs:element name="MyNewFunc" nillable="true">
         <xs:annotation>
           <xs:documentation>最新的函数哦</xs:documentation>

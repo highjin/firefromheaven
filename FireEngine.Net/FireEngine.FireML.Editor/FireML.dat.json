@@ -3,10 +3,22 @@
     "ID" : 1,
     "Name" : null,
     "Content" : [{
-        "_t" : "BackgroundStmt",
+        "_t" : "FunctionCallStmt",
         "ID" : 2,
-        "Img" : "图书馆大厅.jpg",
-        "Asset" : null
+        "Name" : "背景",
+        "ParamMap" : {
+          "图" : {
+            "_t" : "RightValueExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "RightValue" : {
+              "_t" : "StringConst",
+              "Value" : "图书馆大厅"
+            }
+          }
+        },
+        "ReturnDest" : null,
+        "ParaStr" : null
       }, {
         "_t" : "DialogStmt",
         "ID" : 3,
@@ -58,20 +70,29 @@
         "ID" : 8,
         "Text" : "“由于菠萝被水彩化了，我决定出门走走。”"
       }, {
-        "_t" : "ActorStmt",
+        "_t" : "FunctionCallStmt",
         "ID" : 9,
-        "Name" : null,
-        "Img" : null,
-        "Asset" : null,
-        "Avatar" : null,
-        "AvaAsset" : null,
-        "Layer" : null,
-        "Position" : null
+        "Name" : "无立绘",
+        "ParamMap" : { },
+        "ReturnDest" : null,
+        "ParaStr" : null
       }, {
-        "_t" : "BackgroundStmt",
+        "_t" : "FunctionCallStmt",
         "ID" : 10,
-        "Img" : "波洛革涅城.jpg",
-        "Asset" : null
+        "Name" : "背景",
+        "ParamMap" : {
+          "图" : {
+            "_t" : "RightValueExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "RightValue" : {
+              "_t" : "StringConst",
+              "Value" : "波洛革涅城"
+            }
+          }
+        },
+        "ReturnDest" : null,
+        "ParaStr" : null
       }, {
         "_t" : "DialogStmt",
         "ID" : 11,
@@ -99,10 +120,22 @@
         "ID" : 15,
         "Text" : "“总之呢，先出大门再说。”"
       }, {
-        "_t" : "BackgroundStmt",
+        "_t" : "FunctionCallStmt",
         "ID" : 16,
-        "Img" : "图书馆门前.jpg",
-        "Asset" : null
+        "Name" : "背景",
+        "ParamMap" : {
+          "图" : {
+            "_t" : "RightValueExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "RightValue" : {
+              "_t" : "StringConst",
+              "Value" : "图书馆门前"
+            }
+          }
+        },
+        "ReturnDest" : null,
+        "ParaStr" : null
       }, {
         "_t" : "ActorStmt",
         "ID" : 17,
@@ -244,20 +277,29 @@
         "ID" : 30,
         "Text" : "“好呀。”"
       }, {
-        "_t" : "BackgroundStmt",
+        "_t" : "FunctionCallStmt",
         "ID" : 31,
-        "Img" : "校园小路.jpg",
-        "Asset" : null
+        "Name" : "背景",
+        "ParamMap" : {
+          "图" : {
+            "_t" : "RightValueExpr",
+            "DataType" : 0,
+            "Location" : { },
+            "RightValue" : {
+              "_t" : "StringConst",
+              "Value" : "校园小路"
+            }
+          }
+        },
+        "ReturnDest" : null,
+        "ParaStr" : null
       }, {
-        "_t" : "ActorStmt",
+        "_t" : "FunctionCallStmt",
         "ID" : 32,
-        "Name" : null,
-        "Img" : null,
-        "Asset" : null,
-        "Avatar" : null,
-        "AvaAsset" : null,
-        "Layer" : null,
-        "Position" : null
+        "Name" : "无立绘",
+        "ParamMap" : { },
+        "ReturnDest" : null,
+        "ParaStr" : null
       }, {
         "_t" : "DialogStmt",
         "ID" : 33,
@@ -2298,19 +2340,55 @@
         }],
       "ParaStrMap" : []
     },
-    "MyNewFunc" : {
+    "背景" : {
       "ID" : 152,
+      "Name" : "背景",
+      "ParaMap" : {
+        "图" : {
+          "ID" : 0,
+          "Name" : null,
+          "Default" : null,
+          "ParameterType" : 4
+        }
+      },
+      "FuncDefContent" : [{
+          "_t" : "BackgroundStmt",
+          "ID" : 153,
+          "Img" : "{$图}.jpg",
+          "Asset" : null
+        }],
+      "ParaStrMap" : []
+    },
+    "无立绘" : {
+      "ID" : 154,
+      "Name" : "无立绘",
+      "ParaMap" : { },
+      "FuncDefContent" : [{
+          "_t" : "ActorStmt",
+          "ID" : 155,
+          "Name" : null,
+          "Img" : null,
+          "Asset" : null,
+          "Avatar" : null,
+          "AvaAsset" : null,
+          "Layer" : null,
+          "Position" : null
+        }],
+      "ParaStrMap" : []
+    },
+    "MyNewFunc" : {
+      "ID" : 156,
       "Name" : "MyNewFunc",
       "ParaMap" : { },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 153,
+          "ID" : 157,
           "Text" : "Hello New World!"
         }],
       "ParaStrMap" : []
     },
     "Add" : {
-      "ID" : 154,
+      "ID" : 158,
       "Name" : "Add",
       "ParaMap" : {
         "a" : {
@@ -2334,11 +2412,11 @@
       },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 155,
+          "ID" : 159,
           "Text" : "Hello Function!"
         }, {
           "_t" : "EchoStmt",
-          "ID" : 156,
+          "ID" : 160,
           "Expression" : {
             "_t" : "AddExpr",
             "DataType" : 0,
@@ -2365,7 +2443,7 @@
           }
         }, {
           "_t" : "ReturnStmt",
-          "ID" : 157,
+          "ID" : 161,
           "Expression" : {
             "_t" : "AddExpr",
             "DataType" : 0,
@@ -2394,18 +2472,18 @@
       "ParaStrMap" : [[1, ["a"]], [2, ["a", "b"]]]
     },
     "AnotherFunc" : {
-      "ID" : 158,
+      "ID" : 162,
       "Name" : "AnotherFunc",
       "ParaMap" : { },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 159,
+          "ID" : 163,
           "Text" : "Hello~~~"
         }],
       "ParaStrMap" : []
     },
     "英" : {
-      "ID" : 160,
+      "ID" : 164,
       "Name" : "英",
       "ParaMap" : {
         "img" : {
@@ -2429,7 +2507,7 @@
       },
       "FuncDefContent" : [{
           "_t" : "ExpressionStmt",
-          "ID" : 161,
+          "ID" : 165,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -2537,7 +2615,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 162,
+          "ID" : 166,
           "Name" : "英",
           "Img" : "{$imgStr}",
           "Asset" : null,
@@ -2549,7 +2627,7 @@
       "ParaStrMap" : [[1, ["img"]], [2, ["img", "avatar"]]]
     },
     "伊娥" : {
-      "ID" : 163,
+      "ID" : 167,
       "Name" : "伊娥",
       "ParaMap" : {
         "showname" : {
@@ -2582,7 +2660,7 @@
       },
       "FuncDefContent" : [{
           "_t" : "ExpressionStmt",
-          "ID" : 164,
+          "ID" : 168,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -2690,7 +2768,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 165,
+          "ID" : 169,
           "Name" : "{$showname}",
           "Img" : "{$imgStr}",
           "Asset" : null,
@@ -2702,7 +2780,7 @@
       "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
     },
     "黎2" : {
-      "ID" : 166,
+      "ID" : 170,
       "Name" : "黎2",
       "ParaMap" : {
         "showname" : {
@@ -2735,7 +2813,7 @@
       },
       "FuncDefContent" : [{
           "_t" : "ExpressionStmt",
-          "ID" : 167,
+          "ID" : 171,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -2843,7 +2921,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 168,
+          "ID" : 172,
           "Name" : "{$showname}",
           "Img" : "{$imgStr}",
           "Asset" : null,
@@ -2855,7 +2933,7 @@
       "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
     },
     "小潘" : {
-      "ID" : 169,
+      "ID" : 173,
       "Name" : "小潘",
       "ParaMap" : {
         "showname" : {
@@ -2888,7 +2966,7 @@
       },
       "FuncDefContent" : [{
           "_t" : "ExpressionStmt",
-          "ID" : 170,
+          "ID" : 174,
           "ExpressionList" : [{
               "_t" : "AssignExpr",
               "DataType" : 4,
@@ -2996,7 +3074,7 @@
             }]
         }, {
           "_t" : "ActorStmt",
-          "ID" : 171,
+          "ID" : 175,
           "Name" : "{$showname}",
           "Img" : "{$imgStr}",
           "Asset" : null,
@@ -3008,23 +3086,23 @@
       "ParaStrMap" : [[1, ["showname"]], [2, ["showname", "img"]], [3, ["showname", "img", "avatar"]]]
     },
     "badend" : {
-      "ID" : 172,
+      "ID" : 176,
       "Name" : "badend",
       "ParaMap" : { },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 173,
+          "ID" : 177,
           "Text" : "Bad End!"
         }],
       "ParaStrMap" : []
     },
     "goodend" : {
-      "ID" : 174,
+      "ID" : 178,
       "Name" : "goodend",
       "ParaMap" : { },
       "FuncDefContent" : [{
           "_t" : "DialogStmt",
-          "ID" : 175,
+          "ID" : 179,
           "Text" : "Good End!"
         }],
       "ParaStrMap" : []
@@ -3033,7 +3111,7 @@
   "ActionLayerMap" : { },
   "AssetMap" : {
     "1-04 町, 時の流れ, 人" : {
-      "ID" : 176,
+      "ID" : 180,
       "Name" : "1-04 町, 時の流れ, 人",
       "AssetData" : {
         "_t" : "MusicAsset",
@@ -3051,7 +3129,7 @@
       }
     },
     "1-05 渚" : {
-      "ID" : 177,
+      "ID" : 181,
       "Name" : "1-05 渚",
       "AssetData" : {
         "_t" : "MusicAsset",
@@ -3069,7 +3147,7 @@
       }
     },
     "nagisa1_1" : {
-      "ID" : 178,
+      "ID" : 182,
       "Name" : "nagisa1_1",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -3080,7 +3158,7 @@
       }
     },
     "nagisa1_2" : {
-      "ID" : 179,
+      "ID" : 183,
       "Name" : "nagisa1_2",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -3091,7 +3169,7 @@
       }
     },
     "nagisa1_3" : {
-      "ID" : 180,
+      "ID" : 184,
       "Name" : "nagisa1_3",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -3102,7 +3180,7 @@
       }
     },
     "一切" : {
-      "ID" : 181,
+      "ID" : 185,
       "Name" : "一切",
       "AssetData" : {
         "_t" : "MusicAsset",
@@ -3120,7 +3198,7 @@
       }
     },
     "LRCSample" : {
-      "ID" : 182,
+      "ID" : 186,
       "Name" : "LRCSample",
       "AssetData" : {
         "_t" : "MusicAsset",
@@ -3138,7 +3216,7 @@
       }
     },
     "CG测试1" : {
-      "ID" : 183,
+      "ID" : 187,
       "Name" : "CG测试1",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -3149,7 +3227,7 @@
       }
     },
     "CG测试2" : {
-      "ID" : 184,
+      "ID" : 188,
       "Name" : "CG测试2",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -3160,7 +3238,7 @@
       }
     },
     "CG测试3" : {
-      "ID" : 185,
+      "ID" : 189,
       "Name" : "CG测试3",
       "AssetData" : {
         "_t" : "CGAsset",
@@ -3171,7 +3249,7 @@
       }
     },
     "asdfasd" : {
-      "ID" : 186,
+      "ID" : 190,
       "Name" : "asdfasd",
       "AssetData" : {
         "_t" : "ActorAsset",
@@ -3182,7 +3260,7 @@
       }
     },
     "video1" : {
-      "ID" : 187,
+      "ID" : 191,
       "Name" : "video1",
       "AssetData" : {
         "_t" : "VideoAsset",
@@ -3192,7 +3270,7 @@
       }
     },
     "newTest" : {
-      "ID" : 188,
+      "ID" : 192,
       "Name" : "newTest",
       "AssetData" : {
         "_t" : "CGAsset",
